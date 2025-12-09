@@ -1,9 +1,16 @@
 FROM nginx:alpine
 
-# Copy website files to nginx html directory
+# Remove default nginx config
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy all files
 COPY . /usr/share/nginx/html/
 
-# Expose port 80
+# Remove Dockerfile from html directory (it gets copied too)
+RUN rm -f /usr/share/nginx/html/Dockerfile
+
+# Expose port
 EXPOSE 80
 
+# Start nginx in foreground
 CMD ["nginx", "-g", "daemon off;"]
