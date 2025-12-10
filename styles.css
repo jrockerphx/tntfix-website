@@ -76,6 +76,14 @@ nav {
     font-weight: 700;
     color: #ffd966; /* Gold logo */
     font-family: 'EB Garamond', Georgia, serif;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
 }
 
 .nav-links {
@@ -99,10 +107,26 @@ nav {
 
 /* Hero Section */
 .hero {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 4rem 2rem;
     background: linear-gradient(135deg, #0041a5 0%, #1155cc 100%);
     border-bottom: 3px solid #ffffff; /* White divider */
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-image {
+    flex: 0 0 300px;
+    max-width: 300px;
+    height: auto;
 }
 
 .hero h1 {
@@ -113,8 +137,7 @@ nav {
 
 .hero p {
     font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 2rem;
+    margin-bottom: 2rem;
     color: #ffffff;
 }
 
@@ -159,12 +182,20 @@ nav {
     border-radius: 10px;
     border: 2px solid #ffd966; /* Gold border */
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 .service-category:hover {
     transform: translateY(-5px);
     border-color: #ffed4e;
     box-shadow: 0 10px 30px rgba(255, 217, 102, 0.3);
+}
+
+.category-image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 1.5rem;
 }
 
 .service-category h2 {
@@ -180,6 +211,7 @@ nav {
 .service-category p {
     color: #ffffff;
     margin-bottom: 1.5rem;
+    text-align: left;
 }
 
 /* Service Tiles Grid */
@@ -295,6 +327,13 @@ hr {
     border-top: 3px solid #ffffff; /* White divider */
     border-bottom: 3px solid #ffffff;
     margin: 3rem 0;
+    border-radius: 10px;
+}
+
+.cta-image {
+    width: 150px;
+    height: auto;
+    margin-bottom: 1.5rem;
 }
 
 .cta-section h2 {
@@ -335,6 +374,56 @@ footer p {
 }
 
 /* Responsive Design */
+@media (max-width: 968px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-image {
+        flex: 0 0 250px;
+        max-width: 250px;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-container {
-        fle
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-image {
+        flex: 0 0 200px;
+        max-width: 200px;
+    }
+
+    .tiles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-image {
+        max-width: 200px;
+    }
+
+    .cta-image {
+        width: 100px;
+    }
+}
