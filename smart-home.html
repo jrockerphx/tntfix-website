@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Home Installation | TNT Home Repairs</title>
+    <title>Smart Home Installation - TNT Fix Smart Home Solutions</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo">TNT Home Repairs</a>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/tnt-bomb.png" alt="TNT Logo" class="logo-img">
+                TNT Fix Smart Home Solutions
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="smart-home.html">Smart Home</a></li>
@@ -18,180 +24,208 @@
                 <li><a href="home-repair.html">Home Repair</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        </nav>
-    </header>
-
-    <main class="container">
-        <div class="page-header">
-            <h1>Smart Home Installation</h1>
-            <p>Making your home "smart" should be simple—but in reality, many devices can be tricky to install, connect, and keep working together. At TNT Home Repairs, we help take the frustration out of setup so you can enjoy the convenience, comfort, and security of your smart home right away.</p>
         </div>
+    </nav>
 
-        <div class="services-grid">
-            <!-- Service 1: Smart Thermostat Installation -->
+    <!-- Cover Banner -->
+    <div class="cover-banner">
+        <video autoplay loop muted playsinline class="cover-video">
+            <source src="images/cover-smart-home.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="intro-section">
+            <h1>Smart Home Installation</h1>
+            <h2>Want your home to obey what you say and stay that way?</h2>
+            
+            <div class="intro-content">
+                <h3>Consider it "Obedience Training" for your smart home.</h3>
+                <p>Most "smart homes" are just a collection of devices that don't talk to each other. You have 5 different apps, automations that don't work reliably, and devices that stop responding. That's not smart—that's frustrating.</p>
+                
+                <p>At TNT Home Repairs, we specialize in making your smart home actually work together. Whether you're starting from scratch or fixing what's already there, we'll get your devices talking to each other, automate the stuff that matters, and make sure everything stays connected.</p>
+                
+                <p><strong>No more:</strong></p>
+                <ul>
+                    <li>Juggling multiple apps</li>
+                    <li>Devices that randomly stop working</li>
+                    <li>Automations that only work "sometimes"</li>
+                    <li>Spending hours troubleshooting</li>
+                </ul>
+                
+                <p><strong>Just a smart home that actually works.</strong></p>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Service Tiles -->
+        <h2 style="text-align: center; margin-bottom: 2rem;">Our Smart Home Services</h2>
+        
+        <div class="tiles-grid">
+            <!-- Smart Thermostat Installation -->
             <a href="services/smart-home-1.html" class="service-tile" onclick="createExplosion(event)">
                 <div class="flash"></div>
-                <div class="service-title">Smart Thermostat Installation</div>
-                <div class="service-description">Professional installation and setup of your smart thermostat with complete integration into your home automation system.</div>
-                <ul class="service-features">
-                    <li>WiFi & app configuration</li>
-                    <li>Voice control setup</li>
+                <h3>Smart Thermostat Installation</h3>
+                <p class="duration">2 hours</p>
+                <p class="price">$349</p>
+                <ul>
+                    <li>Complete installation & setup</li>
+                    <li>WiFi & voice control config</li>
                     <li>Home Assistant integration</li>
-                    <li>Arizona climate optimization</li>
+                    <li>Full training included</li>
                 </ul>
-                <div class="service-price">$349</div>
-                <div class="service-duration">2 hours</div>
             </a>
 
-            <!-- Service 2: Smart Device Installation -->
+            <!-- Smart Device Installation -->
             <a href="services/smart-home-2.html" class="service-tile" onclick="createExplosion(event)">
                 <div class="flash"></div>
-                <div class="service-title">Smart Device Installation</div>
-                <div class="service-description">Expert installation of smart locks, cameras, doorbells, switches, plugs, and sensors. Choose from single device or multi-device packages.</div>
-                <ul class="service-features">
-                    <li>Single device: $89</li>
-                    <li>3-device pack: $249</li>
-                    <li>5-device pack: $399</li>
-                    <li>Full setup & training</li>
+                <h3>Smart Device Installation</h3>
+                <p class="duration">30 min - 2.5 hours</p>
+                <p class="price">Starting at $89</p>
+                <ul>
+                    <li>Locks, cameras, doorbells, switches</li>
+                    <li>WiFi & app setup</li>
+                    <li>Package deals available</li>
+                    <li>Mix & match devices</li>
                 </ul>
-                <div class="service-price">Starting at $89</div>
-                <div class="service-duration">30 min - 2.5 hrs</div>
             </a>
 
-            <!-- Service 3: Home Assistant Starter -->
+            <!-- Home Assistant Setup -->
             <a href="services/smart-home-3.html" class="service-tile" onclick="createExplosion(event)">
                 <div class="flash"></div>
-                <div class="service-title">Home Assistant - Starter</div>
-                <div class="service-description">Get started with the world's most powerful smart home platform. Integrate up to 15 devices with custom automations.</div>
-                <ul class="service-features">
-                    <li>Up to 15 device integrations</li>
-                    <li>3 custom automations</li>
-                    <li>Custom dashboard design</li>
-                    <li>1 hour training included</li>
+                <h3>Home Assistant Setup</h3>
+                <p class="duration">Varies</p>
+                <p class="price">$599-$899</p>
+                <ul>
+                    <li>Central hub for all devices</li>
+                    <li>Local control (no cloud required)</li>
+                    <li>Advanced automations</li>
+                    <li>Device migration included</li>
                 </ul>
-                <div class="service-price">$599</div>
-                <div class="service-duration">4 hours</div>
             </a>
 
-            <!-- Service 4: Home Assistant Advanced -->
+            <!-- Smart Climate Zones -->
             <a href="services/smart-home-4.html" class="service-tile" onclick="createExplosion(event)">
                 <div class="flash"></div>
-                <div class="service-title">Home Assistant - Advanced</div>
-                <div class="service-description">Premium package with up to 30 devices, sophisticated automations, professional dashboard design, and 30 days of support.</div>
-                <ul class="service-features">
-                    <li>Up to 30 device integrations</li>
-                    <li>5-8 advanced automations</li>
-                    <li>Professional dashboard design</li>
-                    <li>30 days email/text support</li>
+                <h3>Smart Climate Zones</h3>
+                <p class="duration">3-4 hours</p>
+                <p class="price">$449</p>
+                <ul>
+                    <li>Room-by-room temperature control</li>
+                    <li>Smart vents & sensors</li>
+                    <li>Automated scheduling</li>
+                    <li>Energy savings optimization</li>
                 </ul>
-                <div class="service-price">$899</div>
-                <div class="service-duration">4 hours</div>
             </a>
 
-            <!-- Service 5: Smart Climate Zone Optimization -->
+            <!-- Smart Home Troubleshooting -->
             <a href="services/smart-home-5.html" class="service-tile" onclick="createExplosion(event)">
                 <div class="flash"></div>
-                <div class="service-title">Smart Climate Zone Optimization</div>
-                <div class="service-description">Create independent temperature zones using smart vents and sensors. Save 20-40% on Arizona cooling costs.</div>
-                <ul class="service-features">
-                    <li>4-6 smart vent installations</li>
-                    <li>Temperature & motion sensors</li>
-                    <li>Smart thermostat integration</li>
-                    <li>Save $30-60/month</li>
+                <h3>Smart Home Troubleshooting</h3>
+                <p class="duration">1.5 hours</p>
+                <p class="price">$179</p>
+                <ul>
+                    <li>Fix offline devices</li>
+                    <li>Repair automations</li>
+                    <li>Update firmware</li>
+                    <li>Optimize performance</li>
                 </ul>
-                <div class="service-price">$449</div>
-                <div class="service-duration">3 hours</div>
             </a>
 
-            <!-- Service 6: Smart Home Troubleshooting -->
+            <!-- C-Wire Installation -->
             <a href="services/smart-home-6.html" class="service-tile" onclick="createExplosion(event)">
                 <div class="flash"></div>
-                <div class="service-title">Smart Home Troubleshooting</div>
-                <div class="service-description">Fix offline devices, broken automations, connectivity issues, and configuration problems. Any brand, any platform.</div>
-                <ul class="service-features">
-                    <li>Comprehensive diagnostics</li>
-                    <li>Fix up to 5 issues</li>
-                    <li>Firmware updates</li>
-                    <li>15-day follow-up included</li>
+                <h3>C-Wire Installation</h3>
+                <p class="duration">1-2 hours</p>
+                <p class="price">Starting at $179</p>
+                <ul>
+                    <li>Required for smart thermostats</li>
+                    <li>Wire run or adapter install</li>
+                    <li>Power verification & testing</li>
+                    <li>Pricing based on access</li>
                 </ul>
-                <div class="service-price">$179</div>
-                <div class="service-duration">1.5 hours</div>
             </a>
 
-            <!-- Service 7: C-Wire Installation -->
+            <!-- Free Consultation (Placeholder 1) -->
             <a href="services/smart-home-7.html" class="service-tile" onclick="createExplosion(event)">
                 <div class="flash"></div>
-                <div class="service-title">C-Wire Installation</div>
-                <div class="service-description">Professional C-wire installation for smart thermostats. Choose easy or difficult access based on your home's layout.</div>
-                <ul class="service-features">
-                    <li>Easy access: $179</li>
-                    <li>Difficult access: $259</li>
-                    <li>Professional wire fishing</li>
-                    <li>Power verification & testing</li>
+                <h3>Smart Lighting Setup</h3>
+                <p class="duration">2-3 hours</p>
+                <p class="price">Starting at $399</p>
+                <ul>
+                    <li>Smart switches & bulbs</li>
+                    <li>Scene programming</li>
+                    <li>Voice control setup</li>
+                    <li>Scheduling & automation</li>
                 </ul>
-                <div class="service-price">Starting at $179</div>
-                <div class="service-duration">1-2 hours</div>
             </a>
 
-            <!-- Service 8: Free Consultation -->
-            <a href="services/smart-home-8.html" class="service-tile" onclick="createExplosion(event)">
+            <!-- Free Consultation -->
+            <a href="contact.html" class="service-tile" onclick="createExplosion(event)">
                 <div class="flash"></div>
-                <div class="service-title">Free Consultation</div>
-                <div class="service-description">Not sure where to start? Get expert advice on smart home planning, device selection, and system design. No obligation.</div>
-                <ul class="service-features">
-                    <li>Phone or video call</li>
-                    <li>Device recommendations</li>
-                    <li>Platform guidance</li>
-                    <li>Custom quote provided</li>
+                <h3>Free Consultation</h3>
+                <p class="duration">15 minutes</p>
+                <p class="price">FREE</p>
+                <ul>
+                    <li>Discuss your project</li>
+                    <li>Get expert recommendations</li>
+                    <li>Custom quotes</li>
+                    <li>No obligation</li>
                 </ul>
-                <div class="service-price">FREE</div>
-                <div class="service-duration">15 minutes</div>
             </a>
         </div>
-    </main>
 
+        <hr>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <img src="images/tnt-bomb.png" alt="TNT Explosion" class="cta-image">
+            <h2>Ready to make your smart home actually smart?</h2>
+            <a href="contact.html" class="btn">Contact TNT Today!</a>
+        </section>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <p><strong>TNT Home Repairs</strong></p>
-        <p>Operates under the Handyman designation provided by the Arizona Registrar of Contractors</p>
-        <p>Owned and operated by Mr. Tippy's LLC, registered with the Arizona Corporation Commission</p>
-        <p>TNT Home Repairs is not a Licensed Contractor</p>
+        <p>TNT Home Repairs operates under the Handyman designation provided by the Arizona Registrar of Contractors, is owned and operated by Mr. Tippy's LLC, registered with the Arizona Corporation Commission. TNT Home Repairs is not a Licensed Contractor.</p>
     </footer>
 
+    <!-- TNT Explosion JavaScript -->
     <script>
         function createExplosion(event) {
-            // Prevent default link behavior temporarily
             event.preventDefault();
-            
             const tile = event.currentTarget;
             const rect = tile.getBoundingClientRect();
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
+            const clickX = event.clientX - rect.left;
+            const clickY = event.clientY - rect.top;
             
             // Flash effect
             const flash = tile.querySelector('.flash');
+            flash.style.left = clickX + 'px';
+            flash.style.top = clickY + 'px';
             flash.classList.add('active');
             setTimeout(() => flash.classList.remove('active'), 600);
             
-            // Create explosion particles
+            // Create particles
             const particleCount = 40;
+            const colors = ['#ffd966', '#ff9900', '#ffed4e', '#ffbf00', '#ffa500'];
+            
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
+                particle.style.left = clickX + 'px';
+                particle.style.top = clickY + 'px';
+                particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
                 
                 const angle = (Math.PI * 2 * i) / particleCount;
-                const velocity = 120 + Math.random() * 80;
+                const velocity = 100 + Math.random() * 100;
                 const tx = Math.cos(angle) * velocity;
                 const ty = Math.sin(angle) * velocity;
                 
-                particle.style.left = centerX + 'px';
-                particle.style.top = centerY + 'px';
                 particle.style.setProperty('--tx', tx + 'px');
                 particle.style.setProperty('--ty', ty + 'px');
-                
-                // Random gold colors
-                const colors = ['#ffd966', '#ff9900', '#ffed4e', '#ffbf00', '#ffa500'];
-                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-                particle.style.boxShadow = `0 0 15px ${colors[Math.floor(Math.random() * colors.length)]}`;
                 
                 tile.appendChild(particle);
                 
