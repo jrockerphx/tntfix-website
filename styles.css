@@ -250,12 +250,23 @@ nav {
     cursor: pointer;
     transition: all 0.3s ease;
     overflow: hidden;
+    text-decoration: none !important;
+    display: block;
 }
 
 .service-tile:hover {
     transform: translateY(-5px);
     border-color: #ffed4e;
     box-shadow: 0 10px 30px rgba(255, 217, 102, 0.3);
+    text-decoration: none !important;
+}
+
+/* Prevent underline on all child elements */
+.service-tile h3,
+.service-tile p,
+.service-tile ul,
+.service-tile li {
+    text-decoration: none !important;
 }
 
 .service-tile h3 {
