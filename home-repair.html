@@ -3,50 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Repair Services - TNT Fix Smart Home Solutions</title>
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Smart Home Repair Services | TNTFix Smart Home Solutions</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="TNT Fix Logo" class="logo-img">
-                TNT Fix Smart Home Solutions
-            </a>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">TNT Home Repairs</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="smart-home.html">Smart Home</a></li>
                 <li><a href="hvac.html">HVAC</a></li>
-                <li><a href="home-repair.html" class="active">Home Repair</a></li>
+                <li><a href="home-repair.html">Home Repair</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>Home Repair Services</h1>
+            <p>From small plumbing and electrical to drywall, and smart-home installs, we'll make it easy to complete the everyday fixes and upgrades that keep your home in top shape.  Is your "Honey-Do" list ever-growing? We can knock that our too!</p>
         </div>
-    </nav>
 
-    <!-- Cover Banner -->
-    <div class="cover-banner">
-        <video autoplay loop muted playsinline class="cover-video">
-            <source src="images/cover.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <!-- Page Heading -->
-    <section class="intro-section">
-        <div class="intro-content">
-            <h2>Got a "to-do" list that just won't go away?</h2>
-        </div>
-    </section>
-
-    <!-- Services Grid -->
-    <section class="services-section">
         <div class="services-grid">
             <!-- Service 1: Drywall Repair & Patch -->
-            <a href="home-repair/drywall-repair.html" class="service-tile" onclick="triggerExplosion(event, this)">
+            <a href="services/home-repair-1.html" class="service-tile" onclick="createExplosion(event)">
+                <div class="flash"></div>
                 <div class="service-title">Drywall Repair & Patch</div>
                 <div class="service-description">Professional drywall repair from small holes to large damage. Includes patching, sanding, texture matching, and paint touch-up.</div>
                 <ul class="service-features">
@@ -57,11 +41,11 @@
                 </ul>
                 <div class="service-price">Starting at $189</div>
                 <div class="service-duration">2-3.5 hours</div>
-                <div class="explosion-container"></div>
             </a>
 
             <!-- Service 2: Ceiling Fan Installation -->
-            <a href="home-repair/ceiling-fan-installation.html" class="service-tile" onclick="triggerExplosion(event, this)">
+            <a href="services/home-repair-2.html" class="service-tile" onclick="createExplosion(event)">
+                <div class="flash"></div>
                 <div class="service-title">Ceiling Fan Installation</div>
                 <div class="service-description">Professional ceiling fan installation with proper support and balancing. Essential for Arizona homes to reduce cooling costs.</div>
                 <ul class="service-features">
@@ -72,11 +56,11 @@
                 </ul>
                 <div class="service-price">Starting at $179</div>
                 <div class="service-duration">1.5-2.5 hours</div>
-                <div class="explosion-container"></div>
             </a>
 
             <!-- Service 3: Door Service & Hardware -->
-            <a href="home-repair/door-service.html" class="service-tile" onclick="triggerExplosion(event, this)">
+            <a href="services/home-repair-3.html" class="service-tile" onclick="createExplosion(event)">
+                <div class="flash"></div>
                 <div class="service-title">Door Service & Hardware</div>
                 <div class="service-description">Fix sticky doors, install new hardware, adjust hinges, or replace weatherstripping. Keep your home sealed against Arizona heat.</div>
                 <ul class="service-features">
@@ -87,11 +71,11 @@
                 </ul>
                 <div class="service-price">Starting at $149</div>
                 <div class="service-duration">1.5-2.5 hours</div>
-                <div class="explosion-container"></div>
             </a>
 
             <!-- Service 4: Gutter Cleaning & Inspection -->
-            <a href="home-repair/gutter-cleaning.html" class="service-tile" onclick="triggerExplosion(event, this)">
+            <a href="services/home-repair-4.html" class="service-tile" onclick="createExplosion(event)">
+                <div class="flash"></div>
                 <div class="service-title">Gutter Cleaning & Inspection</div>
                 <div class="service-description">Thorough gutter cleaning and inspection. Critical before monsoon season to prevent water damage and foundation issues.</div>
                 <ul class="service-features">
@@ -102,11 +86,11 @@
                 </ul>
                 <div class="service-price">Starting at $149</div>
                 <div class="service-duration">2-3.5 hours</div>
-                <div class="explosion-container"></div>
             </a>
 
             <!-- Service 5: TV Mounting & Wire Concealment -->
-            <a href="home-repair/tv-mounting.html" class="service-tile" onclick="triggerExplosion(event, this)">
+            <a href="services/home-repair-5.html" class="service-tile" onclick="createExplosion(event)">
+                <div class="flash"></div>
                 <div class="service-title">TV Mounting & Wire Concealment</div>
                 <div class="service-description">Professional TV mounting with wire concealment for a clean look. Includes finding studs, level mounting, and cable management.</div>
                 <ul class="service-features">
@@ -117,11 +101,11 @@
                 </ul>
                 <div class="service-price">Starting at $189</div>
                 <div class="service-duration">1.5-2 hours</div>
-                <div class="explosion-container"></div>
             </a>
 
             <!-- Service 6: Faucet Installation -->
-            <a href="home-repair/faucet-installation.html" class="service-tile" onclick="triggerExplosion(event, this)">
+            <a href="services/home-repair-6.html" class="service-tile" onclick="createExplosion(event)">
+                <div class="flash"></div>
                 <div class="service-title">Faucet Installation</div>
                 <div class="service-description">Kitchen or bathroom faucet installation. Remove old faucet, install new one, check for leaks, and ensure proper operation.</div>
                 <ul class="service-features">
@@ -132,11 +116,11 @@
                 </ul>
                 <div class="service-price">$179</div>
                 <div class="service-duration">1.5 hours</div>
-                <div class="explosion-container"></div>
             </a>
 
             <!-- Service 7: Light Fixture Installation -->
-            <a href="home-repair/light-fixture-installation.html" class="service-tile" onclick="triggerExplosion(event, this)">
+            <a href="services/home-repair-7.html" class="service-tile" onclick="createExplosion(event)">
+                <div class="flash"></div>
                 <div class="service-title">Light Fixture Installation</div>
                 <div class="service-description">Install new light fixtures, chandeliers, or replace old fixtures. Proper mounting and electrical connection guaranteed.</div>
                 <ul class="service-features">
@@ -147,11 +131,11 @@
                 </ul>
                 <div class="service-price">$149</div>
                 <div class="service-duration">1 hour</div>
-                <div class="explosion-container"></div>
             </a>
 
             <!-- Service 8: Free Consultation -->
-            <a href="home-repair/free-consultation.html" class="service-tile" onclick="triggerExplosion(event, this)">
+            <a href="services/home-repair-8.html" class="service-tile" onclick="createExplosion(event)">
+                <div class="flash"></div>
                 <div class="service-title">Free Consultation</div>
                 <div class="service-description">Not sure what you need? Get expert advice on home repairs, project planning, and cost estimates. No obligation.</div>
                 <ul class="service-features">
@@ -162,49 +146,61 @@
                 </ul>
                 <div class="service-price">FREE</div>
                 <div class="service-duration">15 minutes</div>
-                <div class="explosion-container"></div>
             </a>
         </div>
-    </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-content">
+        <section style="text-align: center; margin-top: 60px;">
+            <h2 style="font-family: 'EB Garamond', serif; font-size: 32pt; color: #ffd966; margin-bottom: 20px;">Ready to blast your home repair worries away?</h2>
             <a href="contact.html" class="cta-button">Contact TNT Today</a>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <p class="footer-disclaimer">TNT Home Repairs operates under the Handyman designation provided by the Arizona Registrar of Contractors, is owned and operated by Mr. Tippy's LLC, registered with the Arizona Corporation Commission. TNT Home Repairs is not a Licensed Contractor.</p>
-        </div>
+        <p><strong>TNT Home Repairs</strong></p>
+        <p>Operates under the Handyman designation provided by the Arizona Registrar of Contractors</p>
+        <p>Owned and operated by Mr. Tippy's LLC, registered with the Arizona Corporation Commission</p>
+        <p>TNT Home Repairs is not a Licensed Contractor</p>
     </footer>
 
-    <!-- TNT Explosion Animation Script -->
     <script>
-        function triggerExplosion(event, element) {
+        function createExplosion(event) {
             event.preventDefault();
             
-            const container = element.querySelector('.explosion-container');
-            container.innerHTML = '';
+            const tile = event.currentTarget;
+            const rect = tile.getBoundingClientRect();
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
             
-            // Create explosion effect
-            for (let i = 0; i < 20; i++) {
+            const flash = tile.querySelector('.flash');
+            flash.classList.add('active');
+            setTimeout(() => flash.classList.remove('active'), 600);
+            
+            const particleCount = 40;
+            for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
-                particle.className = 'explosion-particle';
-                particle.style.setProperty('--angle', Math.random() * 360 + 'deg');
-                particle.style.setProperty('--distance', (50 + Math.random() * 100) + 'px');
-                particle.style.setProperty('--delay', Math.random() * 0.1 + 's');
-                container.appendChild(particle);
+                particle.className = 'particle';
+                
+                const angle = (Math.PI * 2 * i) / particleCount;
+                const velocity = 120 + Math.random() * 80;
+                const tx = Math.cos(angle) * velocity;
+                const ty = Math.sin(angle) * velocity;
+                
+                particle.style.left = centerX + 'px';
+                particle.style.top = centerY + 'px';
+                particle.style.setProperty('--tx', tx + 'px');
+                particle.style.setProperty('--ty', ty + 'px');
+                
+                const colors = ['#ffd966', '#ff9900', '#ffed4e', '#ffbf00', '#ffa500'];
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                particle.style.boxShadow = `0 0 15px ${colors[Math.floor(Math.random() * colors.length)]}`;
+                
+                tile.appendChild(particle);
+                
+                setTimeout(() => particle.remove(), 1000);
             }
             
-            // Add flash effect
-            element.classList.add('exploding');
-            
-            // Navigate after animation
             setTimeout(() => {
-                window.location.href = element.href;
+                window.location.href = tile.href;
             }, 400);
         }
     </script>

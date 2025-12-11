@@ -3,52 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HVAC Maintenance - TNT Fix Smart Home Solutions</title>
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>HVAC Maintenance | TNT Home Repairs</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="TNT Fix Logo" class="logo-img">
-                TNT Fix Smart Home Solutions
-            </a>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">TNT Home Repairs</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="smart-home.html">Smart Home</a></li>
-                <li><a href="hvac.html" class="active">HVAC</a></li>
+                <li><a href="hvac.html">HVAC</a></li>
                 <li><a href="home-repair.html">Home Repair</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>HVAC Diagnostics and Maintenance</h1>
+            <p>You don't have to wait for a breakdown, keep comfy year-round with proper HVAC inspections, maintenance, and annual tune-ups. TNT offers affordable maintenance plans designed for Phoenix homeowners. While proper routine maintenance is best way to protect your investment and peace of mind, if you find yourself dealing with a breakdown, TNT can diagnose and repair many of the leading causes of system trouble.</p>
         </div>
-    </nav>
 
-    <!-- Cover Banner -->
-    <div class="cover-banner">
-        <video autoplay loop muted playsinline class="cover-video">
-            <source src="images/cover.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <!-- Page Heading -->
-    <section class="intro-section">
-        <div class="intro-content">
-            <h2>Have an A/C unit that won't obey and want to keep A/C trouble away?</h2>
-        </div>
-    </section>
-
-    <!-- Services Grid -->
-    <section class="services-section">
         <div class="services-grid">
             <!-- Service 1: Seasonal A/C Tune-Up -->
-            <a href="hvac/seasonal-ac-tune-up.html" class="service-tile" onclick="triggerExplosion(event, this)">
+            <a href="services/hvac-1.html" class="service-tile" onclick="createExplosion(event)">
+                <div class="flash"></div>
                 <div class="service-title">Seasonal A/C Tune-Up</div>
-                <div class="service-description">Complete maintenance to prepare your A/C for Arizona's brutal summer. RSI-certified technician ensures peak performance.</div>
+                <div class="service-description">Complete maintenance to prepare your A/C for Arizona's brutal summer. RSI-certified technicians ensures peak performance, helping to reduce the risk of system failure. </div>
                 <ul class="service-features">
                     <li>Refrigerant level check</li>
                     <li>Coil cleaning & inspection</li>
@@ -57,11 +41,11 @@
                 </ul>
                 <div class="service-price">$149</div>
                 <div class="service-duration">1.5 hours</div>
-                <div class="explosion-container"></div>
             </a>
 
             <!-- Service 2: A/C Diagnostic Service -->
-            <a href="hvac/ac-diagnostic-service.html" class="service-tile" onclick="triggerExplosion(event, this)">
+            <a href="services/hvac-2.html" class="service-tile" onclick="createExplosion(event)">
+                <div class="flash"></div>
                 <div class="service-title">A/C Diagnostic Service</div>
                 <div class="service-description">Comprehensive diagnostic to identify why your A/C isn't cooling properly. Diagnostic fee waived if we perform the repair.</div>
                 <ul class="service-features">
@@ -72,26 +56,26 @@
                 </ul>
                 <div class="service-price">$119</div>
                 <div class="service-duration">1 hour</div>
-                <div class="explosion-container"></div>
             </a>
 
             <!-- Service 3: Full HVAC System Inspection -->
-            <a href="hvac/full-hvac-inspection.html" class="service-tile" onclick="triggerExplosion(event, this)">
+            <a href="services/hvac-3.html" class="service-tile" onclick="createExplosion(event)">
+                <div class="flash"></div>
                 <div class="service-title">Full HVAC System Inspection</div>
                 <div class="service-description">Thorough inspection of your entire heating and cooling system. Identify potential problems before they become expensive failures.</div>
                 <ul class="service-features">
                     <li>Both heating & cooling systems</li>
                     <li>Ductwork inspection</li>
                     <li>Efficiency analysis</li>
-                    <li>Detailed report provided</li>
+                    <li>Repair/Maintenance Recommendations</li>
                 </ul>
                 <div class="service-price">$199</div>
                 <div class="service-duration">2-3 hours</div>
-                <div class="explosion-container"></div>
             </a>
 
             <!-- Service 4: Mini-Split System Maintenance -->
-            <a href="hvac/mini-split-maintenance.html" class="service-tile" onclick="triggerExplosion(event, this)">
+            <a href="services/hvac-4.html" class="service-tile" onclick="createExplosion(event)">
+                <div class="flash"></div>
                 <div class="service-title">Mini-Split System Maintenance</div>
                 <div class="service-description">Specialized maintenance for ductless mini-split systems. Per-head pricing for multi-zone systems.</div>
                 <ul class="service-features">
@@ -102,11 +86,11 @@
                 </ul>
                 <div class="service-price">$149</div>
                 <div class="service-duration">1.5-3 hours</div>
-                <div class="explosion-container"></div>
             </a>
 
             <!-- Service 5: Smart Climate Care Plan -->
-            <a href="hvac/smart-climate-care-plan.html" class="service-tile" onclick="triggerExplosion(event, this)">
+            <a href="services/hvac-5.html" class="service-tile" onclick="createExplosion(event)">
+                <div class="flash"></div>
                 <div class="service-title">Smart Climate Care Plan</div>
                 <div class="service-description">Year-round maintenance plan with seasonal tune-ups, priority service, and smart thermostat optimization.</div>
                 <ul class="service-features">
@@ -117,11 +101,11 @@
                 </ul>
                 <div class="service-price">Starting at $129/mo</div>
                 <div class="service-duration">Ongoing</div>
-                <div class="explosion-container"></div>
             </a>
 
             <!-- Service 6: Emergency A/C Repair -->
-            <a href="hvac/emergency-ac-repair.html" class="service-tile" onclick="triggerExplosion(event, this)">
+            <a href="services/hvac-6.html" class="service-tile" onclick="createExplosion(event)">
+                <div class="flash"></div>
                 <div class="service-title">Emergency A/C Repair</div>
                 <div class="service-description">Same-day emergency service when your A/C fails during Arizona summer. Fast response, honest pricing, quality work.</div>
                 <ul class="service-features">
@@ -130,13 +114,13 @@
                     <li>Transparent pricing</li>
                     <li>RSI-certified technician</li>
                 </ul>
-                <div class="service-price">Starting at $199</div>
+                <div class="service-price">Starting at $299</div>
                 <div class="service-duration">1-3 hours</div>
-                <div class="explosion-container"></div>
             </a>
 
             <!-- Service 7: Air Filter Replacement -->
-            <a href="hvac/air-filter-replacement.html" class="service-tile" onclick="triggerExplosion(event, this)">
+            <a href="services/hvac-7.html" class="service-tile" onclick="createExplosion(event)">
+                <div class="flash"></div>
                 <div class="service-title">Air Filter Replacement</div>
                 <div class="service-description">Quick filter replacement service. Includes filter, installation, and airflow check. Critical for Arizona dust and allergies.</div>
                 <ul class="service-features">
@@ -147,11 +131,11 @@
                 </ul>
                 <div class="service-price">$79</div>
                 <div class="service-duration">30 minutes</div>
-                <div class="explosion-container"></div>
             </a>
 
             <!-- Service 8: Free Consultation -->
-            <a href="hvac/free-consultation.html" class="service-tile" onclick="triggerExplosion(event, this)">
+            <a href="services/hvac-8.html" class="service-tile" onclick="createExplosion(event)">
+                <div class="flash"></div>
                 <div class="service-title">Free Consultation</div>
                 <div class="service-description">Not sure what your HVAC system needs? Get expert advice on maintenance, repairs, or upgrades. No obligation.</div>
                 <ul class="service-features">
@@ -162,49 +146,61 @@
                 </ul>
                 <div class="service-price">FREE</div>
                 <div class="service-duration">15 minutes</div>
-                <div class="explosion-container"></div>
             </a>
         </div>
-    </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-content">
+        <section style="text-align: center; margin-top: 60px;">
+            <h2 style="font-family: 'EB Garamond', serif; font-size: 32pt; color: #ffd966; margin-bottom: 20px;">Have an A/C unit that won't obey and want to keep A/C trouble away?</h2>
             <a href="contact.html" class="cta-button">Contact TNT Today</a>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <p class="footer-disclaimer">TNT Home Repairs operates under the Handyman designation provided by the Arizona Registrar of Contractors, is owned and operated by Mr. Tippy's LLC, registered with the Arizona Corporation Commission. TNT Home Repairs is not a Licensed Contractor.</p>
-        </div>
+        <p><strong>TNTFix</strong></p>
+        <p>Operates under the Handyman designation provided by the Arizona Registrar of Contractors</p>
+        <p>Owned and operated by Mr. Tippy's LLC, registered with the Arizona Corporation Commission</p>
+        <p>TNTFix is not a Licensed Contractor</p>
     </footer>
 
-    <!-- TNT Explosion Animation Script -->
     <script>
-        function triggerExplosion(event, element) {
+        function createExplosion(event) {
             event.preventDefault();
             
-            const container = element.querySelector('.explosion-container');
-            container.innerHTML = '';
+            const tile = event.currentTarget;
+            const rect = tile.getBoundingClientRect();
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
             
-            // Create explosion effect
-            for (let i = 0; i < 20; i++) {
+            const flash = tile.querySelector('.flash');
+            flash.classList.add('active');
+            setTimeout(() => flash.classList.remove('active'), 600);
+            
+            const particleCount = 40;
+            for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
-                particle.className = 'explosion-particle';
-                particle.style.setProperty('--angle', Math.random() * 360 + 'deg');
-                particle.style.setProperty('--distance', (50 + Math.random() * 100) + 'px');
-                particle.style.setProperty('--delay', Math.random() * 0.1 + 's');
-                container.appendChild(particle);
+                particle.className = 'particle';
+                
+                const angle = (Math.PI * 2 * i) / particleCount;
+                const velocity = 120 + Math.random() * 80;
+                const tx = Math.cos(angle) * velocity;
+                const ty = Math.sin(angle) * velocity;
+                
+                particle.style.left = centerX + 'px';
+                particle.style.top = centerY + 'px';
+                particle.style.setProperty('--tx', tx + 'px');
+                particle.style.setProperty('--ty', ty + 'px');
+                
+                const colors = ['#ffd966', '#ff9900', '#ffed4e', '#ffbf00', '#ffa500'];
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                particle.style.boxShadow = `0 0 15px ${colors[Math.floor(Math.random() * colors.length)]}`;
+                
+                tile.appendChild(particle);
+                
+                setTimeout(() => particle.remove(), 1000);
             }
             
-            // Add flash effect
-            element.classList.add('exploding');
-            
-            // Navigate after animation
             setTimeout(() => {
-                window.location.href = element.href;
+                window.location.href = tile.href;
             }, 400);
         }
     </script>
