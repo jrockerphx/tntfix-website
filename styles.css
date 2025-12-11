@@ -184,7 +184,7 @@ nav {
 .hero-image {
     flex: 0 0 300px;
     max-width: 200px;
-    height: 300px;
+    height: 200px;
 }
 
 .hero h1 {
@@ -252,7 +252,7 @@ nav {
 .category-image {
     width: 960px;
     max-width: 250px;
-    height: auto;
+    height: 250;
     margin-bottom: 1.5rem;
 }
 
@@ -333,7 +333,7 @@ nav {
 }
 
 .service-tile li:before {
-    content: "💥";
+    content: "🔹";
     position: absolute;
     left: 0;
 }
