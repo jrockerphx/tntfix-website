@@ -250,10 +250,11 @@ nav {
 }
 
 .category-image {
-    width: 300px;
-    max-width: 250px;
-    height: 250;
-    margin-bottom: 1.5rem;
+    width: 220px;
+    height: 220px;
+    object-fit: contain;  /* keeps the full character visible */
+    display: block;
+    margin: 0 auto 1.5rem auto; /* centers all icons uniformly */
 }
 
 .service-category h2 {
