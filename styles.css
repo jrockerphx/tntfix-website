@@ -433,8 +433,18 @@ footer p {
     background: rgba(0, 65, 165, 0.6);
     padding: 2rem;
     border-radius: 10px;
-    border: 2px solid #ffd966; /* Gold border */
-    margin: 2rem 0;
+    border: 2px solid #ffd966;
+    margin: 2rem auto;      /* center this block horizontally */
+    max-width: 800px;       /* keeps it nicely centered on large screens */
+}
+
+.contact-form-frame {
+    width: 100%;        /* fill the contact-info area */
+    max-width: 100%;
+    height: 1000px;     /* adjust if you see internal scrollbars */
+    border: 0;          /* no visible iframe border */
+    display: block;
+    margin: 0 auto;     /* extra centering safety */
 }
 
 .contact-info h2 {
