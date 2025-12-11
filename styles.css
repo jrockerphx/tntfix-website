@@ -83,7 +83,7 @@ nav {
 
 .logo-img {
     height: 40px;
-    width: auto;
+    width: 40px;
 }
 
 .nav-links {
@@ -184,7 +184,7 @@ nav {
 .hero-image {
     flex: 0 0 300px;
     max-width: 200px;
-    height: 200px;
+    height: 300px;
 }
 
 .hero h1 {
@@ -250,7 +250,7 @@ nav {
 }
 
 .category-image {
-    width: 960px;
+    width: 300px;
     max-width: 250px;
     height: 250;
     margin-bottom: 1.5rem;
@@ -493,7 +493,7 @@ footer p {
 }
 
 .intro-content ul li:before {
-    content: "💥";
+    content: "🔹";
     position: absolute;
     left: 0;
 }
