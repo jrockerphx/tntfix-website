@@ -111,5 +111,53 @@
         }
     });
 </script>
+<script>
+    function createExplosion(event) {
+        event.preventDefault();
+        const tile = event.currentTarget;
+        const rect = tile.getBoundingClientRect();
+        const clickX = event.clientX - rect.left;
+        const clickY = event.clientY - rect.top;
+        
+        // Flash effect
+        const flash = tile.querySelector('.flash');
+        flash.style.left = clickX + 'px';
+        flash.style.top = clickY + 'px';
+        flash.classList.add('active');
+        setTimeout(() => flash.classList.remove('active'), 600);
+        
+        // Create particles
+        const particleCount = 40;
+        const colors = ['#ffd966', '#ff9900', '#ffed4e', '#ffbf00', '#ffa500'];
+        
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = clickX + 'px';
+            particle.style.top = clickY + 'px';
+            particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            const angle = (Math.PI * 2 * i) / particleCount;
+            const velocity = 100 + Math.random() * 100;
+            const tx = Math.cos(angle) * velocity;
+            const ty = Math.sin(angle) * velocity;
+            
+            particle.style.setProperty('--tx', tx + 'px');
+            particle.style.setProperty('--ty', ty + 'px');
+            
+            tile.appendChild(particle);
+            
+            setTimeout(() => particle.remove(), 1000);
+        }
+        
+        // Navigate after animation
+        setTimeout(() => {
+            window.location.href = tile.href;
+        }, 400);
+    }
+</script>
+</body>
+</html>
+
 </body>
 </html>
