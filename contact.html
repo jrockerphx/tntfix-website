@@ -3,68 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | TNT Home Repairs</title>
+    <title>Contact Us - TNT Fix Smart Home Solutions</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Page-specific styles */
+        .form-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .form-intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .form-intro h2 {
+            color: #ffd966;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        
+        .form-intro p {
+            color: #ffffff;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .form-embed {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-embed iframe {
+            width: 100%;
+            min-height: 1800px;
+            border: none;
+        }
+    </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <nav>
-            <a href="index.html" class="logo">TNT Home Repairs</a>
+            <div class="logo">
+                <a href="index.html">TNT Fix</a>
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="smart-home.html">Smart Home</a></li>
                 <li><a href="hvac.html">HVAC</a></li>
                 <li><a href="home-repair.html">Home Repair</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container">
-        <div class="page-header">
-            <h1>Contact TNT Home Repairs</h1>
-            <p>Ready to get started? Reach out today for a free consultation or to book a service.</p>
+    <!-- Cover Video Banner -->
+    <div class="cover-banner">
+        <video autoplay muted loop playsinline>
+            <source src="videos/tnt-explosion-banner.mp4" type="video/mp4">
+        </video>
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <h1>Get In Touch</h1>
+            <p>Request a service or get a quote</p>
         </div>
+    </div>
 
-        <div style="max-width: 700px; margin: 60px auto; text-align: center;">
-            <div style="background-color: rgba(255, 255, 255, 0.05); border: 2px solid rgba(255, 217, 102, 0.3); border-radius: 10px; padding: 40px; margin-bottom: 40px;">
-                <h2 style="font-family: 'EB Garamond', serif; font-size: 28pt; color: #ffd966; margin-bottom: 30px;">Get In Touch</h2>
-                
-                <p style="font-size: 16pt; margin-bottom: 30px;">We serve Phoenix Metro, Coolidge, and Casa Grande</p>
-                
-                <div style="margin: 30px 0;">
-                    <p style="font-size: 14pt; margin-bottom: 15px;"><strong style="color: #ffd966;">Phone:</strong></p>
-                    <p style="font-size: 18pt;"><a href="tel:YOUR_PHONE_NUMBER" style="color: #ff9900; text-decoration: none;">YOUR_PHONE_NUMBER</a></p>
-                </div>
-                
-                <div style="margin: 30px 0;">
-                    <p style="font-size: 14pt; margin-bottom: 15px;"><strong style="color: #ffd966;">Email:</strong></p>
-                    <p style="font-size: 18pt;"><a href="mailto:YOUR_EMAIL" style="color: #ff9900; text-decoration: none;">YOUR_EMAIL</a></p>
-                </div>
-                
-                <div style="margin: 40px 0;">
-                    <a href="YOUR_BOOKING_LINK" class="cta-button">Book Online Now</a>
-                </div>
+    <!-- Main Content -->
+    <main>
+        <div class="form-container">
+            <div class="form-intro">
+                <h2>TNT Work Request</h2>
+                <p>Fill out the form below to request service, get a quote, or ask us any questions. We'll get back to you as soon as possible!</p>
             </div>
-
-            <div style="text-align: left; background-color: rgba(255, 255, 255, 0.05); border: 2px solid rgba(255, 217, 102, 0.3); border-radius: 10px; padding: 30px;">
-                <h3 style="font-family: 'EB Garamond', serif; font-size: 20pt; color: #ffd966; margin-bottom: 20px;">Service Areas</h3>
-                <p style="font-size: 13pt; line-height: 1.8;">
-                    <strong>Phoenix Metro Area:</strong> Phoenix, Scottsdale, Mesa, Tempe, Chandler, Gilbert, Glendale, Peoria, Surprise, Avondale, Goodyear, Buckeye
-                </p>
-                <p style="font-size: 13pt; line-height: 1.8; margin-top: 15px;">
-                    <strong>Extended Service Area:</strong> Coolidge, Casa Grande, Apache Junction, Queen Creek, San Tan Valley, Maricopa
-                </p>
+            
+            <div class="form-embed">
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSeT8k2sQAX77Yj4juBvwLqdwsJkZ8cgZxO3vLdvuFZyGw84rA/viewform?embedded=true" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0">
+                    Loading…
+                </iframe>
             </div>
         </div>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p><strong>TNT Home Repairs</strong></p>
-        <p>Operates under the Handyman designation provided by the Arizona Registrar of Contractors</p>
-        <p>Owned and operated by Mr. Tippy's LLC, registered with the Arizona Corporation Commission</p>
-        <p>TNT Home Repairs is not a Licensed Contractor</p>
+        <div class="footer-content">
+            <p>&copy; 2024 TNT Fix Smart Home Solutions. All rights reserved.</p>
+            <p class="disclaimer">TNT Home Repairs operates under the Handyman designation provided by the Arizona Registrar of Contractors, is owned and operated by Mr. Tippy's LLC, registered with the Arizona Corporation Commission. TNT Home Repairs is not a Licensed Contractor.</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

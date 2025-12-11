@@ -3,206 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Home Repair Services | TNTFix Smart Home Solutions</title>
+    <title>Home Repair Services - TNT Fix Smart Home Solutions</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <nav>
-            <a href="index.html" class="logo">TNT Home Repairs</a>
+            <div class="logo">
+                <a href="index.html">TNT Fix</a>
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="smart-home.html">Smart Home</a></li>
                 <li><a href="hvac.html">HVAC</a></li>
-                <li><a href="home-repair.html">Home Repair</a></li>
+                <li><a href="home-repair.html" class="active">Home Repair</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container">
-        <div class="page-header">
+    <!-- Cover Video Banner -->
+    <div class="cover-banner">
+        <video autoplay muted loop playsinline>
+            <source src="videos/tnt-explosion-banner.mp4" type="video/mp4">
+        </video>
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
             <h1>Home Repair Services</h1>
-            <p>From small plumbing and electrical to drywall, and smart-home installs, we'll make it easy to complete the everyday fixes and upgrades that keep your home in top shape.  Is your "Honey-Do" list ever-growing? We can knock that our too!</p>
+            <p>Professional handyman services for your home</p>
         </div>
+    </div>
 
-        <div class="services-grid">
-            <!-- Service 1: Drywall Repair & Patch -->
-            <a href="services/home-repair-1.html" class="service-tile" onclick="createExplosion(event)">
-                <div class="flash"></div>
-                <div class="service-title">Drywall Repair & Patch</div>
-                <div class="service-description">Professional drywall repair from small holes to large damage. Includes patching, sanding, texture matching, and paint touch-up.</div>
-                <ul class="service-features">
-                    <li>Small holes: $189</li>
-                    <li>Large repairs: $289+</li>
+    <!-- Main Content -->
+    <main>
+        <!-- Intro Section -->
+        <section class="intro-section">
+            <h2>Got a "to-do" list that just won't go away?</h2>
+            <p>From minor fixes to major improvements, we handle all your home repair needs with professionalism and expertise. No job is too small!</p>
+        </section>
+
+        <!-- Service Tiles Grid -->
+        <div class="service-tiles-grid">
+            <a href="services/home-repair-ceiling-fan-installation.html" class="service-tile" onclick="createExplosion(event)">
+                <h3>Ceiling Fan Installation</h3>
+                <ul>
+                    <li>Professional installation of ceiling fans</li>
+                    <li>Includes mounting bracket installation</li>
+                    <li>Wiring and electrical connection</li>
+                    <li>Balance testing and final adjustments</li>
+                </ul>
+                <div class="service-price">$200</div>
+                <div class="service-duration">2 hours</div>
+            </a>
+
+            <a href="services/home-repair-drywall-repair.html" class="service-tile" onclick="createExplosion(event)">
+                <h3>Drywall Repair</h3>
+                <ul>
+                    <li>Patch holes up to 6 inches</li>
                     <li>Texture matching included</li>
+                    <li>Sanding and priming</li>
                     <li>Paint touch-up available</li>
                 </ul>
-                <div class="service-price">Starting at $189</div>
-                <div class="service-duration">2-3.5 hours</div>
+                <div class="service-price">$150</div>
+                <div class="service-duration">1-2 hours</div>
             </a>
 
-            <!-- Service 2: Ceiling Fan Installation -->
-            <a href="services/home-repair-2.html" class="service-tile" onclick="createExplosion(event)">
-                <div class="flash"></div>
-                <div class="service-title">Ceiling Fan Installation</div>
-                <div class="service-description">Professional ceiling fan installation with proper support and balancing. Essential for Arizona homes to reduce cooling costs.</div>
-                <ul class="service-features">
-                    <li>Standard install: $179</li>
-                    <li>With new wiring: $249</li>
-                    <li>Remove old fan included</li>
-                    <li>Perfect balancing guaranteed</li>
+            <a href="services/home-repair-door-repair.html" class="service-tile" onclick="createExplosion(event)">
+                <h3>Door Repair & Adjustment</h3>
+                <ul>
+                    <li>Adjust misaligned doors</li>
+                    <li>Replace worn hinges</li>
+                    <li>Fix sticking or squeaking</li>
+                    <li>Install new locksets</li>
                 </ul>
-                <div class="service-price">Starting at $179</div>
-                <div class="service-duration">1.5-2.5 hours</div>
-            </a>
-
-            <!-- Service 3: Door Service & Hardware -->
-            <a href="services/home-repair-3.html" class="service-tile" onclick="createExplosion(event)">
-                <div class="flash"></div>
-                <div class="service-title">Door Service & Hardware</div>
-                <div class="service-description">Fix sticky doors, install new hardware, adjust hinges, or replace weatherstripping. Keep your home sealed against Arizona heat.</div>
-                <ul class="service-features">
-                    <li>Door adjustment: $149</li>
-                    <li>Hardware installation: $179</li>
-                    <li>Weatherstripping replacement</li>
-                    <li>Lock installation available</li>
-                </ul>
-                <div class="service-price">Starting at $149</div>
-                <div class="service-duration">1.5-2.5 hours</div>
-            </a>
-
-            <!-- Service 4: Gutter Cleaning & Inspection -->
-            <a href="services/home-repair-4.html" class="service-tile" onclick="createExplosion(event)">
-                <div class="flash"></div>
-                <div class="service-title">Gutter Cleaning & Inspection</div>
-                <div class="service-description">Thorough gutter cleaning and inspection. Critical before monsoon season to prevent water damage and foundation issues.</div>
-                <ul class="service-features">
-                    <li>Complete debris removal</li>
-                    <li>Downspout flushing</li>
-                    <li>Damage inspection</li>
-                    <li>Photo documentation provided</li>
-                </ul>
-                <div class="service-price">Starting at $149</div>
-                <div class="service-duration">2-3.5 hours</div>
-            </a>
-
-            <!-- Service 5: TV Mounting & Wire Concealment -->
-            <a href="services/home-repair-5.html" class="service-tile" onclick="createExplosion(event)">
-                <div class="flash"></div>
-                <div class="service-title">TV Mounting & Wire Concealment</div>
-                <div class="service-description">Professional TV mounting with wire concealment for a clean look. Includes finding studs, level mounting, and cable management.</div>
-                <ul class="service-features">
-                    <li>Up to 65": $189</li>
-                    <li>Over 65": $239</li>
-                    <li>Wire concealment included</li>
-                    <li>Level & secure mounting</li>
-                </ul>
-                <div class="service-price">Starting at $189</div>
-                <div class="service-duration">1.5-2 hours</div>
-            </a>
-
-            <!-- Service 6: Faucet Installation -->
-            <a href="services/home-repair-6.html" class="service-tile" onclick="createExplosion(event)">
-                <div class="flash"></div>
-                <div class="service-title">Faucet Installation</div>
-                <div class="service-description">Kitchen or bathroom faucet installation. Remove old faucet, install new one, check for leaks, and ensure proper operation.</div>
-                <ul class="service-features">
-                    <li>Remove old faucet</li>
-                    <li>Install new faucet</li>
-                    <li>Leak testing & verification</li>
-                    <li>Supply line replacement if needed</li>
-                </ul>
-                <div class="service-price">$179</div>
-                <div class="service-duration">1.5 hours</div>
-            </a>
-
-            <!-- Service 7: Light Fixture Installation -->
-            <a href="services/home-repair-7.html" class="service-tile" onclick="createExplosion(event)">
-                <div class="flash"></div>
-                <div class="service-title">Light Fixture Installation</div>
-                <div class="service-description">Install new light fixtures, chandeliers, or replace old fixtures. Proper mounting and electrical connection guaranteed.</div>
-                <ul class="service-features">
-                    <li>Standard fixtures</li>
-                    <li>Chandelier installation</li>
-                    <li>Remove old fixture included</li>
-                    <li>Safe electrical connection</li>
-                </ul>
-                <div class="service-price">$149</div>
+                <div class="service-price">$100</div>
                 <div class="service-duration">1 hour</div>
             </a>
 
-            <!-- Service 8: Free Consultation -->
-            <a href="services/home-repair-8.html" class="service-tile" onclick="createExplosion(event)">
-                <div class="flash"></div>
-                <div class="service-title">Free Consultation</div>
-                <div class="service-description">Not sure what you need? Get expert advice on home repairs, project planning, and cost estimates. No obligation.</div>
-                <ul class="service-features">
-                    <li>Phone or video call</li>
-                    <li>Project evaluation</li>
-                    <li>Repair recommendations</li>
+            <a href="services/home-repair-shelf-installation.html" class="service-tile" onclick="createExplosion(event)">
+                <h3>Shelf & Cabinet Installation</h3>
+                <ul>
+                    <li>Wall-mounted shelf installation</li>
+                    <li>Cabinet mounting and leveling</li>
+                    <li>Stud finding and secure mounting</li>
+                    <li>Up to 3 shelves or cabinets</li>
+                </ul>
+                <div class="service-price">$175</div>
+                <div class="service-duration">1.5 hours</div>
+            </a>
+
+            <a href="services/home-repair-faucet-repair.html" class="service-tile" onclick="createExplosion(event)">
+                <h3>Faucet Repair & Replacement</h3>
+                <ul>
+                    <li>Fix leaky faucets</li>
+                    <li>Replace worn cartridges</li>
+                    <li>Install new faucets</li>
+                    <li>Check all connections for leaks</li>
+                </ul>
+                <div class="service-price">$150</div>
+                <div class="service-duration">1-2 hours</div>
+            </a>
+
+            <a href="services/home-repair-light-fixture-replacement.html" class="service-tile" onclick="createExplosion(event)">
+                <h3>Light Fixture Replacement</h3>
+                <ul>
+                    <li>Remove old fixture safely</li>
+                    <li>Install new light fixture</li>
+                    <li>Test electrical connections</li>
+                    <li>Includes basic fixtures (customer provides)</li>
+                </ul>
+                <div class="service-price">$125</div>
+                <div class="service-duration">1 hour</div>
+            </a>
+
+            <a href="services/home-repair-furniture-assembly.html" class="service-tile" onclick="createExplosion(event)">
+                <h3>Furniture Assembly</h3>
+                <ul>
+                    <li>Professional furniture assembly</li>
+                    <li>Desks, bookshelves, dressers, etc.</li>
+                    <li>All tools provided</li>
+                    <li>Secure and stable assembly guaranteed</li>
+                </ul>
+                <div class="service-price">$100/hour</div>
+                <div class="service-duration">Varies</div>
+            </a>
+
+            <a href="services/home-repair-general-handyman.html" class="service-tile" onclick="createExplosion(event)">
+                <h3>General Handyman Services</h3>
+                <ul>
+                    <li>Custom projects and repairs</li>
+                    <li>Hourly rate for various tasks</li>
+                    <li>Professional assessment included</li>
                     <li>Custom quote provided</li>
                 </ul>
-                <div class="service-price">FREE</div>
-                <div class="service-duration">15 minutes</div>
+                <div class="service-price">$85/hour</div>
+                <div class="service-duration">Varies</div>
             </a>
         </div>
 
-        <section style="text-align: center; margin-top: 60px;">
-            <h2 style="font-family: 'EB Garamond', serif; font-size: 32pt; color: #ffd966; margin-bottom: 20px;">Ready to blast your home repair worries away?</h2>
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <h2>Ready to tackle that to-do list?</h2>
             <a href="contact.html" class="cta-button">Contact TNT Today</a>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p><strong>TNT Home Repairs</strong></p>
-        <p>Operates under the Handyman designation provided by the Arizona Registrar of Contractors</p>
-        <p>Owned and operated by Mr. Tippy's LLC, registered with the Arizona Corporation Commission</p>
-        <p>TNT Home Repairs is not a Licensed Contractor</p>
+        <div class="footer-content">
+            <p>&copy; 2024 TNT Fix Smart Home Solutions. All rights reserved.</p>
+            <p class="disclaimer">TNT Home Repairs operates under the Handyman designation provided by the Arizona Registrar of Contractors, is owned and operated by Mr. Tippy's LLC, registered with the Arizona Corporation Commission. TNT Home Repairs is not a Licensed Contractor.</p>
+        </div>
     </footer>
 
-    <script>
-        function createExplosion(event) {
-            event.preventDefault();
-            
-            const tile = event.currentTarget;
-            const rect = tile.getBoundingClientRect();
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            const flash = tile.querySelector('.flash');
-            flash.classList.add('active');
-            setTimeout(() => flash.classList.remove('active'), 600);
-            
-            const particleCount = 40;
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                
-                const angle = (Math.PI * 2 * i) / particleCount;
-                const velocity = 120 + Math.random() * 80;
-                const tx = Math.cos(angle) * velocity;
-                const ty = Math.sin(angle) * velocity;
-                
-                particle.style.left = centerX + 'px';
-                particle.style.top = centerY + 'px';
-                particle.style.setProperty('--tx', tx + 'px');
-                particle.style.setProperty('--ty', ty + 'px');
-                
-                const colors = ['#ffd966', '#ff9900', '#ffed4e', '#ffbf00', '#ffa500'];
-                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-                particle.style.boxShadow = `0 0 15px ${colors[Math.floor(Math.random() * colors.length)]}`;
-                
-                tile.appendChild(particle);
-                
-                setTimeout(() => particle.remove(), 1000);
-            }
-            
-            setTimeout(() => {
-                window.location.href = tile.href;
-            }, 400);
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
