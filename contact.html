@@ -3,68 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - TNT Fix Smart Home Solutions</title>
+    <title>Contact TNT Today - TNT Fix Smart Home Solutions</title>
     <link rel="icon" type="image/png" href="images/tntfix-favicon.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="header-content">
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
             <div class="logo">
-                <a href="index.html">
-                    <img src="images/tntfix-logo-cloud-g.gif" alt="TNT Fix Logo" class="logo-img">
-                </a>
+                <img src="images/tntfix-logo-cloud-g.gif" alt="TNT Fix Logo" class="logo-img">
+                TNT Fix Smart Home Solutions
             </div>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="smart-home.html">Smart Home</a>
-                <a href="hvac.html">HVAC</a>
-                <a href="home-repair.html">Home Repair</a>
-                <a href="contact.html" class="active">Contact</a>
-            </nav>
-        </div>
-    </header>
 
-    <div class="cover-banner">
-        <video autoplay muted loop playsinline class="cover-video">
-            <source src="images/cover-contact.mp4" type="video/mp4">
-        </video>
-        <div class="cover-overlay"></div>
-        <div class="cover-content">
-            <h1>Contact Us Today</h1>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="smart-home.html">Smart Home</a></li>
+                <li><a href="hvac.html">HVAC</a></li>
+                <li><a href="home-repair.html">Home Repair</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
+    </nav>
+
+    <!-- Cover Banner -->
+    <div class="cover-banner">
+        <video autoplay loop muted playsinline class="cover-video">
+            <source src="images/cover-home.mp4" type="video/mp4">
+        </video>
     </div>
 
-    <main>
+    <!-- Main Content -->
+    <div class="container">
         <section class="intro-section">
-            <h2>Get In Touch</h2>
-            <p>Ready to get started? Fill out the form below and we'll get back to you as soon as possible!</p>
+            <h1>Contact TNT Today</h1>
+            <h2>Ready to blast your home repair worries away?</h2>
+
+            <div class="intro-content">
+                <p>
+                    Whether you’re planning a smart home upgrade, need HVAC maintenance, or
+                    just want to get that “to-do” list under control, we’re here to help.
+                </p>
+                <p>
+                    Reach out with questions, ideas, or projects you’re considering, and
+                    we’ll help you figure out the best next step.
+                </p>
+            </div>
         </section>
 
-        <section class="contact-form-section">
-            <div class="form-container">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeT8k2sQAX77Yj4juBvwLqdwsJkZ8cgZxO3vLdvuFZyGw84rA/viewform?embedded=true" 
-                        width="100%" 
-                        height="1800" 
-                        frameborder="0" 
-                        marginheight="0" 
-                        marginwidth="0">
-                    Loading…
-                </iframe>
-            </div>
+        <section class="contact-info">
+            <h2>How to Reach TNT Fix</h2>
+
+            <h3>Call or Text</h3>
+            <p><strong>Phone:</strong> <em>(XXX) XXX-XXXX</em> <!-- replace with your number --></p>
+
+            <h3>Email</h3>
+            <p><strong>Email:</strong> <em>you@example.com</em> <!-- replace with your email --></p>
+
+            <h3>Service Area</h3>
+            <p>
+                Serving Phoenix Metro, Coolidge, and Casa Grande and nearby communities.
+            </p>
+
+            <h3>Hours</h3>
+            <p>
+                Typical service hours are <strong>Monday–Saturday</strong>, with limited
+                Sunday and evening availability by appointment.
+            </p>
+
+            <h3>Book Online</h3>
+            <p>
+                Prefer to pick a time online? Use our EasyAppointments booking link:
+                <br>
+                <a href="https://your-easyappointments-link-here" target="_blank" rel="noopener">
+                    Book a time with TNT Fix
+                </a>
+                <!-- replace with your actual EasyAppointments URL -->
+            </p>
         </section>
 
         <section class="cta-section">
-            <img src="images/tnt-fix-logo.png" alt="TNT Fix Logo">
-            <h2>Ready to blast your home repair worries away?</h2>
-            <p>We look forward to hearing from you!</p>
+            <img src="images/tnt-bomb.png" alt="TNT Explosion" class="cta-image">
+            <h2>Let TNT Fix make your home behave.</h2>
+            <a href="https://your-easyappointments-link-here" class="btn">
+                Schedule Your Appointment
+            </a>
         </section>
-    </main>
+    </div>
 
+    <!-- Footer -->
     <footer>
-        <p>TNT Home Repairs operates under the Handyman designation provided by the Arizona Registrar of Contractors, is owned and operated by Mr. Tippy's LLC, registered with the Arizona Corporation Commission. TNT Home Repairs is not a Licensed Contractor.</p>
+        <p>
+            TNT Home Repairs operates under the Handyman designation provided by the Arizona Registrar of Contractors,
+            is owned and operated by Mr. Tippy's LLC, registered with the Arizona Corporation Commission.
+            TNT Home Repairs is not a Licensed Contractor.
+        </p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function () {
+                    navLinks.classList.toggle('nav-links-open');
+                    navToggle.classList.toggle('open');
+                });
+            }
+        });
+
+        function createExplosion(event) {
+            event.preventDefault();
+            const tile = event.currentTarget;
+            const rect = tile.getBoundingClientRect();
+            const clickX = event.clientX - rect.left;
+            const clickY = event.clientY - rect.top;
+
+            const flash = tile.querySelector('.flash');
+            if (flash) {
+                flash.style.left = clickX + 'px';
+                flash.style.top = clickY + 'px';
+                flash.classList.add('active');
+                setTimeout(() => flash.classList.remove('active'), 600);
+            }
+
+            const particleCount = 40;
+            const colors = ['#ffd966', '#ff9900', '#ffed4e', '#ffbf00', '#ffa500'];
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = clickX + 'px';
+                particle.style.top = clickY + 'px';
+                particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+                const angle = (Math.PI * 2 * i) / particleCount;
+                const velocity = 100 + Math.random() * 100;
+                const tx = Math.cos(angle) * velocity;
+                const ty = Math.sin(angle) * velocity;
+
+                particle.style.setProperty('--tx', tx + 'px');
+                particle.style.setProperty('--ty', ty + 'px');
+
+                document.body.appendChild(particle);
+                setTimeout(() => particle.remove(), 1000);
+            }
+
+            setTimeout(() => {
+                window.location.href = tile.href;
+            }, 400);
+        }
+    </script>
 </body>
 </html>
