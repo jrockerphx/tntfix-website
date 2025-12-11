@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TNT Home Repairs - Smart Home, HVAC & Home Repair Services</title>
+    <title>TNT Fix - Smart Home, HVAC & Home Repair Services</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,20 +12,29 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <img src="images/tnt-bomb.png" alt="TNT Logo" class="logo-img">
-                TNT Fix Smart Home Solutions
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="smart-home.html">Smart Home</a></li>
-                <li><a href="hvac.html">HVAC</a></li>
-                <li><a href="home-repair.html">Home Repair</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+    <div class="nav-container">
+        <div class="logo">
+            <img src="images/tnt-bomb.png" alt="TNT Logo" class="logo-img">
+            TNT Fix Smart Home Solutions
         </div>
-    </nav>
+
+        <!-- Hamburger / menu toggle button (mobile) -->
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="smart-home.html">Smart Home</a></li>
+            <li><a href="hvac.html">HVAC</a></li>
+            <li><a href="home-repair.html">Home Repair</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
 
     <!-- Cover Banner -->
     <div class="cover-banner">
@@ -89,5 +98,18 @@
     <footer>
         <p>TNT Home Repairs operates under the Handyman designation provided by the Arizona Registrar of Contractors, is owned and operated by Mr. Tippy's LLC, registered with the Arizona Corporation Commission. TNT Home Repairs is not a Licensed Contractor.</p>
     </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (navToggle && navLinks) {
+            navToggle.addEventListener('click', function () {
+                navLinks.classList.toggle('nav-links-open');
+                navToggle.classList.toggle('open');
+            });
+        }
+    });
+</script>
 </body>
 </html>
