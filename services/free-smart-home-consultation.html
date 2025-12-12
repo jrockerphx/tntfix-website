@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Smart Home Consultation - TNT Fix - Smart Home &amp; Climate Solutions</title>
+
+    <link rel="icon" type="image/png" href="../images/tntfix-favicon.png">
+    <link rel="stylesheet" href="../styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="../images/tntfix-logo-cloud-g.gif" alt="TNT Fix Logo" class="logo-img">
+                TNT Fix - Smart Home &amp; Climate Solutions
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../smart-home.html">Smart Home</a></li>
+                <li><a href="../hvac.html">HVAC</a></li>
+                <li><a href="../home-repair.html">Home Repair</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="cover-banner">
+        <video autoplay loop muted playsinline class="cover-video">
+            <source src="../images/cover-smart-home-services.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="container">
+        <header class="service-header">
+            <h1>Free Smart Home Consultation</h1>
+            <p class="service-tagline">
+                Talk through your goals and devices, get clear recommendations, and map out next steps—no obligation.
+            </p>
+            <div class="service-meta">
+                <span>Smart Home</span>
+                <span>15 minutes</span>
+                <span>FREE</span>
+                <span>Serving Phoenix Metro, Coolidge &amp; Casa Grande</span>
+            </div>
+        </header>
+
+        <section class="service-layout">
+            <article class="service-main">
+                <img src="../images/Handyman-Jon-Smarthome.png" alt="Free Smart Home Consultation" class="service-image">
+
+                <h2>What We’ll Discuss</h2>
+                <p>
+                    Not sure where to start? Get expert advice with no pressure and no obligation. We’ll help you sort out what’s worth doing, what’s compatible, and what you can skip.
+                </p>
+                <ul>
+                    <li>Your goals (and what’s frustrating you right now).</li>
+                    <li>Current devices/systems you already have.</li>
+                    <li>Compatibility between brands and platforms.</li>
+                    <li>Realistic budgets and timelines.</li>
+                    <li>Which services make the most sense for your home.</li>
+                    <li>A rough plan + next steps (including DIY recommendations when appropriate).</li>
+                </ul>
+
+                <h2>Consultation Options</h2>
+                <ul>
+                    <li>Phone call</li>
+                    <li>Video call</li>
+                    <li>In-person (when needed)</li>
+                </ul>
+                <p>
+                    We’ll be straight with you—if DIY is the better route, we’ll tell you.
+                </p>
+
+
+
+            </article>
+
+            <aside class="service-sidebar">
+                <div class="booking-box">
+                    <h2>Book This Service</h2>
+                    <p class="booking-price">FREE</p>
+                    <p class="booking-duration">15 minutes</p>
+
+                    <a href="EA-LINK-FREE-SMART-HOME-CONSULTATION" class="btn" target="_blank" rel="noopener">
+                        Schedule Free Consultation
+                    </a>
+
+                    <p class="booking-note">
+                        No pressure, no obligation. We’ll help you pick the right next step (even if that means DIY).
+                    </p>
+                </div>
+            </aside>
+        </section>
+    </div>
+
+    <footer>
+        <p>
+            TNT Fix operates under the Handyman designation provided by the Arizona Registrar of Contractors,
+            is owned and operated by Mr. Tippy's LLC, registered with the Arizona Corporation Commission.
+            TNT Fix is not a Licensed Contractor.
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function () {
+                    navLinks.classList.toggle('nav-links-open');
+                    navToggle.classList.toggle('open');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
