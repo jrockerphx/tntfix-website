@@ -6,6 +6,23 @@
     <title>Contact TNT Fix Today - TNT Fix Smart Home & Climate Solutions</title>
     <link rel="icon" type="image/png" href="images/tntfix-favicon.png">
     <link rel="stylesheet" href="styles.css">
+    <style>
+  /* Contact page only: prevent iframe scrollbars by giving it enough height */
+  .contact-form-frame {
+    width: 100%;
+    max-width: 100%;
+    border: 0;
+    display: block;
+    height: 2400px; /* desktop */
+  }
+
+  @media (max-width: 768px) {
+    .contact-form-frame {
+      height: 2600px; /* keep your “mobile looks perfect” height */
+    }
+  }
+</style>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -67,15 +84,17 @@
                 work, this form reduces unnecessary phone-tag and is always the best way to reach us.
            </p>
     <iframe
-        class="contact-form-frame"
-        loading="lazy"
-        src="https://docs.google.com/forms/d/e/1FAIpQLSeT8k2sQAX77Yj4juBvwLqdwsJkZ8cgZxO3vLdvuFZyGw84rA/viewform?embedded=true"
-        width="100%"
-        height="2100"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0"
-    >Loading…</iframe>
+  class="contact-form-frame"
+  src="https://docs.google.com/forms/d/e/1FAIpQLSeT8k2sQAX77Yj4juBvwLqdwsJkZ8cgZxO3vLdvuFZyGw84rA/viewform?embedded=true"
+  title="Contact TNT Fix Form"
+  loading="lazy"
+  frameborder="0"
+  marginheight="0"
+  marginwidth="0"
+>
+  Loading…
+</iframe>
+
 </section>
 
         </section>
