@@ -829,20 +829,23 @@ footer p {
     padding: 0.6rem 1rem;
     border-radius: 6px;
     border: 2px solid rgba(255, 217, 102, 0.7);
-    background: rgba(0, 65, 165, 0.35);
+    background-color: rgba(0, 65, 165, 0.35);
     text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+    transform: translateY(0);
+    will-change: transform;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
 }
 
 .why-choose-link:hover {
-    /* Match the service-tile hover "lift" while KEEPING the gold glow outline */
     text-decoration: none;
-    transform: translateY(-5px);
-    background: rgba(28, 69, 135, 0.72);
-    border-color: var(--gs-accent);
-    color: var(--gs-accent);
-    box-shadow: 0 10px 30px rgba(255, 217, 102, 0.30),
-                0 0 0 2px rgba(255, 217, 102, 0.65) inset;
+    border-color: #ffed4e;
+    box-shadow: 0 8px 20px rgba(255, 217, 102, 0.2);
+    transform: translateY(-1px);
 }
 
 /* =========================================================
@@ -943,17 +946,42 @@ nav{
     background: var(--gs-surface-alt) !important;
 }
 
-/* Buttons match Google Sites: solid primary */
+/* Buttons match Google Sites: blue background, gold text/border */
 .btn{
-    background: var(--gs-accent) !important;
-    border-color: var(--gs-accent) !important;
+    background-color: var(--gs-frame) !important;     /* blue */
+    border-color: var(--gs-accent) !important;        /* gold border */
     border-radius: 10px !important;
-    color: var(--gs-on-accent) !important;
+    color: var(--gs-accent) !important;               /* gold text */
     box-shadow: none !important;
+    transform: translateY(0);
+    will-change: transform;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
 }
 
+/* Make the "How TNT Fix Works" link look like all other buttons */
+.why-choose-link{
+    background-color: var(--gs-frame) !important;     /* blue */
+    border: 2px solid var(--gs-accent) !important;    /* gold border */
+    border-radius: 10px !important;
+    color: var(--gs-accent) !important;              /* gold text */
+    box-shadow: none !important;
+    transform: translateY(0);
+    will-change: transform;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
+    text-decoration: none !important;
+}
 .btn:hover{
-    background: var(--gs-bg) !important;          /* invert on hover */
+    background-color: var(--gs-bg) !important;          /* invert on hover */
     color: var(--gs-accent) !important;          /* keep text visible */
     border-color: var(--gs-accent) !important;
     transform: translateY(-1px);
@@ -1088,4 +1116,44 @@ footer p{
 
 hr{
     border-top-color: var(--gs-divider) !important;
+}
+/* -----------------------------------------------------------
+   Unified hover: apply the "lift + glow-outline" to ALL buttons
+   and ALL clickable tiles, while keeping click (explosion) FX.
+------------------------------------------------------------ */
+:root{
+  --gs-surface-hover: rgba(28, 69, 135, 0.72);
+  --gs-glow: var(--gs-shadow-hover),
+             0 10px 30px rgba(255, 217, 102, 0.30),
+             0 0 0 2px rgba(255, 217, 102, 0.65) inset;
+}
+
+/* Buttons (link-buttons only) */
+.btn:hover,
+.why-choose-link:hover{
+  background-color: var(--gs-surface-hover) !important;
+  color: var(--gs-accent) !important;
+  border-color: var(--gs-accent) !important;
+  transform: translateY(-5px) !important;
+  box-shadow: var(--gs-glow) !important;
+  text-decoration: none !important;
+}
+
+/* Tiles / cards that behave like tiles */
+.service-tile:hover,
+.service-category:hover{
+  background-color: var(--gs-surface-hover) !important;
+  border-color: var(--gs-accent) !important;
+  transform: translateY(-5px);
+  box-shadow: var(--gs-glow) !important;
+  text-decoration: none !important;
+}
+
+/* Optional: keyboard focus matches the same "glow" treatment */
+.btn:focus-visible,
+.why-choose-link:focus-visible,
+.service-tile:focus-visible,
+.service-category:focus-visible{
+  outline: none;
+  box-shadow: var(--gs-glow) !important;
 }
