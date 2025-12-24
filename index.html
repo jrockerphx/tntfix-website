@@ -3,29 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="TNT Fix provides smart home installation, HVAC maintenance, and home repairs in Phoenix, Coolidge & Casa Grande. RSI-certified technician. Honest pricing. Book online.">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tntfix.com/">
-    <meta property="og:title" content="TNT Fix - Smart Home & Climate Solutions Phoenix">
-    <meta property="og:description" content="Professional smart home installation, HVAC service, and home repairs in Phoenix. RSI-certified. Transparent pricing. Book online.">
-    <meta property="og:image" content="https://tntfix.com/web-logo.png">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://tntfix.com/">
-    <meta name="twitter:title" content="TNT Fix - Smart Home & Climate Solutions Phoenix">
-    <meta name="twitter:description" content="Professional smart home installation, HVAC service, and home repairs in Phoenix. RSI-certified. Transparent pricing.">
-    <meta name="twitter:image" content="https://tntfix.com/web-logo.png">
-    
-    <title>TNT Fix - Smart Home & Climate Solutions</title>
-    <link rel="icon" type="image/png" href="images/tntfix-favicon.png">
-    <link rel="stylesheet" href="styles.css">
-    <!-- rest of your head content -->
-</head><body>
+    <title>TNT Fix Smart Home & Climate Solutions</title>
+<link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<!-- Site Icons (use root-relative paths so subfolder pages work) -->
+<link rel="icon" type="image/png" href="/tntfix-favicon.png">
+<link rel="icon" type="image/png" href="/images/tntfix-favicon.png">
+<link rel="apple-touch-icon" href="/images/tntfix-favicon.png">
+<meta name="theme-color" content="#073763">
+
+<!-- Default Share Preview Image -->
+<meta property="og:image" content="https://tntfix.com/web-logo.png">
+<meta property="og:image:secure_url" content="https://tntfix.com/web-logo.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="TNT Fix">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tntfix.com/web-logo.png">
+<meta name="twitter:image:alt" content="TNT Fix">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "TNT Fix - Smart Home & Climate Solutions",
+  "url": "https://tntfix.com/",
+  "logo": "https://tntfix.com/web-logo.png",
+  "image": "https://tntfix.com/web-logo.png"
+}
+</script>
+
+</head>
+<body>
     <!-- Navigation -->
     <nav>
     <div class="nav-container">
@@ -35,13 +46,13 @@
         </div>
 
         <!-- Hamburger / menu toggle button (mobile) -->
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+        <button class="nav-toggle" aria-label="Toggle navigation">
             <span></span>
             <span></span>
             <span></span>
         </button>
 
-        <ul class="nav-links" id="primary-navigation">
+        <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="smart-home.html">Smart Home</a></li>
             <li><a href="hvac.html">HVAC</a></li>
@@ -49,9 +60,7 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
-    <div class="nav-backdrop" hidden></div>
 </nav>
-
 
     <!-- Cover Banner -->
     <div class="cover-banner">
@@ -72,51 +81,6 @@
 
     <!-- Main Content -->
     <div class="container">
-
-        <!-- NEW: Why Choose TNT Fix (added, does not modify existing sections) -->
-        <section class="why-choose-section">
-            <h2>Why Homeowners Choose TNT Fix</h2>
-            <p class="why-choose-subhead">
-                We’re not just “device installers” or “just HVAC.” We combine certified climate expertise with smart home systems thinking—
-                so your home works reliably, efficiently, and makes sense to you.
-            </p>
-
-            <div class="why-choose-grid">
-                <div class="why-choose-card">
-                    <h3>Smart Home + Certified HVAC</h3>
-                    <p>
-                        Most smart home installers don’t understand HVAC at a system level.
-                        We do—so thermostats, sensors, schedules, and equipment work together the right way.
-                    </p>
-                </div>
-
-                <div class="why-choose-card">
-                    <h3>We Live the Technology</h3>
-                    <p>
-                        Our smart homes have over 80 devices with Home Assistant bringing them all together as a smart system. We’ve solved the problems you’ll run into—because we've run into them first.
-                    </p>
-                </div>
-
-                <div class="why-choose-card">
-                    <h3>Education-First (No Lock-In)</h3>
-                    <p>
-                        We train you to use your system confidently. You won’t be dependent on us for every small change—unless you want to be.
-                    </p>
-                </div>
-
-                <div class="why-choose-card">
-                    <h3>Trusted With Big Systems</h3>
-                    <p>
-                        Our founder built his career maintaining and managing major hotels—essentially huge homes with hundreds of A/C units, bathrooms, and electrical fixtures that must work every day.
-                    </p>
-                </div>
-            </div>
-
-            <div class="why-choose-actions">
-                <a href="how-we-work.html" class="why-choose-link">Learn how TNT Fix works →</a>
-            </div>
-        </section>
-
         <hr>
         
         <!-- Services Grid -->
@@ -175,63 +139,15 @@
     </footer>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const nav = document.querySelector('nav');
-        const navContainer = document.querySelector('.nav-container');
         const navToggle = document.querySelector('.nav-toggle');
         const navLinks = document.querySelector('.nav-links');
-        const navBackdrop = document.querySelector('.nav-backdrop');
 
-        if (!navToggle || !navLinks) return;
-
-        const setOpen = (open) => {
-            navLinks.classList.toggle('nav-links-open', open);
-            navToggle.classList.toggle('open', open);
-            navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-
-            // Lock page scroll when the mobile menu is open
-            document.body.classList.toggle('no-scroll', open);
-
-            // Backdrop (click outside to close on mobile)
-            if (navBackdrop) {
-                navBackdrop.hidden = !open;
-            }
-        };
-
-        const isOpen = () => navLinks.classList.contains('nav-links-open');
-
-        navToggle.addEventListener('click', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-            setOpen(!isOpen());
-        });
-
-        // Close when tapping a nav link (mobile UX)
-        navLinks.querySelectorAll('a').forEach((link) => {
-            link.addEventListener('click', () => setOpen(false));
-        });
-
-        // Close when clicking the backdrop
-        if (navBackdrop) {
-            navBackdrop.addEventListener('click', () => setOpen(false));
+        if (navToggle && navLinks) {
+            navToggle.addEventListener('click', function () {
+                navLinks.classList.toggle('nav-links-open');
+                navToggle.classList.toggle('open');
+            });
         }
-
-        // Close when clicking anywhere outside the nav
-        document.addEventListener('click', function (e) {
-            if (!isOpen()) return;
-            const target = e.target;
-            const clickedInside = (navContainer && navContainer.contains(target)) || (nav && nav.contains(target));
-            if (!clickedInside) setOpen(false);
-        });
-
-        // Close on Escape
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && isOpen()) setOpen(false);
-        });
-
-        // If someone rotates / resizes to desktop, close the mobile menu
-        window.addEventListener('resize', function () {
-            if (window.innerWidth > 768 && isOpen()) setOpen(false);
-        });
     });
 </script>
 <script>
@@ -279,5 +195,8 @@
         }, 400);
     }
 </script>
+</body>
+</html>
+
 </body>
 </html>
