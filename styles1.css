@@ -948,12 +948,11 @@ nav{
 }
 
 .btn:hover{
-    background: var(--gs-bg) !important;          /* invert on hover */
-    color: var(--gs-accent) !important;          /* keep text visible */
+    background: var(--gs-accent) !important;
     border-color: var(--gs-accent) !important;
     transform: translateY(-1px);
+    filter: brightness(1.03);
     box-shadow: var(--gs-shadow) !important;
-    text-decoration: none;
 }
 
 /* Hero: white surface section, more "Sites" spacing */
