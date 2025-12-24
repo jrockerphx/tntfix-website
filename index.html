@@ -35,13 +35,13 @@
         </div>
 
         <!-- Hamburger / menu toggle button (mobile) -->
-        <button class="nav-toggle" aria-label="Toggle navigation">
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
         </button>
 
-        <ul class="nav-links">
+        <ul class="nav-links" id="primary-navigation">
             <li><a href="index.html">Home</a></li>
             <li><a href="smart-home.html">Smart Home</a></li>
             <li><a href="hvac.html">HVAC</a></li>
@@ -49,6 +49,7 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
+    <div class="nav-backdrop" hidden></div>
 </nav>
 
 
@@ -174,15 +175,63 @@
     </footer>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
+        const nav = document.querySelector('nav');
+        const navContainer = document.querySelector('.nav-container');
         const navToggle = document.querySelector('.nav-toggle');
         const navLinks = document.querySelector('.nav-links');
+        const navBackdrop = document.querySelector('.nav-backdrop');
 
-        if (navToggle && navLinks) {
-            navToggle.addEventListener('click', function () {
-                navLinks.classList.toggle('nav-links-open');
-                navToggle.classList.toggle('open');
-            });
+        if (!navToggle || !navLinks) return;
+
+        const setOpen = (open) => {
+            navLinks.classList.toggle('nav-links-open', open);
+            navToggle.classList.toggle('open', open);
+            navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+
+            // Lock page scroll when the mobile menu is open
+            document.body.classList.toggle('no-scroll', open);
+
+            // Backdrop (click outside to close on mobile)
+            if (navBackdrop) {
+                navBackdrop.hidden = !open;
+            }
+        };
+
+        const isOpen = () => navLinks.classList.contains('nav-links-open');
+
+        navToggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            setOpen(!isOpen());
+        });
+
+        // Close when tapping a nav link (mobile UX)
+        navLinks.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => setOpen(false));
+        });
+
+        // Close when clicking the backdrop
+        if (navBackdrop) {
+            navBackdrop.addEventListener('click', () => setOpen(false));
         }
+
+        // Close when clicking anywhere outside the nav
+        document.addEventListener('click', function (e) {
+            if (!isOpen()) return;
+            const target = e.target;
+            const clickedInside = (navContainer && navContainer.contains(target)) || (nav && nav.contains(target));
+            if (!clickedInside) setOpen(false);
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && isOpen()) setOpen(false);
+        });
+
+        // If someone rotates / resizes to desktop, close the mobile menu
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 768 && isOpen()) setOpen(false);
+        });
     });
 </script>
 <script>
@@ -230,8 +279,5 @@
         }, 400);
     }
 </script>
-</body>
-</html>
-
 </body>
 </html>
