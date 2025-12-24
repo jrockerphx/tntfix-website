@@ -1,4 +1,6 @@
 /* TNT Fix - Google Sites Color Scheme */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -836,4 +838,222 @@ footer p {
     border-color: #ffed4e;
     box-shadow: 0 8px 20px rgba(255, 217, 102, 0.2);
     transform: translateY(-1px);
+}
+
+/* =========================================================
+   Google Sites-inspired Theme Override (layout + tokens)
+   Added to END of file so it overrides earlier rules.
+   Keeps TNT click/explosion effects intact.
+========================================================= */
+
+:root{
+    /* Core palette (Google Sites / Material-ish) */
+    --gs-bg: #f8f9fa;
+    --gs-surface: #ffffff;
+    --gs-surface-alt: #f1f3f4;
+    --gs-border: #dadce0;
+
+    --gs-text: #202124;
+    --gs-text-muted: #5f6368;
+
+    --gs-primary: #1a73e8;
+    --gs-primary-600: #1967d2;
+    --gs-accent: #f9ab00;
+
+    --gs-radius: 12px;
+    --gs-shadow: 0 1px 2px rgba(60,64,67,.2), 0 2px 6px rgba(60,64,67,.12);
+    --gs-shadow-hover: 0 2px 6px rgba(60,64,67,.24), 0 8px 24px rgba(60,64,67,.18);
+
+    --gs-maxw: 960px;
+    --gs-pad-x: 24px;
+    --gs-pad-y: 32px;
+}
+
+/* Base */
+body{
+    background: var(--gs-bg) !important;
+    color: var(--gs-text) !important;
+    font-family: Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif !important;
+    line-height: 1.65 !important;
+}
+
+p{
+    color: var(--gs-text) !important;
+}
+
+a{
+    color: var(--gs-primary) !important;
+}
+
+a:hover{
+    color: var(--gs-primary-600) !important;
+    text-decoration: underline;
+}
+
+/* Headings (Google Sites tends to keep headings in the same family) */
+h1,h2,h3,h4,h5,h6{
+    font-family: Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif !important;
+    color: var(--gs-text) !important;
+    letter-spacing: -0.01em;
+}
+
+h1{ font-size: 2.25rem !important; line-height: 1.15; }
+h2{ font-size: 1.75rem !important; line-height: 1.2;  }
+h3{ font-size: 1.25rem !important; line-height: 1.25; }
+
+/* Layout containers */
+.nav-container,
+.hero,
+.container{
+    max-width: var(--gs-maxw) !important;
+}
+
+/* Nav = clean white bar, subtle border/shadow */
+nav{
+    background: var(--gs-surface) !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid var(--gs-border);
+}
+
+.logo{
+    color: var(--gs-text) !important;
+    font-family: Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif !important;
+    font-weight: 700;
+}
+
+.nav-links a{
+    color: var(--gs-text) !important;
+    border-radius: 8px;
+}
+
+.nav-links a:hover{
+    background: var(--gs-surface-alt) !important;
+}
+
+/* Buttons match Google Sites: solid primary */
+.btn{
+    background: var(--gs-primary) !important;
+    border-color: var(--gs-primary) !important;
+    border-radius: 10px !important;
+    box-shadow: none !important;
+}
+
+.btn:hover{
+    background: var(--gs-primary-600) !important;
+    border-color: var(--gs-primary-600) !important;
+    transform: translateY(-1px);
+    box-shadow: var(--gs-shadow) !important;
+}
+
+/* Hero: white surface section, more "Sites" spacing */
+.hero{
+    background: var(--gs-surface) !important;
+    border-bottom: 1px solid var(--gs-border) !important;
+    padding: 56px var(--gs-pad-x) !important;
+    gap: 40px !important;
+    margin: 0 auto !important;
+}
+
+.hero p{
+    color: var(--gs-text-muted) !important;
+    font-size: 1.05rem !important;
+}
+
+/* Cover: keep, but make it feel like Sites (clean dividers) */
+.cover-banner{
+    border-bottom: 1px solid var(--gs-border) !important;
+    background: var(--gs-surface) !important;
+}
+
+/* Main container: more Sites-like padding */
+.container{
+    padding: var(--gs-pad-y) var(--gs-pad-x) !important;
+}
+
+/* Cards everywhere (Services tiles, grids, sidebars, intro, contact, booking) */
+.service-tile,
+.service-category,
+.service-main,
+.service-sidebar,
+.contact-info,
+.intro-content,
+.booking-box,
+.why-choose-section,
+.why-choose-card,
+.cta-section{
+    background: var(--gs-surface) !important;
+    border: 1px solid var(--gs-border) !important;
+    border-radius: var(--gs-radius) !important;
+    box-shadow: var(--gs-shadow) !important;
+}
+
+/* Card hover */
+.service-tile:hover,
+.service-category:hover,
+.why-choose-card:hover{
+    box-shadow: var(--gs-shadow-hover) !important;
+    border-color: rgba(26,115,232,.25) !important;
+}
+
+/* Card typography */
+.service-tile h2,
+.service-tile h3,
+.service-category h2,
+.service-category h3,
+.cta-section h2{
+    color: var(--gs-text) !important;
+}
+
+.service-tile p,
+.service-category p,
+.intro-content p,
+.contact-info p{
+    color: var(--gs-text-muted) !important;
+}
+
+/* Prices / accents */
+.service-tile .price,
+.booking-price{
+    color: var(--gs-accent) !important;
+}
+
+/* Dividers */
+hr{
+    border-top: 1px solid var(--gs-border) !important;
+    opacity: 1 !important;
+}
+
+/* CTA section: keep TNT vibe but align to Sites spacing */
+.cta-section{
+    padding: 32px 24px !important;
+}
+
+/* Footer: simple Sites footer */
+footer{
+    background: var(--gs-surface) !important;
+    color: var(--gs-text-muted) !important;
+    border-top: 1px solid var(--gs-border) !important;
+}
+
+footer p{
+    color: var(--gs-text-muted) !important;
+    opacity: 1 !important;
+}
+
+/* Mobile nav: match white bar + card dropdown */
+@media (max-width: 768px){
+    .nav-links{
+        background: var(--gs-surface) !important;
+        border-bottom: 1px solid var(--gs-border) !important;
+        box-shadow: var(--gs-shadow) !important;
+    }
+
+    .nav-toggle span{
+        background-color: var(--gs-text) !important;
+    }
+}
+
+/* Keep explosion flash visible on light theme */
+.flash{
+    background: radial-gradient(circle, rgba(249,171,0,.95) 0%, transparent 70%) !important;
 }
