@@ -29,6 +29,97 @@
   "image": "https://tntfix.com/web-logo.png"
 }
     </script>
+<style>
+    /* FAQ Preview Styles */
+    .faq-preview-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+    .faq-preview-section h2 {
+        text-align: center;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+    .faq-preview-section .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+    }
+    .faq-preview-item {
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        transition: box-shadow 0.3s ease;
+    }
+    .faq-preview-item:hover {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .faq-preview-question {
+        padding: 1.25rem 1.5rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fafafa;
+        font-weight: 500;
+        font-size: 1.05rem;
+        color: #222;
+        transition: background 0.2s ease;
+    }
+    .faq-preview-question:hover {
+        background: #f5f5f5;
+    }
+    .faq-preview-question::after {
+        content: '+';
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #ff9900;
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+        margin-left: 1rem;
+    }
+    .faq-preview-item.open .faq-preview-question::after {
+        transform: rotate(45deg);
+    }
+    .faq-preview-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+    .faq-preview-item.open .faq-preview-answer {
+        max-height: 300px;
+        padding: 1.25rem 1.5rem;
+    }
+    .faq-preview-answer p {
+        margin: 0;
+        color: #555;
+        line-height: 1.7;
+    }
+    .view-all-faqs {
+        display: block;
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+    .view-all-faqs a {
+        display: inline-block;
+        padding: 0.75rem 2rem;
+        background: #ff9900;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 500;
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .view-all-faqs a:hover {
+        background: #cc7a00;
+        transform: translateY(-2px);
+    }
+</style>
 </head>
 <body>
 <!-- Navigation -->
@@ -65,20 +156,20 @@
 <h1>Smart Home Installation</h1>
 <h2>Want your home to obey what you say and stay that way?</h2>
 <div class="intro-content">
-<h2>Consider it “obedience training” for your smart home.</h2>
+<h2>Consider it "obedience training" for your smart home.</h2>
 <p>
-                    Most “smart homes” are really just a pile of devices that don’t talk to each other.
+                    Most "smart homes" are really just a pile of devices that don't talk to each other.
                     You end up with five different apps, automations that rarely work, and devices
-                    that go offline for no obvious reason. That’s not smart—that’s frustrating.
+                    that go offline for no obvious reason. That's not smart—that's frustrating.
                 </p>
 <p>
                     TNT Fix specializes in <strong>true</strong> home automation—where everything works
-                    together reliably. No app juggling, no “Can’t connect to device” messages, and no
+                    together reliably. No app juggling, no "Can't connect to device" messages, and no
                     guesswork. Just a home that quietly does what you need while respecting your privacy.
                 </p>
 <p>
                     Whether you're starting from scratch or trying to tame an existing setup,
-                    we’ll design, install, and configure a system that fits the way you actually live.
+                    we'll design, install, and configure a system that fits the way you actually live.
                 </p>
 <p><strong>Check out some of our most popular smart home services below:</strong></p>
 </div>
@@ -112,7 +203,7 @@
 <li>Mix-and-match installs to fit your needs</li>
 </ul>
 </a>
-<!-- Home Assistant Setup (FIXED: restored class="service-tile") -->
+<!-- Home Assistant Setup -->
 <a class="service-tile" href="services/home-assistant-setup.html" onclick="createExplosion(event)">
 <div class="flash"></div>
 <h3>Home Assistant Setup</h3>
@@ -125,7 +216,7 @@
 <li>Migration from existing platforms</li>
 </ul>
 </a>
-<!-- Smart Climate Zones (FIXED: restored class="service-tile") -->
+<!-- Smart Climate Zones -->
 <a class="service-tile" href="services/smart-climate-zones.html" onclick="createExplosion(event)">
 <div class="flash"></div>
 <h3>Smart Climate Zones</h3>
@@ -177,7 +268,7 @@
 <li>Scheduling &amp; automation tuning</li>
 </ul>
 </a>
-<!-- Free Consultation (FIXED: restored class="service-tile") -->
+<!-- Free Consultation -->
 <a class="service-tile" href="services/free-smart-home-consultation.html" onclick="createExplosion(event)">
 <div class="flash"></div>
 <h3>Free Smart Home Consultation</h3>
@@ -192,6 +283,40 @@
 </a>
 </div>
 <hr/>
+
+<!-- FAQ Preview Section -->
+<section class="faq-preview-section">
+    <h2>Frequently Asked Questions</h2>
+    <p class="subtitle">Quick answers to common smart home questions</p>
+    
+    <div class="faq-preview-item">
+        <div class="faq-preview-question">What makes a home "smart" vs. just having smart devices?</div>
+        <div class="faq-preview-answer">
+            <p>A truly smart home has devices that communicate with each other and work together through automations. Instead of controlling each device separately through different apps, everything connects to a central hub and responds intelligently—like lights that dim when you start a movie, or your thermostat adjusting when you leave for work.</p>
+        </div>
+    </div>
+
+    <div class="faq-preview-item">
+        <div class="faq-preview-question">Will my smart home still work if the internet goes out?</div>
+        <div class="faq-preview-answer">
+            <p>It depends on your setup. Cloud-dependent devices need internet to function. With Home Assistant and local-control devices (Zigbee, Z-Wave, or local Wi-Fi devices), your automations and controls keep working even without internet. We design systems with local control in mind so you're not stranded when your ISP has issues.</p>
+        </div>
+    </div>
+
+    <div class="faq-preview-item">
+        <div class="faq-preview-question">I already have a bunch of smart devices. Can you help organize them?</div>
+        <div class="faq-preview-answer">
+            <p>Yes—that's one of our most common requests. We'll inventory what you have, consolidate control into a single interface, fix devices that have gone offline, and create automations that actually work. Many customers come to us frustrated after buying devices that never worked well together.</p>
+        </div>
+    </div>
+
+    <div class="view-all-faqs">
+        <a href="smart-home-faq.html">View All Smart Home FAQs →</a>
+    </div>
+</section>
+
+<hr/>
+
 <!-- Call to Action -->
 <section class="cta-section">
 <img alt="TNT Explosion" class="cta-image" src="images/tnt-bomb.png"/>
@@ -219,6 +344,19 @@
                     navToggle.classList.toggle('open');
                 });
             }
+
+            // FAQ Preview accordion
+            const faqItems = document.querySelectorAll('.faq-preview-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-preview-question');
+                question.addEventListener('click', () => {
+                    const wasOpen = item.classList.contains('open');
+                    faqItems.forEach(i => i.classList.remove('open'));
+                    if (!wasOpen) {
+                        item.classList.add('open');
+                    }
+                });
+            });
         });
 
         function createExplosion(event) {

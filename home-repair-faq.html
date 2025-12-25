@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Home Repair FAQs - TNT Fix Smart Home &amp; Climate Solutions</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link href="/tntfix-favicon.png" rel="icon" type="image/png"/>
+    <link href="/images/tntfix-favicon.png" rel="icon" type="image/png"/>
+    <link href="/images/tntfix-favicon.png" rel="apple-touch-icon"/>
+    <meta content="https://tntfix.com/web-logo.png" property="og:image"/>
+    <meta content="https://tntfix.com/web-logo.png" property="og:image:secure_url"/>
+    <meta content="image/png" property="og:image:type"/>
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="https://tntfix.com/web-logo.png" name="twitter:image"/>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": []
+    }
+    </script>
+    <style>
+        .faq-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .faq-section h1 {
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .faq-section .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+        }
+        .faq-item {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            transition: box-shadow 0.3s ease;
+        }
+        .faq-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .faq-question {
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fafafa;
+            font-weight: 500;
+            font-size: 1.05rem;
+            color: #222;
+            transition: background 0.2s ease;
+        }
+        .faq-question:hover {
+            background: #f5f5f5;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #ff9900;
+            transition: transform 0.3s ease;
+        }
+        .faq-item.open .faq-question::after {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 500px;
+            padding: 1.25rem 1.5rem;
+        }
+        .faq-answer p {
+            margin: 0;
+            color: #555;
+            line-height: 1.7;
+        }
+        .faq-category {
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #ff9900;
+            color: #333;
+            font-family: 'EB Garamond', serif;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #ff9900;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        .back-link:hover {
+            color: #cc7a00;
+        }
+        .back-link::before {
+            content: '← ';
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img alt="TNT Fix Logo" class="logo-img" src="images/tntfix-logo-cloud-g.gif"/>
+                TNT Fix Smart Home &amp; Climate Solutions
+            </div>
+            <button aria-label="Toggle navigation" class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="smart-home.html">Smart Home</a></li>
+                <li><a href="hvac.html">HVAC</a></li>
+                <li><a href="home-repair.html">Home Repair</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="faq-section">
+            <a class="back-link" href="home-repair.html">Back to Home Repair Services</a>
+            <h1>Home Repair FAQs</h1>
+            <p class="subtitle">Common questions about our handyman and home repair services</p>
+
+            <h2 class="faq-category">General Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">What's the difference between a handyman and a licensed contractor?</div>
+                <div class="faq-answer">
+                    <p>A Handyman cannot work on structural, major gas, or major electrical systems. Licensed contractors handle larger jobs and specialized work that requires permits. We're upfront about what falls within our scope—if your project needs a licensed contractor, we'll tell you.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do you provide free estimates?</div>
+                <div class="faq-answer">
+                    <p>For most services, our pricing is listed right on our website—no surprises. For larger or custom projects, we offer a free 15-minute consultation to understand your needs and provide accurate pricing. We believe in transparency: you should know what something costs before you commit.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do I need to provide materials, or do you bring them?</div>
+                <div class="faq-answer">
+                    <p>It depends on the service. For most fixture and device installs, we ask you to purchase the item you want (faucet, ceiling fan, etc.) so you get exactly what you like. For basic supplies like drywall compound, screws, or wire nuts, we bring what's needed. Our service pages specify what's included and what you'll need to provide.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What areas do you serve?</div>
+                <div class="faq-answer">
+                    <p>We serve the greater Phoenix metro area, including Scottsdale, Tempe, Mesa, Chandler, Gilbert, Glendale, Peoria, and surrounding communities. If you're unsure whether we cover your area, just ask—we're happy to let you know.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I book a service?</div>
+                <div class="faq-answer">
+                    <p>You can book directly through our website—just click any service tile and follow the prompts to choose a time that works for you. You can also reach out through our contact page or call us directly. We try to respond to all inquiries within a few hours during business days.</p>
+                </div>
+            </div>
+
+            <h2 class="faq-category">Plumbing Services</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Can you fix a running toilet?</div>
+                <div class="faq-answer">
+                    <p>Yes—toilet repairs are one of our most common calls. Running toilets usually need a new flapper, fill valve, or flush valve. We diagnose the issue and repair or replace the faulty components. Most toilet repairs take 30-60 minutes and cost between $49-$129 depending on what's needed.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do you install garbage disposals?</div>
+                <div class="faq-answer">
+                    <p>Yes. We install new garbage disposals and replace old ones. If you're replacing an existing unit, installation typically takes about an hour. New installations (where there wasn't a disposal before) may take longer and require additional electrical work. You provide the disposal; we handle the installation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can you replace shut-off valves?</div>
+                <div class="faq-answer">
+                    <p>Yes, we replace standard compression and quarter-turn shut-off valves under sinks and toilets. If the valve is soldered or the supply line requires modification beyond basic replacement, that may fall outside handyman scope. We'll assess your situation and let you know if a plumber is needed instead.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What plumbing work is outside your scope?</div>
+                <div class="faq-answer">
+                    <p>We don't work on water heaters, main water lines, sewer lines, or anything requiring permits. We also don't cut into walls to access or reroute pipes. Our plumbing services focus on fixtures, valves, and connections at accessible points. For larger plumbing projects, we can recommend trusted local plumbers.</p>
+                </div>
+            </div>
+
+            <h2 class="faq-category">Electrical Services</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Can you install ceiling fans?</div>
+                <div class="faq-answer">
+                    <p>Yes. If you have an existing ceiling fan or light fixture with proper wiring and a fan-rated box, we can swap in a new fan for $179. If you need a new fan where there isn't one (requiring new wiring from an existing switch), that's $299 and depends on attic access. You provide the fan; we handle installation and testing.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do you install smart switches and dimmers?</div>
+                <div class="faq-answer">
+                    <p>Yes—this is one of our specialties. We install smart switches, dimmers, and outlets, and can configure them with your smart home system. We verify neutral wire presence (required for most smart switches), test everything after installation, and help with app setup if needed.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can you add new outlets or circuits?</div>
+                <div class="faq-answer">
+                    <p>Adding new circuits or running new wiring typically requires a licensed electrician and permits. We focus on replacing existing switches, outlets, and fixtures—not adding new electrical runs. If you need new circuits, we can recommend electricians we trust.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What electrical work can't you do?</div>
+                <div class="faq-answer">
+                    <p>We don't work inside electrical panels, add new circuits, run new wiring through walls, or do anything that requires an electrical permit. We replace and upgrade existing fixtures, switches, and outlets at locations where wiring already exists. This keeps work safe and within Arizona's handyman guidelines.</p>
+                </div>
+            </div>
+
+            <h2 class="faq-category">Doors, Drywall &amp; Mounting</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Can you fix a door that won't close properly?</div>
+                <div class="faq-answer">
+                    <p>Yes. Sticking or misaligned doors are a common fix. We adjust hinges, plane edges if needed, realign strike plates, and ensure proper latching. Most door adjustments take 1-2 hours. If the door frame has shifted significantly due to foundation issues, that's beyond our scope—but we'll let you know if that's the case.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How big of a drywall hole can you patch?</div>
+                <div class="faq-answer">
+                    <p>We handle patches up to about 12 inches—things like old TV mount holes, doorknob damage, or small cutouts. Larger repairs (like water-damaged sections or full sheets) typically require a drywall specialist. Our patches are sanded smooth and ready for paint, though texture matching depends on your existing wall texture.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do you paint after patching drywall?</div>
+                <div class="faq-answer">
+                    <p>We prep patches to a paint-ready finish but don't include painting in our standard drywall service. If you provide matching paint, we can touch up the patch area for an additional fee. For larger paint jobs, we recommend hiring a painter for the best results.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can you mount my TV on the wall?</div>
+                <div class="faq-answer">
+                    <p>Yes. We mount TVs up to 85" using appropriate hardware and verify secure attachment to studs or masonry. Basic mounting starts at $149; complex installs with cable concealment start at $249. You provide the TV and mount (or we can recommend options); we handle safe, level installation.</p>
+                </div>
+            </div>
+
+            <h2 class="faq-category">Scheduling &amp; Pricing</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">What are your "Honey-Do" packages?</div>
+                <div class="faq-answer">
+                    <p>Our Honey-Do Half Day ($449 for up to 4 hours) and Full Day ($749 for up to 8 hours) packages let you knock out a punch list of small tasks in one visit. You provide the list, we help prioritize, and we work through as much as time allows. These are great before guests arrive, move-outs, or when your to-do list has gotten out of hand.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What if my job takes longer than expected?</div>
+                <div class="faq-answer">
+                    <p>For fixed-price services, the price stays the same even if we run a bit over. If we discover something unexpected that would significantly change the scope (like hidden water damage or incorrect wiring), we'll stop and discuss options with you before proceeding. No surprises.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do you offer discounts for multiple services?</div>
+                <div class="faq-answer">
+                    <p>Yes. When you book multiple services in one visit, you save on total cost because we're already there. Our Honey-Do packages are designed exactly for this—batching tasks together is more efficient for everyone. For device installs, we offer bundle pricing that reduces the per-item cost.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What forms of payment do you accept?</div>
+                <div class="faq-answer">
+                    <p>We accept credit cards, debit cards, and digital payments (Apple Pay, Google Pay, etc.). Payment is due upon completion of work. For larger projects, we may request a deposit when scheduling. We'll always confirm payment terms before we start.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr/>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <img alt="TNT Explosion" class="cta-image" src="images/tnt-bomb.png"/>
+            <h2>Ready to check items off your list?</h2>
+            <a class="btn" href="services/free-home-repair-consultation.html">Book a Free Consultation</a>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            TNT Fix operates under the Handyman designation provided by the Arizona Registrar of Contractors,
+            is owned and operated by Mr. Tippy's LLC, registered with the Arizona Corporation Commission.
+            TNT Fix is not a Licensed Contractor.
+        </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function () {
+                    navLinks.classList.toggle('nav-links-open');
+                    navToggle.classList.toggle('open');
+                });
+            }
+
+            // FAQ accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const wasOpen = item.classList.contains('open');
+                    faqItems.forEach(i => i.classList.remove('open'));
+                    if (!wasOpen) {
+                        item.classList.add('open');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

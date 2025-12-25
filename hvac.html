@@ -29,6 +29,97 @@
   "image": "https://tntfix.com/web-logo.png"
 }
     </script>
+<style>
+    /* FAQ Preview Styles */
+    .faq-preview-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+    .faq-preview-section h2 {
+        text-align: center;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+    .faq-preview-section .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+    }
+    .faq-preview-item {
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        transition: box-shadow 0.3s ease;
+    }
+    .faq-preview-item:hover {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .faq-preview-question {
+        padding: 1.25rem 1.5rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fafafa;
+        font-weight: 500;
+        font-size: 1.05rem;
+        color: #222;
+        transition: background 0.2s ease;
+    }
+    .faq-preview-question:hover {
+        background: #f5f5f5;
+    }
+    .faq-preview-question::after {
+        content: '+';
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #ff9900;
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+        margin-left: 1rem;
+    }
+    .faq-preview-item.open .faq-preview-question::after {
+        transform: rotate(45deg);
+    }
+    .faq-preview-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+    .faq-preview-item.open .faq-preview-answer {
+        max-height: 300px;
+        padding: 1.25rem 1.5rem;
+    }
+    .faq-preview-answer p {
+        margin: 0;
+        color: #555;
+        line-height: 1.7;
+    }
+    .view-all-faqs {
+        display: block;
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+    .view-all-faqs a {
+        display: inline-block;
+        padding: 0.75rem 2rem;
+        background: #ff9900;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 500;
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .view-all-faqs a:hover {
+        background: #cc7a00;
+        transform: translateY(-2px);
+    }
+</style>
 </head>
 <body>
 <!-- Navigation -->
@@ -64,15 +155,15 @@
 <h1>HVAC Maintenance &amp; Repair</h1>
 <h2>Keep comfy year-round with inspections, tune-ups, and diagnostics that help prevent breakdowns.</h2>
 <div class="intro-content">
-<h3>Don’t wait for a no-cool emergency.</h3>
+<h3>Don't wait for a no-cool emergency.</h3>
 <p>
                     Routine HVAC maintenance is the best way to protect your system, your comfort,
                     and your peace of mind. With Phoenix heat, small issues can quickly grow into
-                    expensive failures if they’re ignored. 
+                    expensive failures if they're ignored. 
                 </p>
 <p>
                     TNT Fix offers affordable inspections, tune-ups, and diagnostics aimed at catching problems
-                    early. If you’re already dealing with a breakdown, we can track down many of the most
+                    early. If you're already dealing with a breakdown, we can track down many of the most
                     common causes of trouble and get you cooling again.
                 </p>
 <p><strong>Below are some of the HVAC services our customers rely on most:</strong></p>
@@ -141,7 +232,7 @@
 <p class="price">$99</p>
 <ul>
 <li>Fix mis-wired or misconfigured thermostats</li>
-<li>Resolve “short cycling” and weird behavior</li>
+<li>Resolve "short cycling" and weird behavior</li>
 <li>Integrate with smart home, where applicable</li>
 <li>Confirm safe operation after changes</li>
 </ul>
@@ -226,10 +317,44 @@
 </a>
 </div>
 <hr/>
+
+<!-- FAQ Preview Section -->
+<section class="faq-preview-section">
+    <h2>Frequently Asked Questions</h2>
+    <p class="subtitle">Quick answers to common HVAC questions</p>
+    
+    <div class="faq-preview-item">
+        <div class="faq-preview-question">How often should I have my A/C serviced?</div>
+        <div class="faq-preview-answer">
+            <p>In Phoenix, we recommend at least once a year—ideally in spring before the brutal summer heat arrives. The extreme temperatures here put more stress on systems than in milder climates. Regular maintenance catches small issues before they become expensive failures.</p>
+        </div>
+    </div>
+
+    <div class="faq-preview-item">
+        <div class="faq-preview-question">My A/C is running but not cooling. What's wrong?</div>
+        <div class="faq-preview-answer">
+            <p>Several things can cause this: a dirty air filter restricting airflow, a frozen evaporator coil, low refrigerant, a failing compressor, or a faulty capacitor. Our diagnostic service ($129) identifies the root cause so you know exactly what you're dealing with.</p>
+        </div>
+    </div>
+
+    <div class="faq-preview-item">
+        <div class="faq-preview-question">How often should I change my air filter?</div>
+        <div class="faq-preview-answer">
+            <p>In Phoenix, we recommend checking monthly and changing every 1-3 months depending on the filter type and your home's dust levels. During peak summer when the system runs constantly, filters clog faster. A dirty filter is the #1 cause of preventable A/C problems.</p>
+        </div>
+    </div>
+
+    <div class="view-all-faqs">
+        <a href="hvac-faq.html">View All HVAC FAQs →</a>
+    </div>
+</section>
+
+<hr/>
+
 <!-- Call to Action -->
 <section class="cta-section">
 <img alt="TNT Explosion" class="cta-image" src="images/tnt-bomb.png"/>
-<h2>Have an A/C unit that won’t obey and want to keep A/C trouble away?</h2>
+<h2>Have an A/C unit that won't obey and want to keep A/C trouble away?</h2>
 <a class="btn" href="contact.html">Contact TNT Fix Today!</a>
 </section>
 </div>
@@ -253,6 +378,19 @@
                     navToggle.classList.toggle('open');
                 });
             }
+
+            // FAQ Preview accordion
+            const faqItems = document.querySelectorAll('.faq-preview-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-preview-question');
+                question.addEventListener('click', () => {
+                    const wasOpen = item.classList.contains('open');
+                    faqItems.forEach(i => i.classList.remove('open'));
+                    if (!wasOpen) {
+                        item.classList.add('open');
+                    }
+                });
+            });
         });
 
         function createExplosion(event) {
