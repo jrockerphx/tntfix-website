@@ -1,6 +1,4 @@
 /* TNT Fix - Google Sites Color Scheme */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -52,19 +50,6 @@ a {
 a:hover {
     color: #ffed4e; /* Lighter gold on hover */
     text-decoration: underline;
-}
-
-/* Prevent background scroll when mobile menu is open */
-.no-scroll {
-    overflow: hidden;
-}
-
-/* Mobile nav backdrop (click outside to close) */
-.nav-backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.35);
-    z-index: 999; /* sits under the sticky nav (1000) */
 }
 
 /* Navigation */
@@ -693,39 +678,22 @@ footer p {
         display: block;
     }
 
-    /* Mobile nav: hidden by default, slides open */
+    /* Hide links by default on mobile */
     .nav-links {
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        display: flex;
+        display: none; /* controlled by .nav-links-open */
         flex-direction: column;
         gap: 0.5rem;
         text-align: center;
         background-color: #0041a5; /* match nav bar */
-        border-bottom: 2px solid #ffffff;
-
-        /* hidden state */
-        overflow: hidden;
-        max-height: 0;
-        opacity: 0;
-        transform: translateY(-8px);
-        pointer-events: none;
-        padding: 0;
-
-        transition: max-height 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
-        z-index: 1001; /* above the backdrop */
-    }
-
-    .nav-links.nav-links-open {
-        max-height: 60vh;
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
         padding: 0.5rem 0;
+        border-bottom: 2px solid #ffffff;
     }
-.nav-links li a {
+
+    .nav-links li a {
         display: block;
         padding: 0.75rem 1rem;
     }
@@ -769,6 +737,7 @@ footer p {
         height: 200px;
     }
 
+    /* NEW: Why Choose section responsiveness */
     .why-choose-section {
         padding: 1.5rem;
     }
@@ -793,12 +762,17 @@ footer p {
 }
 
 .why-choose-grid {
-    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
 }
 
-/* Why Choose tiles reuse .service-tile for consistent hover/click behavior */
-.why-choose-card.service-tile {
-    /* Keep defaults from .service-tile */
+.why-choose-card {
+    background: rgba(0, 65, 165, 0.45);
+    border: 2px solid rgba(255, 217, 102, 0.6);
+    border-radius: 10px;
+    padding: 1.5rem;
 }
 
 .why-choose-card h3 {
@@ -809,434 +783,23 @@ footer p {
     margin-bottom: 0;
 }
 
-/* =========================================================
-   Google Sites-inspired Theme Override (layout + tokens)
-   Added to END of file so it overrides earlier rules.
-   Keeps TNT click/explosion effects intact.
-========================================================= */
-
-:root{
-    /* TNT Fix palette (matched to your Google Site hex values) */
-    --gs-bg: #073763;           /* background */
-    --gs-frame: #1c4587;        /* frame / bars / primary surfaces */
-
-    /* Surfaces & effects */
-    --gs-surface: rgba(28, 69, 135, 0.55);
-    --gs-surface-alt: rgba(255, 217, 102, 0.14);
-
-    /* Type + rules */
-    --gs-accent: #ffd966;       /* titles, headings, buttons, links, borders */
-    --gs-border: #ffd966;
-    --gs-divider: #c6ddea;      /* dividers + normal/small text */
-
-    --gs-text: #c6ddea;
-    --gs-text-muted: rgba(198, 221, 234, 0.9);
-
-    --gs-primary: #ffd966;      /* links */
-    --gs-primary-600: #ffd966;
-
-    --gs-on-accent: #073763;    /* text on gold */
-
-    --gs-radius: 12px;
-    --gs-shadow: 0 1px 2px rgba(0,0,0,.25), 0 6px 16px rgba(0,0,0,.18);
-    --gs-shadow-hover: 0 2px 6px rgba(0,0,0,.30), 0 10px 24px rgba(0,0,0,.22);
-
-    --gs-maxw: 960px;
-    --gs-pad-x: 24px;
-    --gs-pad-y: 32px;
+.why-choose-actions {
+    text-align: center;
+    margin-top: 1.25rem;
 }
 
-/* Base */
-body{
-    background: var(--gs-bg) !important;
-    color: var(--gs-text) !important;
-    font-family: Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif !important;
-    line-height: 1.65 !important;
+.why-choose-link {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    border: 2px solid rgba(255, 217, 102, 0.7);
+    background: rgba(0, 65, 165, 0.35);
+    text-decoration: none;
 }
 
-p{
-    color: var(--gs-text) !important;
-}
-
-a{
-    color: var(--gs-primary) !important;
-}
-
-a:hover{
-    color: var(--gs-primary-600) !important;
-    text-decoration: underline;
-}
-
-/* Headings (Google Sites tends to keep headings in the same family) */
-h1,h2,h3,h4,h5,h6{
-    font-family: Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif !important;
-    color: var(--gs-accent) !important;
-    letter-spacing: -0.01em;
-}
-
-h1{ font-size: 2.25rem !important; line-height: 1.15; }
-h2{ font-size: 1.75rem !important; line-height: 1.2;  }
-h3{ font-size: 1.25rem !important; line-height: 1.25; }
-
-/* Layout containers */
-.nav-container,
-.hero,
-.container{
-    max-width: var(--gs-maxw) !important;
-}
-
-/* Nav = clean white bar, subtle border/shadow */
-nav{
-    background: var(--gs-frame) !important;
-    box-shadow: none !important;
-    border-bottom: 1px solid var(--gs-divider);
-}
-
-.logo{
-    color: var(--gs-accent) !important;
-    font-family: Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif !important;
-    font-weight: 700;
-}
-
-.nav-links a{
-    color: var(--gs-text) !important;
-    border-radius: 8px;
-}
-
-.nav-links a:hover{
-    background: var(--gs-surface-alt) !important;
-}
-
-/* Buttons match Google Sites: blue background, gold text/border */
-.btn{
-    background-color: var(--gs-frame) !important;     /* blue */
-    border-color: var(--gs-accent) !important;        /* gold border */
-    border-radius: 10px !important;
-    color: var(--gs-accent) !important;               /* gold text */
-    box-shadow: none !important;
-    transform: translateY(0);
-    will-change: transform;
-    transition:
-        transform 0.3s ease,
-        background-color 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease,
-        color 0.3s ease;
-}
-
-/* Make the "How TNT Fix Works" link look like all other buttons */
-.btn:hover{
-    background-color: var(--gs-bg) !important;          /* invert on hover */
-    color: var(--gs-accent) !important;          /* keep text visible */
-    border-color: var(--gs-accent) !important;
+.why-choose-link:hover {
+    text-decoration: none;
+    border-color: #ffed4e;
+    box-shadow: 0 8px 20px rgba(255, 217, 102, 0.2);
     transform: translateY(-1px);
-    box-shadow: var(--gs-shadow) !important;
-    text-decoration: none;
-}
-
-/* Hero: white surface section, more "Sites" spacing */
-.hero{
-    background: var(--gs-surface) !important;
-    border-bottom: 1px solid var(--gs-border) !important;
-    padding: 56px var(--gs-pad-x) !important;
-    gap: 40px !important;
-    margin: 0 auto !important;
-}
-
-.hero p{
-    color: var(--gs-text-muted) !important;
-    font-size: 1.05rem !important;
-}
-
-/* Cover: keep, but make it feel like Sites (clean dividers) */
-.cover-banner{
-    border-bottom: 1px solid var(--gs-border) !important;
-    background: var(--gs-surface) !important;
-}
-
-/* Main container: more Sites-like padding */
-.container{
-    padding: var(--gs-pad-y) var(--gs-pad-x) !important;
-}
-
-/* Cards everywhere (Services tiles, grids, sidebars, intro, contact, booking) */
-.service-tile,
-.service-category,
-.service-main,
-.service-sidebar,
-.contact-info,
-.intro-content,
-.booking-box,
-.why-choose-section,
-.why-choose-card,
-.cta-section{
-    background: var(--gs-surface) !important;
-    border: 1px solid var(--gs-border) !important;
-    border-radius: var(--gs-radius) !important;
-    box-shadow: var(--gs-shadow) !important;
-}
-
-/* Card hover */
-.service-tile:hover,
-.service-category:hover,
-.why-choose-card:hover{
-    box-shadow: var(--gs-shadow-hover) !important;
-    border-color: rgba(26,115,232,.25) !important;
-}
-
-/* Card typography */
-.service-tile h2,
-.service-tile h3,
-.service-category h2,
-.service-category h3,
-.cta-section h2{
-    color: var(--gs-text) !important;
-}
-
-.service-tile p,
-.service-category p,
-.intro-content p,
-.contact-info p{
-    color: var(--gs-text-muted) !important;
-}
-
-/* Prices / accents */
-.service-tile .price,
-.booking-price{
-    color: var(--gs-accent) !important;
-}
-
-/* Dividers */
-hr{
-    border-top: 1px solid var(--gs-divider) !important;
-    opacity: 1 !important;
-}
-
-/* CTA section: keep TNT vibe but align to Sites spacing */
-.cta-section{
-    padding: 32px 24px !important;
-}
-
-/* Footer: simple Sites footer */
-footer{
-    background: var(--gs-frame) !important;
-    color: var(--gs-text) !important;
-    border-top: 1px solid var(--gs-divider) !important;
-}
-
-footer p{
-    color: var(--gs-text) !important;
-    opacity: 1 !important;
-}
-
-/* Mobile nav: match white bar + card dropdown */
-@media (max-width: 768px){
-    .nav-links{
-        background: var(--gs-surface) !important;
-        border-bottom: 1px solid var(--gs-border) !important;
-        box-shadow: var(--gs-shadow) !important;
-    }
-
-    .nav-toggle span{
-        background-color: var(--gs-text) !important;
-    }
-}
-
-/* Keep explosion flash visible on light theme */
-.flash{
-    background: radial-gradient(circle, rgba(249,171,0,.95) 0%, transparent 70%) !important;
-}
-
-
-/* --- Palette alignment tweaks (bg/frame + dividers) --- */
-.cover-banner{
-    background-color: var(--gs-frame) !important;
-    border-bottom: 1px solid var(--gs-divider) !important;
-}
-
-.hero{
-    background: linear-gradient(135deg, var(--gs-frame) 0%, var(--gs-bg) 100%) !important;
-    border-bottom: 1px solid var(--gs-divider) !important;
-}
-
-hr{
-    border-top-color: var(--gs-divider) !important;
-}
-/* -----------------------------------------------------------
-   Unified hover: apply the "lift + glow-outline" to ALL buttons
-   and ALL clickable tiles, while keeping click (explosion) FX.
------------------------------------------------------------- */
-:root{
-  --gs-surface-hover: rgba(28, 69, 135, 0.72);
-  --gs-glow: var(--gs-shadow-hover),
-             0 10px 30px rgba(255, 217, 102, 0.30),
-             0 0 0 2px rgba(255, 217, 102, 0.65) inset;
-}
-
-/* Buttons (link-buttons only) */
-.btn:hover,
-/* Tiles / cards that behave like tiles */
-.service-tile:hover,
-.service-category:hover{
-  background-color: var(--gs-surface-hover) !important;
-  border-color: var(--gs-accent) !important;
-  transform: translateY(-5px);
-  box-shadow: var(--gs-glow) !important;
-  text-decoration: none !important;
-}
-
-/* Optional: keyboard focus matches the same "glow" treatment */
-.btn:focus-visible,
-.service-tile:focus-visible,
-.service-category:focus-visible{
-  outline: none;
-  box-shadow: var(--gs-glow) !important;
-}
-
-/* -----------------------------------------------------------
-   FAQ Preview & Full FAQ Page Styles
-   Matches tile background (--gs-surface) for consistency
------------------------------------------------------------- */
-.faq-preview-section,
-.faq-section {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-}
-
-.faq-preview-section h2,
-.faq-section h1,
-.faq-section h2 {
-    text-align: center;
-    margin-bottom: 0.5rem;
-    color: var(--gs-accent) !important;
-}
-
-.faq-preview-section .subtitle,
-.faq-section .subtitle {
-    text-align: center;
-    color: var(--gs-text-muted) !important;
-    margin-bottom: 2rem;
-    font-size: 1rem;
-}
-
-.faq-preview-item,
-.faq-item {
-    background: var(--gs-surface) !important;
-    border: 1px solid var(--gs-border) !important;
-    border-radius: var(--gs-radius) !important;
-    margin-bottom: 1rem;
-    overflow: hidden;
-    box-shadow: var(--gs-shadow) !important;
-    transition: box-shadow 0.3s ease;
-}
-
-.faq-preview-item:hover,
-.faq-item:hover {
-    box-shadow: var(--gs-shadow-hover) !important;
-}
-
-.faq-preview-question,
-.faq-question {
-    padding: 1.25rem 1.5rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--gs-surface) !important;
-    font-weight: 500;
-    font-size: 1.05rem;
-    color: var(--gs-text) !important;
-    transition: background 0.2s ease;
-}
-
-.faq-preview-question:hover,
-.faq-question:hover {
-    background: var(--gs-surface-hover) !important;
-}
-
-.faq-preview-question::after,
-.faq-question::after {
-    content: '+';
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: var(--gs-accent) !important;
-    transition: transform 0.3s ease;
-    flex-shrink: 0;
-    margin-left: 1rem;
-}
-
-.faq-preview-item.open .faq-preview-question::after,
-.faq-item.open .faq-question::after {
-    transform: rotate(45deg);
-}
-
-.faq-preview-answer,
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease;
-}
-
-.faq-preview-item.open .faq-preview-answer,
-.faq-item.open .faq-answer {
-    max-height: 500px;
-    padding: 1.25rem 1.5rem;
-}
-
-.faq-preview-answer p,
-.faq-answer p {
-    margin: 0;
-    color: var(--gs-text-muted) !important;
-    line-height: 1.7;
-}
-
-.faq-category {
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--gs-accent) !important;
-    color: var(--gs-accent) !important;
-}
-
-.back-link {
-    display: inline-block;
-    margin-bottom: 2rem;
-    color: var(--gs-accent) !important;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s ease;
-}
-
-.back-link:hover {
-    color: var(--gs-primary-600) !important;
-}
-
-.back-link::before {
-    content: '← ';
-}
-
-.view-all-faqs {
-    display: block;
-    text-align: center;
-    margin-top: 1.5rem;
-}
-
-.view-all-faqs a {
-    display: inline-block;
-    padding: 0.75rem 2rem;
-    background: var(--gs-frame) !important;
-    border: 1px solid var(--gs-accent) !important;
-    color: var(--gs-accent) !important;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: 500;
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-.view-all-faqs a:hover {
-    background: var(--gs-surface-hover) !important;
-    transform: translateY(-2px);
-    box-shadow: var(--gs-shadow-hover) !important;
-    text-decoration: none !important;
 }
