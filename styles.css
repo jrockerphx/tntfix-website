@@ -493,6 +493,22 @@ footer p {
     border: 2px solid #ffd966;
 }
 
+/* Contact page: center the "Ready to book?" button within the intro-content box
+   without changing paragraph alignment. */
+.page-contact .intro-content > .btn {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin: 1.25rem auto 0;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .page-contact .intro-content > .btn {
+        width: 100%;
+    }
+}
+
 .intro-content p {
     margin-bottom: 1.5rem;
     line-height: 1.8;
@@ -738,6 +754,10 @@ footer p {
     }
 
     /* NEW: Why Choose section responsiveness */
+    .why-choose-grid {
+        grid-template-columns: 1fr;
+    }
+
     .why-choose-section {
         padding: 1.5rem;
     }
@@ -763,9 +783,9 @@ footer p {
 
 .why-choose-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin: 2rem 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
 }
 
 .why-choose-card {
@@ -802,4 +822,18 @@ footer p {
     border-color: #ffed4e;
     box-shadow: 0 8px 20px rgba(255, 217, 102, 0.2);
     transform: translateY(-1px);
+}
+
+/* --- Patch: remove static glow from tiles (keep glow on hover only) --- */
+.service-tile,
+.service-category,
+.why-choose-card{
+    box-shadow: none !important;
+}
+
+/* Ensure hover glow still works even if a base !important shadow existed */
+.service-tile:hover,
+.service-category:hover,
+.why-choose-card:hover{
+    box-shadow: var(--gs-shadow-hover, 0 10px 30px rgba(255, 217, 102, 0.3)) !important;
 }
