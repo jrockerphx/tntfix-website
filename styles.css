@@ -988,3 +988,144 @@ nav{
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ===== Payment Information Section ===== */
+.payment-info-section {
+  background: rgba(0, 65, 165, 0.6);
+  border: 2px solid var(--gs-accent, #ffd966);
+  border-radius: var(--gs-radius, 10px);
+  padding: 2.5rem;
+  margin: 0 0 2rem 0;
+}
+
+.payment-info-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.payment-info-block {
+  background: rgba(0, 65, 165, 0.45);
+  border: 2px solid rgba(255, 217, 102, 0.5);
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  /* No hover effect - static tile */
+  cursor: default;
+}
+
+.payment-info-block:last-child {
+  margin-bottom: 0;
+}
+
+.payment-info-block h3 {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.payment-info-block p {
+  margin-bottom: 0.75rem;
+}
+
+.payment-info-block p:last-child {
+  margin-bottom: 0;
+}
+
+.payment-info-block ul {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.payment-info-block li {
+  color: var(--gs-text, #c6ddea);
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.payment-info-block li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--gs-accent, #ffd966);
+}
+
+.no-fee-badge {
+  display: inline-block;
+  background: rgba(76, 175, 80, 0.3);
+  color: #81c784;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid rgba(76, 175, 80, 0.5);
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.payment-example {
+  background: rgba(255, 153, 0, 0.15);
+  border-left: 3px solid #ff9900;
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+  border-radius: 0 6px 6px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .payment-info-section {
+    padding: 1.5rem;
+  }
+  
+  .payment-info-block {
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+/* ===== Payment Info Link in Booking Box ===== */
+.payment-info-link {
+  text-align: center;
+  margin: 1rem 0 0.75rem 0;
+  font-size: 0.9rem;
+}
+
+.payment-info-link a {
+  color: var(--gs-text, #c6ddea) !important;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 217, 102, 0.4);
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.25s ease;
+}
+
+.payment-info-link a:hover {
+  color: var(--gs-accent, #ffd966) !important;
+  border-color: var(--gs-accent, #ffd966);
+  background: rgba(255, 217, 102, 0.1);
+  text-decoration: none;
+}
+
+/* ===== Payment Info Link - Button Style Match ===== */
+.payment-info-link a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--gs-surface, #1c4587) !important;
+  color: var(--gs-accent, #ffd966) !important;
+  border: 2px solid var(--gs-accent, #ffd966) !important;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease !important;
+}
+
+.payment-info-link a:hover {
+  background-color: var(--gs-surface-hover, #2458a8) !important;
+  color: var(--gs-accent, #ffd966) !important;
+  border-color: var(--gs-accent, #ffd966) !important;
+  transform: translateY(-5px) !important;
+  box-shadow: var(--gs-glow, 0 0 0 2px rgba(255,217,102,0.70), 0 12px 28px rgba(255,217,102,0.22)) !important;
+  text-decoration: none !important;
+}
