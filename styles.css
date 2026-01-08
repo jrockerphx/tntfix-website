@@ -82,8 +82,8 @@ nav {
 }
 
 .logo-img {
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
 }
 
 .nav-links {
@@ -1128,4 +1128,91 @@ nav{
   transform: translateY(-5px) !important;
   box-shadow: var(--gs-glow, 0 0 0 2px rgba(255,217,102,0.70), 0 12px 28px rgba(255,217,102,0.22)) !important;
   text-decoration: none !important;
+}
+
+/* ==================================================
+   NAVIGATION MENU EXPANSION FIX
+   Added: January 8, 2026
+   Purpose: Handle expanded 9-item navigation menu
+   ================================================== */
+
+/* Enhanced mobile navigation - scrollable for long menus */
+@media (max-width: 768px) {
+    .nav-links {
+        /* Allow scrolling if menu items exceed viewport height */
+        max-height: calc(100vh - 80px) !important; /* Reserve space for header */
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        
+        /* Smooth scrolling */
+        -webkit-overflow-scrolling: touch !important;
+        scroll-behavior: smooth !important;
+        
+        /* Add padding at bottom for better UX */
+        padding-bottom: 2rem !important;
+    }
+    
+    /* When menu is open, make it more prominent */
+    .nav-links.nav-links-open {
+        /* Override the max-height set elsewhere */
+        max-height: calc(100vh - 80px) !important;
+    }
+    
+    /* Style the scrollbar for better appearance */
+    .nav-links::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .nav-links::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+    }
+    
+    .nav-links::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 3px;
+    }
+    
+    .nav-links::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.5);
+    }
+    
+    /* Ensure nav items don't get cut off */
+    .nav-links li {
+        flex-shrink: 0 !important;
+    }
+}
+
+/* Very small mobile screens - ensure readability */
+@media (max-width: 400px) {
+    .nav-links a {
+        font-size: 1rem !important; /* Ensure readability on small screens */
+        padding: 0.75rem 1rem !important;
+    }
+}
+
+/* Desktop/larger screens - handle more items gracefully */
+@media (min-width: 769px) {
+    /* If nav ever needs to be horizontal on desktop, this ensures wrapping works */
+    .nav-links.horizontal-desktop {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        row-gap: 0.5rem;
+    }
+    
+    .nav-links.horizontal-desktop li {
+        margin-left: 1.5rem;
+    }
+    
+    .nav-links.horizontal-desktop a {
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
+}
+
+/* Ensure nav container can accommodate wrapped items if needed */
+.nav-container {
+    align-items: center !important;
+    min-height: 60px !important; /* Allow expansion if nav wraps */
 }
