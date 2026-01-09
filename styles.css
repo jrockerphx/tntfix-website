@@ -1140,7 +1140,7 @@ nav{
 @media (max-width: 768px) {
     .nav-links {
         /* Allow scrolling if menu items exceed viewport height */
-        max-height: calc(100vh - 80px) !important; /* Reserve space for header */
+        max-height: none; !important; /* Reserve space for header */
         overflow-y: auto !important;
         overflow-x: hidden !important;
         
