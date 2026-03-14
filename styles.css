@@ -54,7 +54,7 @@ a:hover {
 
 /* Navigation */
 nav {
-    background-color: #010202; /* Default color - darker blue */
+    background-color: #96adb8; /* Blue-silver nav */
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -119,7 +119,7 @@ nav {
     display: block;
     width: 24px;
     height: 3px;
-    background-color: #fff3dd;
+    background-color: #010202;
     margin: 4px 0;
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -150,7 +150,7 @@ nav {
     height: 300px;
     overflow: hidden;
     position: relative;
-    background-color: #010202;
+    background-color: #96adb8;
     border-bottom: 3px solid #96adb8;
 }
 
@@ -169,7 +169,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #010202 0%, #2a2f34 100%);
+    background: linear-gradient(135deg, #96adb8 0%, #2a5f86 100%);
     border-bottom: 3px solid #96adb8; /* White divider */
     gap: 3rem;
     max-width: 1200px;
@@ -415,7 +415,7 @@ hr {
 
 /* Footer */
 footer {
-    background-color: #010202; /* Default color - darker blue */
+    background-color: #96adb8; /* Blue-silver footer */
     color: #fff3dd;
     text-align: center;
     padding: 2rem;
@@ -688,7 +688,7 @@ footer p {
         flex-direction: column;
         gap: 0.5rem;
         text-align: center;
-        background-color: #010202; /* match nav bar */
+        background-color: #96adb8; /* match nav bar */
         padding: 0.5rem 0;
         border-bottom: 2px solid #96adb8;
     }
@@ -813,7 +813,7 @@ footer p {
 */
 :root{
   --gs-bg: #2a2f34;          /* deep charcoal bg */
-  --gs-surface: #010202;     /* near-black surfaces */
+  --gs-surface: #96adb8;     /* blue-silver surfaces */
   --gs-surface-hover: #3d454c; /* dark grey-blue hover */
   --gs-accent: #dcb517;      /* TNT gold accent */
   --gs-text: #fff3dd;        /* warm white text */
@@ -850,7 +850,7 @@ hr{
 
 /* ===== Solid (opaque) header + hamburger menu on ALL displays ===== */
 nav{
-  background-color: var(--gs-surface) !important;
+  background-color: #96adb8 !important;
   position: sticky !important;
   top: 0 !important;
   z-index: 1000 !important;
@@ -882,7 +882,7 @@ nav{
   width: min(360px, 92vw) !important;
   margin: 0.75rem 0 0 0 !important;
 
-  background-color: var(--gs-surface) !important;
+  background-color: #96adb8 !important;
   border: 2px solid rgba(220,181,23,0.70) !important;
   border-radius: 12px !important;
 
@@ -947,7 +947,7 @@ nav{
 
 /* ===== Buttons: blue fill + gold outline/text (restore) ===== */
 .btn{
-  background-color: var(--gs-surface) !important;
+  background-color: #96adb8 !important;
   color: var(--gs-accent) !important;
   border: 2px solid var(--gs-accent) !important;
   box-shadow: none !important;
@@ -1112,7 +1112,7 @@ nav{
 .payment-info-link a {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: var(--gs-surface, #010202) !important;
+  background-color: var(--gs-surface, #96adb8) !important;
   color: var(--gs-accent, #dcb517) !important;
   border: 2px solid var(--gs-accent, #dcb517) !important;
   border-radius: 5px;
