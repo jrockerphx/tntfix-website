@@ -1,4 +1,4 @@
-/* TNT Fix - Google Sites Color Scheme */
+/* TNT Fix - Brand Color Scheme (Black / Silver / Blue-Steel) */
 * {
     margin: 0;
     padding: 0;
@@ -7,15 +7,15 @@
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    background-color: #1155cc; /* Google Sites background */
-    color: #ffffff; /* White text */
+    background-color: #2a2f34; /* Google Sites background */
+    color: #fff3dd; /* White text */
     line-height: 1.6;
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'EB Garamond', Georgia, serif;
-    color: #ffd966; /* Gold headings */
+    color: #dcb517; /* Gold headings */
     font-weight: 700;
 }
 
@@ -27,34 +27,34 @@ h1 {
 h2 {
     font-size: 2rem;
     margin-bottom: 0.8rem;
-    color: #ffd966; /* Gold titles */
+    color: #dcb517; /* Gold titles */
 }
 
 h3 {
     font-size: 1.5rem;
     margin-bottom: 0.6rem;
-    color: #ffd966; /* Gold headings */
+    color: #dcb517; /* Gold headings */
 }
 
 p {
-    color: #ffffff; /* White normal text */
+    color: #fff3dd; /* White normal text */
     margin-bottom: 1rem;
 }
 
 a {
-    color: #ffd966; /* Gold links */
+    color: #dcb517; /* Gold links */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #ffed4e; /* Lighter gold on hover */
+    color: #e8c830; /* Lighter gold on hover */
     text-decoration: underline;
 }
 
 /* Navigation */
 nav {
-    background-color: #0041a5; /* Default color - darker blue */
+    background-color: #010202; /* Default color - darker blue */
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -74,7 +74,7 @@ nav {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #ffd966; /* Gold logo */
+    color: #dcb517; /* Gold logo */
     font-family: 'EB Garamond', Georgia, serif;
     display: flex;
     align-items: center;
@@ -93,7 +93,7 @@ nav {
 }
 
 .nav-links a {
-    color: #ffffff;
+    color: #fff3dd;
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -119,7 +119,7 @@ nav {
     display: block;
     width: 24px;
     height: 3px;
-    background-color: #ffffff;
+    background-color: #fff3dd;
     margin: 4px 0;
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -150,8 +150,8 @@ nav {
     height: 300px;
     overflow: hidden;
     position: relative;
-    background-color: #0041a5;
-    border-bottom: 3px solid #ffffff;
+    background-color: #010202;
+    border-bottom: 3px solid #96adb8;
 }
 
 .cover-video,
@@ -169,8 +169,8 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #0041a5 0%, #1155cc 100%);
-    border-bottom: 3px solid #ffffff; /* White divider */
+    background: linear-gradient(135deg, #010202 0%, #2a2f34 100%);
+    border-bottom: 3px solid #96adb8; /* White divider */
     gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -190,32 +190,32 @@ nav {
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #ffd966; /* Gold */
+    color: #dcb517; /* Gold */
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: #ffffff;
+    color: #fff3dd;
 }
 
 /* Buttons */
 .btn {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: #ff9900; /* Orange button */
-    color: #ffffff;
+    background-color: #96adb8; /* Orange button */
+    color: #fff3dd;
     border-radius: 5px;
     font-weight: 600;
     transition: all 0.3s ease;
-    border: 2px solid #ff9900;
+    border: 2px solid #96adb8;
 }
 
 .btn:hover {
-    background-color: #ffb84d;
-    border-color: #ffb84d;
+    background-color: #b0c5cf;
+    border-color: #b0c5cf;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 153, 0, 0.4);
+    box-shadow: 0 5px 15px rgba(150,173,184,0.4);
     text-decoration: none;
 }
 
@@ -235,18 +235,18 @@ nav {
 }
 
 .service-category {
-    background: rgba(0, 65, 165, 0.6); /* Darker blue with transparency */
+    background: rgba(61, 69, 76, 0.75); /* Darker blue with transparency */
     padding: 2rem;
     border-radius: 10px;
-    border: 2px solid #ffd966; /* Gold border */
+    border: 2px solid #dcb517; /* Gold border */
     transition: all 0.3s ease;
     text-align: center;
 }
 
 .service-category:hover {
     transform: translateY(-5px);
-    border-color: #ffed4e;
-    box-shadow: 0 10px 30px rgba(255, 217, 102, 0.3);
+    border-color: #e8c830;
+    box-shadow: 0 10px 30px rgba(220,181,23,0.3);
 }
 
 .category-image {
@@ -258,17 +258,17 @@ nav {
 }
 
 .service-category h2 {
-    color: #ffd966; /* Gold titles */
+    color: #dcb517; /* Gold titles */
     margin-bottom: 1rem;
 }
 
 .service-category h3 {
-    color: #ff9900; /* Orange subheadings */
+    color: #96adb8; /* Orange subheadings */
     margin-bottom: 0.5rem;
 }
 
 .service-category p {
-    color: #ffffff;
+    color: #fff3dd;
     margin-bottom: 1.5rem;
     text-align: left;
 }
@@ -283,10 +283,10 @@ nav {
 
 .service-tile {
     position: relative;
-    background: rgba(0, 65, 165, 0.7); /* Darker blue */
+    background: rgba(61, 69, 76, 0.80); /* Darker blue */
     padding: 2rem;
     border-radius: 10px;
-    border: 2px solid #ffd966; /* Gold border */
+    border: 2px solid #dcb517; /* Gold border */
     cursor: pointer;
     transition: all 0.3s ease;
     overflow: hidden;
@@ -296,8 +296,8 @@ nav {
 
 .service-tile:hover {
     transform: translateY(-5px);
-    border-color: #ffed4e;
-    box-shadow: 0 10px 30px rgba(255, 217, 102, 0.3);
+    border-color: #e8c830;
+    box-shadow: 0 10px 30px rgba(220,181,23,0.3);
     text-decoration: none !important;
 }
 
@@ -310,12 +310,12 @@ nav {
 }
 
 .service-tile h3 {
-    color: #ffd966; /* Gold title */
+    color: #dcb517; /* Gold title */
     margin-bottom: 0.5rem;
 }
 
 .service-tile .price {
-    color: #ff9900; /* Orange price */
+    color: #96adb8; /* Orange price */
     font-size: 1.5rem;
     font-weight: 700;
     margin: 1rem 0;
@@ -327,7 +327,7 @@ nav {
 }
 
 .service-tile li {
-    color: #ffffff;
+    color: #fff3dd;
     margin-bottom: 0.5rem;
     padding-left: 1.5rem;
     position: relative;
@@ -346,7 +346,7 @@ nav {
     left: 50%;
     width: 0;
     height: 0;
-    background: radial-gradient(circle, #ffd966 0%, transparent 70%);
+    background: radial-gradient(circle, #dcb517 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
@@ -364,7 +364,7 @@ nav {
     position: absolute;
     width: 8px;
     height: 8px;
-    background-color: #ffd966;
+    background-color: #dcb517;
     border-radius: 50%;
     pointer-events: none;
     animation: particle-burst 1s ease-out forwards;
@@ -384,7 +384,7 @@ nav {
 /* Dividers */
 hr {
     border: none;
-    border-top: 2px solid #ffffff; /* White dividers */
+    border-top: 2px solid #96adb8; /* White dividers */
     margin: 3rem 0;
     opacity: 0.5;
 }
@@ -392,9 +392,9 @@ hr {
 .cta-section {
     text-align: center;
     padding: 1.5rem 1.5rem;         /* smaller padding */
-    background: rgba(0, 65, 165, 0.8);
-    border-top: 3px solid #ffffff;
-    border-bottom: 3px solid #ffffff;
+    background: rgba(61, 69, 76, 0.85);
+    border-top: 3px solid #96adb8;
+    border-bottom: 3px solid #96adb8;
     margin: 2rem 0;                 /* slightly smaller vertical margin */
     border-radius: 10px;
 }
@@ -409,18 +409,18 @@ hr {
 }
 
 .cta-section h2 {
-    color: #ffd966; /* Gold */
+    color: #dcb517; /* Gold */
     margin-bottom: 1rem;
 }
 
 /* Footer */
 footer {
-    background-color: #0041a5; /* Default color - darker blue */
-    color: #ffffff;
+    background-color: #010202; /* Default color - darker blue */
+    color: #fff3dd;
     text-align: center;
     padding: 2rem;
     margin-top: 4rem;
-    border-top: 3px solid #ffffff; /* White divider */
+    border-top: 3px solid #96adb8; /* White divider */
 }
 
 footer p {
@@ -430,10 +430,10 @@ footer p {
 
 /* Contact Page */
 .contact-info {
-    background: rgba(0, 65, 165, 0.6);
+    background: rgba(61, 69, 76, 0.75);
     padding: 2rem;
     border-radius: 10px;
-    border: 2px solid #ffd966;
+    border: 2px solid #dcb517;
     margin: 2rem auto;      /* center this block horizontally */
     max-width: 800px;       /* keeps it nicely centered on large screens */
 }
@@ -448,11 +448,11 @@ footer p {
 }
 
 .contact-info h2 {
-    color: #ffd966;
+    color: #dcb517;
 }
 
 .contact-info h3 {
-    color: #ff9900;
+    color: #96adb8;
 }
 
 .contact-info p {
@@ -466,19 +466,19 @@ footer p {
 }
 
 .intro-section h1 {
-    color: #ffd966;
+    color: #dcb517;
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .intro-section h2 {
-    color: #ffd966;
+    color: #dcb517;
     font-size: 1.8rem;
     margin-bottom: 2rem;
 }
 
 .intro-section h3 {
-    color: #ff9900;
+    color: #96adb8;
     font-size: 1.4rem;
     margin-bottom: 1rem;
 }
@@ -487,10 +487,10 @@ footer p {
     max-width: 900px;
     margin: 0 auto;
     text-align: left;
-    background: rgba(0, 65, 165, 0.4);
+    background: rgba(61, 69, 76, 0.55);
     padding: 2rem;
     border-radius: 10px;
-    border: 2px solid #ffd966;
+    border: 2px solid #dcb517;
 }
 
 .intro-content p {
@@ -517,7 +517,7 @@ footer p {
 
 /* Duration styling for service tiles */
 .service-tile .duration {
-    color: #ffffff;
+    color: #fff3dd;
     font-size: 0.9rem;
     font-style: italic;
     margin: 0.5rem 0;
@@ -537,7 +537,7 @@ footer p {
 
 .service-tagline {
     font-size: 1.1rem;
-    color: #ffffff;
+    color: #fff3dd;
     opacity: 0.9;
     margin-bottom: 1rem;
 }
@@ -548,13 +548,13 @@ footer p {
     gap: 1rem;
     justify-content: center;
     font-size: 0.95rem;
-    color: #ffffff;
+    color: #fff3dd;
     opacity: 0.9;
 }
 
 .service-meta span {
-    background: rgba(0, 65, 165, 0.7);
-    border: 1px solid #ffd966;
+    background: rgba(61, 69, 76, 0.80);
+    border: 1px solid #dcb517;
     border-radius: 20px;
     padding: 0.4rem 0.9rem;
 }
@@ -569,9 +569,9 @@ footer p {
 
 .service-main,
 .service-sidebar {
-    background: rgba(0, 65, 165, 0.6);
+    background: rgba(61, 69, 76, 0.75);
     border-radius: 10px;
-    border: 2px solid #ffd966;
+    border: 2px solid #dcb517;
     padding: 1.75rem;
 }
 
@@ -603,16 +603,16 @@ footer p {
 /* Booking box */
 .booking-box {
     text-align: center;
-    background: rgba(0, 65, 165, 0.85);
+    background: rgba(61, 69, 76, 0.90);
     border-radius: 10px;
-    border: 2px solid #ff9900;
+    border: 2px solid #96adb8;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
 .booking-price {
     font-size: 1.4rem;
-    color: #ff9900;
+    color: #96adb8;
     font-weight: 700;
     margin-bottom: 0.25rem;
 }
@@ -688,9 +688,9 @@ footer p {
         flex-direction: column;
         gap: 0.5rem;
         text-align: center;
-        background-color: #0041a5; /* match nav bar */
+        background-color: #010202; /* match nav bar */
         padding: 0.5rem 0;
-        border-bottom: 2px solid #ffffff;
+        border-bottom: 2px solid #96adb8;
     }
 
     .nav-links li a {
@@ -752,8 +752,8 @@ footer p {
    (added only; no global changes)
 ---------------------------------------- */
 .why-choose-section {
-    background: rgba(0, 65, 165, 0.6);
-    border: 2px solid #ffd966;
+    background: rgba(61, 69, 76, 0.75);
+    border: 2px solid #dcb517;
     border-radius: 10px;
     padding: 2rem;
     margin: 0 0 2rem 0;
@@ -773,8 +773,8 @@ footer p {
 }
 
 .why-choose-card {
-    background: rgba(0, 65, 165, 0.45);
-    border: 2px solid rgba(255, 217, 102, 0.6);
+    background: rgba(61, 69, 76, 0.60);
+    border: 2px solid rgba(220,181,23,0.6);
     border-radius: 10px;
     padding: 1.5rem;
 }
@@ -796,14 +796,14 @@ footer p {
     display: inline-block;
     padding: 0.6rem 1rem;
     border-radius: 6px;
-    border: 2px solid rgba(255, 217, 102, 0.7);
-    background: rgba(0, 65, 165, 0.35);
+    border: 2px solid rgba(220,181,23,0.7);
+    background: rgba(61, 69, 76, 0.50);
     text-decoration: none;
 }
 
 .why-choose-link:hover {
     text-decoration: none;
-    border-color: #ffed4e;
+    border-color: #e8c830;
     box-shadow: 0 8px 20px rgba(255, 217, 102, 0.2);
     transform: translateY(-1px);
 }
@@ -812,17 +812,17 @@ footer p {
    Appended to the end of the stylesheet so it overrides earlier rules without deleting content.
 */
 :root{
-  --gs-bg: #073763;          /* background */
-  --gs-surface: #1c4587;     /* frame / surfaces */
-  --gs-surface-hover: #2458a8; /* slightly lighter surface for hover */
-  --gs-accent: #ffd966;      /* headings, links, borders */
-  --gs-text: #c6ddea;        /* body text + dividers */
+  --gs-bg: #2a2f34;          /* deep charcoal bg */
+  --gs-surface: #010202;     /* near-black surfaces */
+  --gs-surface-hover: #3d454c; /* dark grey-blue hover */
+  --gs-accent: #dcb517;      /* TNT gold accent */
+  --gs-text: #fff3dd;        /* warm white text */
   --gs-radius: 10px;
   --gs-content-max: 1200px;
   /* ~1 inch wider than content on each side on large screens */
   --gs-cover-max: calc(var(--gs-content-max) + 160px);
   --gs-shadow: 0 10px 30px rgba(0,0,0,0.22);
-  --gs-glow: 0 0 0 2px rgba(255,217,102,0.70), 0 12px 28px rgba(255,217,102,0.22);
+  --gs-glow: 0 0 0 2px rgba(220,181,23,0.70), 0 12px 28px rgba(220,181,23,0.22);
 }
 
 /* Global colors + typography */
@@ -840,7 +840,7 @@ a{
   color: var(--gs-accent) !important;
 }
 a:hover{
-  color: #ffed4e !important;
+  color: #e8c830 !important;
 }
 
 /* Dividers */
@@ -883,7 +883,7 @@ nav{
   margin: 0.75rem 0 0 0 !important;
 
   background-color: var(--gs-surface) !important;
-  border: 2px solid rgba(255,217,102,0.70) !important;
+  border: 2px solid rgba(220,181,23,0.70) !important;
   border-radius: 12px !important;
 
   overflow: hidden !important;
@@ -912,7 +912,7 @@ nav{
 
 /* Backdrop remains optional; keep it compatible */
 .nav-backdrop{
-  background: rgba(0,0,0,0.35) !important;
+  background: rgba(0,0,0,0.55) !important;
 }
 
 /* ===== Cover banner: max width + centered + background matches page ===== */
@@ -968,7 +968,7 @@ nav{
 .service-tile,
 .service-category,
 .why-choose-card{
-  border-color: rgba(255,217,102,0.70) !important;
+  border-color: rgba(220,181,23,0.70) !important;
 }
 
 .service-tile:hover,
@@ -991,8 +991,8 @@ nav{
 
 /* ===== Payment Information Section ===== */
 .payment-info-section {
-  background: rgba(0, 65, 165, 0.6);
-  border: 2px solid var(--gs-accent, #ffd966);
+  background: rgba(61, 69, 76, 0.75);
+  border: 2px solid var(--gs-accent, #dcb517);
   border-radius: var(--gs-radius, 10px);
   padding: 2.5rem;
   margin: 0 0 2rem 0;
@@ -1004,8 +1004,8 @@ nav{
 }
 
 .payment-info-block {
-  background: rgba(0, 65, 165, 0.45);
-  border: 2px solid rgba(255, 217, 102, 0.5);
+  background: rgba(61, 69, 76, 0.60);
+  border: 2px solid rgba(150,173,184,0.5);
   border-radius: 10px;
   padding: 1.5rem 2rem;
   margin-bottom: 1.5rem;
@@ -1050,7 +1050,7 @@ nav{
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--gs-accent, #ffd966);
+  color: var(--gs-accent, #dcb517);
 }
 
 .no-fee-badge {
@@ -1066,8 +1066,8 @@ nav{
 }
 
 .payment-example {
-  background: rgba(255, 153, 0, 0.15);
-  border-left: 3px solid #ff9900;
+  background: rgba(150,173,184,0.15);
+  border-left: 3px solid #96adb8;
   padding: 0.75rem 1rem;
   margin-top: 1rem;
   border-radius: 0 6px 6px 0;
@@ -1095,16 +1095,16 @@ nav{
   color: var(--gs-text, #c6ddea) !important;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  border: 1px solid rgba(255, 217, 102, 0.4);
+  border: 1px solid rgba(150,173,184,0.4);
   border-radius: 6px;
   display: inline-block;
   transition: all 0.25s ease;
 }
 
 .payment-info-link a:hover {
-  color: var(--gs-accent, #ffd966) !important;
-  border-color: var(--gs-accent, #ffd966);
-  background: rgba(255, 217, 102, 0.1);
+  color: var(--gs-accent, #dcb517) !important;
+  border-color: var(--gs-accent, #dcb517);
+  background: rgba(220,181,23,0.1);
   text-decoration: none;
 }
 
@@ -1112,9 +1112,9 @@ nav{
 .payment-info-link a {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: var(--gs-surface, #1c4587) !important;
-  color: var(--gs-accent, #ffd966) !important;
-  border: 2px solid var(--gs-accent, #ffd966) !important;
+  background-color: var(--gs-surface, #010202) !important;
+  color: var(--gs-accent, #dcb517) !important;
+  border: 2px solid var(--gs-accent, #dcb517) !important;
   border-radius: 5px;
   font-weight: 600;
   text-decoration: none !important;
@@ -1122,11 +1122,11 @@ nav{
 }
 
 .payment-info-link a:hover {
-  background-color: var(--gs-surface-hover, #2458a8) !important;
-  color: var(--gs-accent, #ffd966) !important;
-  border-color: var(--gs-accent, #ffd966) !important;
+  background-color: var(--gs-surface-hover, #3d454c) !important;
+  color: var(--gs-accent, #dcb517) !important;
+  border-color: var(--gs-accent, #dcb517) !important;
   transform: translateY(-5px) !important;
-  box-shadow: var(--gs-glow, 0 0 0 2px rgba(255,217,102,0.70), 0 12px 28px rgba(255,217,102,0.22)) !important;
+  box-shadow: var(--gs-glow, 0 0 0 2px rgba(220,181,23,0.70), 0 12px 28px rgba(220,181,23,0.22)) !important;
   text-decoration: none !important;
 }
 
@@ -1164,17 +1164,17 @@ nav{
     }
     
     .nav-links::-webkit-scrollbar-track {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(150, 173, 184, 0.1);
         border-radius: 3px;
     }
     
     .nav-links::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, 0.3);
+        background: rgba(150, 173, 184, 0.3);
         border-radius: 3px;
     }
     
     .nav-links::-webkit-scrollbar-thumb:hover {
-        background: rgba(255, 255, 255, 0.5);
+        background: rgba(150, 173, 184, 0.5);
     }
     
     /* Ensure nav items don't get cut off */
