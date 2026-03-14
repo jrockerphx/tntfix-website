@@ -175,8 +175,10 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #3d454c 0%, #2a2f34 100%);
-    border-bottom: 3px solid #3d454c;
+    background: rgba(61, 69, 76, 0.85);
+    border-top: 3px solid #96adb8;
+    border-bottom: 3px solid #96adb8;
+    border-radius: 10px;
     gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
