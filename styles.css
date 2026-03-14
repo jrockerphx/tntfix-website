@@ -79,6 +79,12 @@ nav {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+.logo:hover {
+    color: #e8c830;
+    text-decoration: none;
 }
 
 .logo-img {
@@ -169,8 +175,8 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #96adb8 0%, #2a5f86 100%);
-    border-bottom: 3px solid #96adb8; /* White divider */
+    background: linear-gradient(135deg, #3d454c 0%, #2a2f34 100%);
+    border-bottom: 3px solid #3d454c;
     gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
