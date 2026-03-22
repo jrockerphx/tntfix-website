@@ -176,8 +176,7 @@ nav {
     justify-content: space-between;
     padding: 4rem 2rem;
     background: rgba(61, 69, 76, 0.85);
-    border-top: 3px solid #060830;
-    border-bottom: 3px solid #060830;
+    border: 2px solid #dcb517;
     border-radius: 10px;
     gap: 3rem;
     max-width: 1200px;
@@ -210,21 +209,21 @@ nav {
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 1rem 2rem;
-    background-color: #060830; /* Orange button */
-    color: #fff3dd;
-    border-radius: 5px;
+    padding: 0.6rem 1rem;
+    background: rgba(61, 69, 76, 0.50);
+    color: #dcb517;
+    border-radius: 6px;
     font-weight: 600;
     transition: all 0.3s ease;
-    border: 2px solid #060830;
+    border: 2px solid rgba(220,181,23,0.7);
+    text-decoration: none;
 }
 
 .btn:hover {
-    background-color: #b0c5cf;
-    border-color: #b0c5cf;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(150,173,184,0.4);
     text-decoration: none;
+    border-color: #e8c830;
+    box-shadow: 0 8px 20px rgba(255, 217, 102, 0.2);
+    transform: translateY(-1px);
 }
 
 /* Main Container */
@@ -399,11 +398,10 @@ hr {
 
 .cta-section {
     text-align: center;
-    padding: 1.5rem 1.5rem;         /* smaller padding */
+    padding: 1.5rem 1.5rem;
     background: rgba(61, 69, 76, 0.85);
-    border-top: 3px solid #060830;
-    border-bottom: 3px solid #060830;
-    margin: 2rem 0;                 /* slightly smaller vertical margin */
+    border: 2px solid #dcb517;
+    margin: 2rem 0;
     border-radius: 10px;
 }
 
@@ -953,22 +951,22 @@ nav{
   margin-top: 18px !important;
 }
 
-/* ===== Buttons: blue fill + gold outline/text (restore) ===== */
+/* ===== Buttons: match why-choose-link tile style ===== */
 .btn{
-  background-color: #060830 !important;
+  background: rgba(61, 69, 76, 0.50) !important;
   color: var(--gs-accent) !important;
-  border: 2px solid var(--gs-accent) !important;
+  border: 2px solid rgba(220,181,23,0.7) !important;
   box-shadow: none !important;
-  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
   text-decoration: none !important;
 }
 
 .btn:hover{
-  background-color: var(--gs-surface-hover) !important;
+  background: rgba(61, 69, 76, 0.50) !important;
   color: var(--gs-accent) !important;
-  border-color: var(--gs-accent) !important;
-  transform: translateY(-5px) !important;
-  box-shadow: var(--gs-glow) !important;
+  border-color: #e8c830 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 8px 20px rgba(255, 217, 102, 0.2) !important;
   text-decoration: none !important;
 }
 
