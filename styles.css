@@ -54,7 +54,7 @@ a:hover {
 
 /* Navigation */
 nav {
-    background-color: #96adb8; /* Blue-silver nav */
+    background-color: #060830; /* Blue-silver nav */
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -156,8 +156,8 @@ nav {
     height: 300px;
     overflow: hidden;
     position: relative;
-    background-color: #96adb8;
-    border-bottom: 3px solid #96adb8;
+    background-color: #060830;
+    border-bottom: 3px solid #060830;
 }
 
 .cover-video,
@@ -176,8 +176,8 @@ nav {
     justify-content: space-between;
     padding: 4rem 2rem;
     background: rgba(61, 69, 76, 0.85);
-    border-top: 3px solid #96adb8;
-    border-bottom: 3px solid #96adb8;
+    border-top: 3px solid #060830;
+    border-bottom: 3px solid #060830;
     border-radius: 10px;
     gap: 3rem;
     max-width: 1200px;
@@ -211,12 +211,12 @@ nav {
 .btn {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: #96adb8; /* Orange button */
+    background-color: #060830; /* Orange button */
     color: #fff3dd;
     border-radius: 5px;
     font-weight: 600;
     transition: all 0.3s ease;
-    border: 2px solid #96adb8;
+    border: 2px solid #060830;
 }
 
 .btn:hover {
@@ -271,7 +271,7 @@ nav {
 }
 
 .service-category h3 {
-    color: #96adb8; /* Orange subheadings */
+    color: #060830; /* Orange subheadings */
     margin-bottom: 0.5rem;
 }
 
@@ -323,7 +323,7 @@ nav {
 }
 
 .service-tile .price {
-    color: #96adb8; /* Orange price */
+    color: #060830; /* Orange price */
     font-size: 1.5rem;
     font-weight: 700;
     margin: 1rem 0;
@@ -392,7 +392,7 @@ nav {
 /* Dividers */
 hr {
     border: none;
-    border-top: 2px solid #96adb8; /* White dividers */
+    border-top: 2px solid #060830; /* White dividers */
     margin: 3rem 0;
     opacity: 0.5;
 }
@@ -401,8 +401,8 @@ hr {
     text-align: center;
     padding: 1.5rem 1.5rem;         /* smaller padding */
     background: rgba(61, 69, 76, 0.85);
-    border-top: 3px solid #96adb8;
-    border-bottom: 3px solid #96adb8;
+    border-top: 3px solid #060830;
+    border-bottom: 3px solid #060830;
     margin: 2rem 0;                 /* slightly smaller vertical margin */
     border-radius: 10px;
 }
@@ -423,12 +423,12 @@ hr {
 
 /* Footer */
 footer {
-    background-color: #96adb8; /* Blue-silver footer */
+    background-color: #060830; /* Blue-silver footer */
     color: #fff3dd;
     text-align: center;
     padding: 2rem;
     margin-top: 4rem;
-    border-top: 3px solid #96adb8; /* White divider */
+    border-top: 3px solid #060830; /* White divider */
 }
 
 footer p {
@@ -460,7 +460,7 @@ footer p {
 }
 
 .contact-info h3 {
-    color: #96adb8;
+    color: #060830;
 }
 
 .contact-info p {
@@ -486,7 +486,7 @@ footer p {
 }
 
 .intro-section h3 {
-    color: #96adb8;
+    color: #060830;
     font-size: 1.4rem;
     margin-bottom: 1rem;
 }
@@ -613,14 +613,14 @@ footer p {
     text-align: center;
     background: rgba(61, 69, 76, 0.90);
     border-radius: 10px;
-    border: 2px solid #96adb8;
+    border: 2px solid #060830;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
 .booking-price {
     font-size: 1.4rem;
-    color: #96adb8;
+    color: #060830;
     font-weight: 700;
     margin-bottom: 0.25rem;
 }
@@ -696,9 +696,9 @@ footer p {
         flex-direction: column;
         gap: 0.5rem;
         text-align: center;
-        background-color: #96adb8; /* match nav bar */
+        background-color: #060830; /* match nav bar */
         padding: 0.5rem 0;
-        border-bottom: 2px solid #96adb8;
+        border-bottom: 2px solid #060830;
     }
 
     .nav-links li a {
@@ -821,7 +821,7 @@ footer p {
 */
 :root{
   --gs-bg: #2a2f34;          /* deep charcoal bg */
-  --gs-surface: #96adb8;     /* blue-silver surfaces */
+  --gs-surface: #060830;     /* blue-silver surfaces */
   --gs-surface-hover: #3d454c; /* dark grey-blue hover */
   --gs-accent: #dcb517;      /* TNT gold accent */
   --gs-text: #fff3dd;        /* warm white text */
@@ -858,7 +858,7 @@ hr{
 
 /* ===== Solid (opaque) header + hamburger menu on ALL displays ===== */
 nav{
-  background-color: #96adb8 !important;
+  background-color: #060830 !important;
   position: sticky !important;
   top: 0 !important;
   z-index: 1000 !important;
@@ -890,7 +890,7 @@ nav{
   width: min(360px, 92vw) !important;
   margin: 0.75rem 0 0 0 !important;
 
-  background-color: #96adb8 !important;
+  background-color: #060830 !important;
   border: 2px solid rgba(220,181,23,0.70) !important;
   border-radius: 12px !important;
 
@@ -955,7 +955,7 @@ nav{
 
 /* ===== Buttons: blue fill + gold outline/text (restore) ===== */
 .btn{
-  background-color: #96adb8 !important;
+  background-color: #060830 !important;
   color: var(--gs-accent) !important;
   border: 2px solid var(--gs-accent) !important;
   box-shadow: none !important;
@@ -1075,7 +1075,7 @@ nav{
 
 .payment-example {
   background: rgba(150,173,184,0.15);
-  border-left: 3px solid #96adb8;
+  border-left: 3px solid #060830;
   padding: 0.75rem 1rem;
   margin-top: 1rem;
   border-radius: 0 6px 6px 0;
@@ -1120,7 +1120,7 @@ nav{
 .payment-info-link a {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: var(--gs-surface, #96adb8) !important;
+  background-color: var(--gs-surface, #060830) !important;
   color: var(--gs-accent, #dcb517) !important;
   border: 2px solid var(--gs-accent, #dcb517) !important;
   border-radius: 5px;
