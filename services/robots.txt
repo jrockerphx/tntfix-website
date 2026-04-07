@@ -1,0 +1,32 @@
+# robots.txt for tntfix.com
+# TNT Fix - Smart Home & Climate Solutions
+# Phoenix Metro, Coolidge, Casa Grande, Arizona
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://tntfix.com/sitemap.xml
+
+# Crawl delay (be nice to our server)
+Crawl-delay: 1
+
+# Block private/sensitive areas
+Disallow: /customer-portal/
+Disallow: /admin/
+Disallow: /private/
+
+# Allow important pages and assets
+Allow: /index.html
+Allow: /smart-home.html
+Allow: /hvac.html
+Allow: /home-repair.html
+Allow: /how-we-work.html
+Allow: /billing.html
+Allow: /privacy-policy.html
+Allow: /terms.html
+Allow: /contact.html
+Allow: /services/
+Allow: /images/
+Allow: /favicon.ico
+Allow: /sitemap.xml
