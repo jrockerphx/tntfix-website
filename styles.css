@@ -34,7 +34,7 @@
 body {
     font-family: 'MarkaziText', Georgia, serif;
     font-size: 1.1rem;
-    background-color: #2a2f34; /* Google Sites background */
+    background-color: #111840; /* Page background - lighter than header */
     color: #fff3dd; /* White text */
     line-height: 1.6;
 }
@@ -254,13 +254,15 @@ nav {
     transition: all 0.3s ease;
     border: 2px solid rgba(220,181,23,0.7);
     text-decoration: none;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn:hover {
     text-decoration: none;
     border-color: #e8c830;
-    box-shadow: 0 8px 20px rgba(255, 217, 102, 0.2);
-    transform: translateY(-1px);
+    box-shadow: 0 12px 28px rgba(255, 217, 102, 0.35);
+    transform: translateY(-5px);
 }
 
 /* Main Container */
@@ -847,15 +849,15 @@ footer p {
 .why-choose-link:hover {
     text-decoration: none;
     border-color: #e8c830;
-    box-shadow: 0 8px 20px rgba(255, 217, 102, 0.2);
-    transform: translateY(-1px);
+    box-shadow: 0 12px 28px rgba(255, 217, 102, 0.35);
+    transform: translateY(-5px);
 }
 
 /* === TNT Fix Theme Overrides (Google Sites palette + solid header + wide-screen cover) ===
    Appended to the end of the stylesheet so it overrides earlier rules without deleting content.
 */
 :root{
-  --gs-bg: #2a2f34;          /* deep charcoal bg */
+  --gs-bg: #111840;          /* deep charcoal bg */
   --gs-surface: #060830;     /* blue-silver surfaces */
   --gs-surface-hover: #3d454c; /* dark grey-blue hover */
   --gs-accent: #dcb517;      /* TNT gold accent */
@@ -998,14 +1000,16 @@ nav{
   box-shadow: none !important;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
   text-decoration: none !important;
+  position: relative !important;
+  overflow: hidden !important;
 }
 
 .btn:hover{
   background: rgba(61, 69, 76, 0.50) !important;
   color: var(--gs-accent) !important;
   border-color: #e8c830 !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 8px 20px rgba(255, 217, 102, 0.2) !important;
+  transform: translateY(-5px) !important;
+  box-shadow: 0 12px 28px rgba(255, 217, 102, 0.35) !important;
   text-decoration: none !important;
 }
 
