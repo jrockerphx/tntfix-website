@@ -136,7 +136,7 @@ nav {
 }
 
 .nav-links a {
-    color: #fff3dd;
+    color: #1f9bcf;
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -144,7 +144,7 @@ nav {
 }
 
 .nav-links a:hover {
-    background-color: rgba(232, 232, 232, 0.2); /* Gold tint on hover */
+    background-color: rgba(31, 155, 207, 0.15); /* Cyan tint on hover */
     text-decoration: none;
 }
 
@@ -212,7 +212,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 4rem 2rem;
-    background: rgba(61, 69, 76, 0.85);
+    background: rgba(6, 8, 48, 0.85);
     border: 2px solid #e8e8e8;
     border-radius: 10px;
     gap: 3rem;
@@ -247,7 +247,7 @@ nav {
 .btn {
     display: inline-block;
     padding: 0.6rem 1rem;
-    background: rgba(61, 69, 76, 0.50);
+    background: rgba(6, 8, 48, 0.50);
     color: #e8e8e8;
     border-radius: 6px;
     font-weight: 600;
@@ -281,7 +281,7 @@ nav {
 }
 
 .service-category {
-    background: rgba(61, 69, 76, 0.75); /* Darker blue with transparency */
+    background: rgba(6, 8, 48, 0.75); /* Darker blue with transparency */
     padding: 2rem;
     border-radius: 10px;
     border: 2px solid #e8e8e8; /* Gold border */
@@ -329,7 +329,7 @@ nav {
 
 .service-tile {
     position: relative;
-    background: rgba(61, 69, 76, 0.80); /* Darker blue */
+    background: rgba(6, 8, 48, 0.80); /* Darker blue */
     padding: 2rem;
     border-radius: 10px;
     border: 2px solid #e8e8e8; /* Gold border */
@@ -438,7 +438,7 @@ hr {
 .cta-section {
     text-align: center;
     padding: 1.5rem 1.5rem;
-    background: rgba(61, 69, 76, 0.85);
+    background: rgba(6, 8, 48, 0.85);
     border: 2px solid #e8e8e8;
     margin: 2rem 0;
     border-radius: 10px;
@@ -475,7 +475,7 @@ footer p {
 
 /* Contact Page */
 .contact-info {
-    background: rgba(61, 69, 76, 0.75);
+    background: rgba(6, 8, 48, 0.75);
     padding: 2rem;
     border-radius: 10px;
     border: 2px solid #e8e8e8;
@@ -532,7 +532,7 @@ footer p {
     max-width: 900px;
     margin: 0 auto;
     text-align: left;
-    background: rgba(61, 69, 76, 0.55);
+    background: rgba(6, 8, 48, 0.55);
     padding: 2rem;
     border-radius: 10px;
     border: 2px solid #e8e8e8;
@@ -598,7 +598,7 @@ footer p {
 }
 
 .service-meta span {
-    background: rgba(61, 69, 76, 0.80);
+    background: rgba(6, 8, 48, 0.80);
     border: 1px solid #e8e8e8;
     border-radius: 20px;
     padding: 0.4rem 0.9rem;
@@ -614,7 +614,7 @@ footer p {
 
 .service-main,
 .service-sidebar {
-    background: rgba(61, 69, 76, 0.75);
+    background: rgba(6, 8, 48, 0.75);
     border-radius: 10px;
     border: 2px solid #e8e8e8;
     padding: 1.75rem;
@@ -648,7 +648,7 @@ footer p {
 /* Booking box */
 .booking-box {
     text-align: center;
-    background: rgba(61, 69, 76, 0.90);
+    background: rgba(6, 8, 48, 0.90);
     border-radius: 10px;
     border: 2px solid rgba(232,232,232,0.3);
     padding: 1.5rem;
@@ -797,7 +797,7 @@ footer p {
    (added only; no global changes)
 ---------------------------------------- */
 .why-choose-section {
-    background: rgba(61, 69, 76, 0.75);
+    background: rgba(6, 8, 48, 0.75);
     border: 2px solid #e8e8e8;
     border-radius: 10px;
     padding: 2rem;
@@ -818,7 +818,7 @@ footer p {
 }
 
 .why-choose-card {
-    background: rgba(61, 69, 76, 0.60);
+    background: rgba(6, 8, 48, 0.60);
     border: 2px solid rgba(232, 232, 232,0.6);
     border-radius: 10px;
     padding: 1.5rem;
@@ -842,7 +842,7 @@ footer p {
     padding: 0.6rem 1rem;
     border-radius: 6px;
     border: 2px solid rgba(232, 232, 232,0.7);
-    background: rgba(61, 69, 76, 0.50);
+    background: rgba(6, 8, 48, 0.50);
     text-decoration: none;
 }
 
@@ -858,7 +858,7 @@ footer p {
 */
 :root{
   --gs-bg: #272727;          /* deep charcoal bg */
-  --gs-surface: #0d0d0d;     /* blue-silver surfaces */
+  --gs-surface: #060830;     /* blue-silver surfaces */
   --gs-surface-hover: #3d454c; /* dark grey-blue hover */
   --gs-accent: #e8e8e8;      /* TNT gold accent */
   --gs-text: #fff3dd;        /* warm white text */
@@ -994,7 +994,7 @@ nav{
 
 /* ===== Buttons: match why-choose-link tile style ===== */
 .btn{
-  background: rgba(61, 69, 76, 0.50) !important;
+  background: rgba(6, 8, 48, 0.50) !important;
   color: var(--gs-accent) !important;
   border: 2px solid rgba(232, 232, 232,0.7) !important;
   box-shadow: none !important;
@@ -1005,7 +1005,7 @@ nav{
 }
 
 .btn:hover{
-  background: rgba(61, 69, 76, 0.50) !important;
+  background: rgba(6, 8, 48, 0.50) !important;
   color: var(--gs-accent) !important;
   border-color: #f2f2f2 !important;
   transform: translateY(-5px) !important;
@@ -1040,7 +1040,7 @@ nav{
 
 /* ===== Payment Information Section ===== */
 .payment-info-section {
-  background: rgba(61, 69, 76, 0.75);
+  background: rgba(6, 8, 48, 0.75);
   border: 2px solid var(--gs-accent, #e8e8e8);
   border-radius: var(--gs-radius, 10px);
   padding: 2.5rem;
@@ -1053,7 +1053,7 @@ nav{
 }
 
 .payment-info-block {
-  background: rgba(61, 69, 76, 0.60);
+  background: rgba(6, 8, 48, 0.60);
   border: 2px solid rgba(150,173,184,0.5);
   border-radius: 10px;
   padding: 1.5rem 2rem;
@@ -1305,4 +1305,56 @@ nav{
 .breadcrumb-inner .bc-current {
   color: #e8e8e8;
   font-weight: 600;
+}
+
+/* ===== Cyan accent for nav, footer, links (matching book.tntfix.com) ===== */
+:root {
+  --tnt-cyan: #1f9bcf;
+  --tnt-cyan-hover: #3db8e8;
+}
+
+/* Nav links */
+.nav-links a,
+.nav-links li a {
+  color: var(--tnt-cyan) !important;
+}
+
+.nav-links a:hover,
+.nav-links li a:hover {
+  color: var(--tnt-cyan-hover) !important;
+  background-color: rgba(31, 155, 207, 0.12) !important;
+}
+
+/* Logo text */
+.logo {
+  color: var(--tnt-cyan) !important;
+}
+
+/* Footer text, links */
+footer,
+footer p,
+footer a,
+footer li,
+footer span,
+#footer,
+.footer {
+  color: var(--tnt-cyan) !important;
+}
+
+/* Breadcrumb links */
+.breadcrumb-inner a {
+  color: var(--tnt-cyan) !important;
+}
+
+.breadcrumb-inner a:hover {
+  color: var(--tnt-cyan-hover) !important;
+}
+
+/* General page links */
+a:not(.btn):not(.logo):not(.service-tile):not(.service-category):not(.why-choose-card) {
+  color: var(--tnt-cyan) !important;
+}
+
+a:not(.btn):not(.logo):not(.service-tile):not(.service-category):not(.why-choose-card):hover {
+  color: var(--tnt-cyan-hover) !important;
 }
