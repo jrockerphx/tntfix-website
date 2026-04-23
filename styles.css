@@ -1358,3 +1358,29 @@ a:not(.btn):not(.logo):not(.service-tile):not(.service-category):not(.why-choose
 a:not(.btn):not(.logo):not(.service-tile):not(.service-category):not(.why-choose-card):hover {
   color: var(--tnt-cyan-hover) !important;
 }
+
+/* ===== Scroll Reveal Animation ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delay for grid children */
+.reveal-stagger .reveal:nth-child(1) { transition-delay: 0s; }
+.reveal-stagger .reveal:nth-child(2) { transition-delay: 0.08s; }
+.reveal-stagger .reveal:nth-child(3) { transition-delay: 0.16s; }
+.reveal-stagger .reveal:nth-child(4) { transition-delay: 0.24s; }
+.reveal-stagger .reveal:nth-child(5) { transition-delay: 0.32s; }
+.reveal-stagger .reveal:nth-child(6) { transition-delay: 0.40s; }
+.reveal-stagger .reveal:nth-child(7) { transition-delay: 0.48s; }
+.reveal-stagger .reveal:nth-child(8) { transition-delay: 0.56s; }
+.reveal-stagger .reveal:nth-child(9) { transition-delay: 0.64s; }
+.reveal-stagger .reveal:nth-child(10) { transition-delay: 0.72s; }
+.reveal-stagger .reveal:nth-child(11) { transition-delay: 0.80s; }
+.reveal-stagger .reveal:nth-child(12) { transition-delay: 0.88s; }
