@@ -1360,10 +1360,13 @@ a:not(.btn):not(.logo):not(.service-tile):not(.service-category):not(.why-choose
 }
 
 /* ===== Scroll Reveal Animation ===== */
+
+/* --- Box reveal --- */
 .reveal {
     opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.55s ease, transform 0.55s ease;
+    transform: translateY(40px);
+    transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .reveal.revealed {
@@ -1371,16 +1374,61 @@ a:not(.btn):not(.logo):not(.service-tile):not(.service-category):not(.why-choose
     transform: translateY(0);
 }
 
-/* Stagger delay for grid children */
-.reveal-stagger .reveal:nth-child(1) { transition-delay: 0s; }
-.reveal-stagger .reveal:nth-child(2) { transition-delay: 0.08s; }
-.reveal-stagger .reveal:nth-child(3) { transition-delay: 0.16s; }
-.reveal-stagger .reveal:nth-child(4) { transition-delay: 0.24s; }
-.reveal-stagger .reveal:nth-child(5) { transition-delay: 0.32s; }
-.reveal-stagger .reveal:nth-child(6) { transition-delay: 0.40s; }
-.reveal-stagger .reveal:nth-child(7) { transition-delay: 0.48s; }
-.reveal-stagger .reveal:nth-child(8) { transition-delay: 0.56s; }
-.reveal-stagger .reveal:nth-child(9) { transition-delay: 0.64s; }
-.reveal-stagger .reveal:nth-child(10) { transition-delay: 0.72s; }
-.reveal-stagger .reveal:nth-child(11) { transition-delay: 0.80s; }
-.reveal-stagger .reveal:nth-child(12) { transition-delay: 0.88s; }
+/* --- Text wipe inside revealed boxes --- */
+/* Wrap mechanism: .reveal-text spans get a clip-path wipe */
+.reveal-text {
+    display: inline-block;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: 0.55s; /* fires after box has landed */
+}
+
+.revealed .reveal-text {
+    clip-path: inset(0 0% 0 0);
+}
+
+/* Block-level text wipe (for h2, p, etc.) */
+.reveal-text-block {
+    overflow: hidden;
+}
+
+.reveal-text-block > * {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.5s ease;
+    transition-delay: 0.5s;
+}
+
+.revealed .reveal-text-block > * {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Stagger delays for grid children — slower & more dramatic */
+.reveal-stagger .reveal:nth-child(1)  { transition-delay: 0s; }
+.reveal-stagger .reveal:nth-child(2)  { transition-delay: 0.12s; }
+.reveal-stagger .reveal:nth-child(3)  { transition-delay: 0.24s; }
+.reveal-stagger .reveal:nth-child(4)  { transition-delay: 0.36s; }
+.reveal-stagger .reveal:nth-child(5)  { transition-delay: 0.48s; }
+.reveal-stagger .reveal:nth-child(6)  { transition-delay: 0.60s; }
+.reveal-stagger .reveal:nth-child(7)  { transition-delay: 0.72s; }
+.reveal-stagger .reveal:nth-child(8)  { transition-delay: 0.84s; }
+.reveal-stagger .reveal:nth-child(9)  { transition-delay: 0.96s; }
+.reveal-stagger .reveal:nth-child(10) { transition-delay: 1.08s; }
+.reveal-stagger .reveal:nth-child(11) { transition-delay: 1.20s; }
+.reveal-stagger .reveal:nth-child(12) { transition-delay: 1.32s; }
+
+/* Stagger text wipe delays must add the box delay on top */
+.reveal-stagger .reveal:nth-child(1)  .reveal-text { transition-delay: 0.55s; }
+.reveal-stagger .reveal:nth-child(2)  .reveal-text { transition-delay: 0.67s; }
+.reveal-stagger .reveal:nth-child(3)  .reveal-text { transition-delay: 0.79s; }
+.reveal-stagger .reveal:nth-child(4)  .reveal-text { transition-delay: 0.91s; }
+.reveal-stagger .reveal:nth-child(5)  .reveal-text { transition-delay: 1.03s; }
+.reveal-stagger .reveal:nth-child(6)  .reveal-text { transition-delay: 1.15s; }
+.reveal-stagger .reveal:nth-child(7)  .reveal-text { transition-delay: 1.27s; }
+.reveal-stagger .reveal:nth-child(8)  .reveal-text { transition-delay: 1.39s; }
+.reveal-stagger .reveal:nth-child(9)  .reveal-text { transition-delay: 1.51s; }
+.reveal-stagger .reveal:nth-child(10) .reveal-text { transition-delay: 1.63s; }
+.reveal-stagger .reveal:nth-child(11) .reveal-text { transition-delay: 1.75s; }
+.reveal-stagger .reveal:nth-child(12) .reveal-text { transition-delay: 1.87s; }
