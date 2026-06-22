@@ -11,20 +11,59 @@
 <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
 <link href="styles.css" rel="stylesheet"/>
 <style>
-  /* Contact page only: prevent iframe scrollbars by giving it enough height */
-  .contact-form-frame {
+  /* Contact form styling */
+  .tnt-form {
+    max-width: 640px;
+    margin: 1.5rem auto 0;
+    text-align: left;
+  }
+  .tnt-form .form-row {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .tnt-form label {
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+    color: #e8e8e8;
+  }
+  .tnt-form .req { color: #0ab3fa; }
+  .tnt-form input,
+  .tnt-form textarea {
     width: 100%;
-    max-width: 100%;
-    border: 0;
-    display: block;
-    height: 2400px; /* desktop */
+    padding: 0.75rem 0.9rem;
+    background: #0d0d0d;
+    border: 1px solid #2a2f4a;
+    border-radius: 6px;
+    color: #f2f2f2;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
   }
-
-  @media (max-width: 768px) {
-    .contact-form-frame {
-      height: 2600px; /* keep your “mobile looks perfect” height */
-    }
+  .tnt-form input:focus,
+  .tnt-form textarea:focus {
+    outline: none;
+    border-color: #0ab3fa;
+    box-shadow: 0 0 0 3px rgba(10, 179, 250, 0.2);
   }
+  .tnt-form textarea { resize: vertical; }
+  .tnt-form .form-submit {
+    margin-top: 0.5rem;
+    cursor: pointer;
+    background: transparent;
+    font-size: 1rem;
+  }
+  .tnt-form .form-submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .tnt-form .form-status {
+    margin-top: 1rem;
+    min-height: 1.4em;
+    font-weight: 500;
+  }
+  .tnt-form .form-status.success { color: #4ade80; }
+  .tnt-form .form-status.error { color: #f87171; }
 </style>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -86,19 +125,19 @@
 <!-- Main Content -->
 <div class="container">
 <section class="intro-section">
-<h1>Contact TNT Fix Today</h1>
-<h2>Ready to blast your home repair worries away?</h2>
+<h1>Contact TNT Fix</h1>
+<h2>Let's talk about your project.</h2>
 <div class="intro-content">
 <p>
-                    Whether you’re planning a smart home upgrade, need HVAC maintenance, or
-                    just want to get that “to-do” list under control, we’re here to help.
+                    Whether you're planning a smart home upgrade, need HVAC maintenance, or
+                    have a list of repairs to tackle, we're here to help you find the right path forward.
                 </p>
 <p>
-                    Reach out with questions, ideas, or projects you’re considering, and
-                    we’ll help you figure out the best next step.
+                    Share a few details about what you're considering, and we'll follow up with
+                    honest guidance on the best next step.
                 </p>
 <a class="btn" href="https://book.tntfix.com/index.php/?service=69" onclick="createExplosion(event)"><div class="flash"></div>
-                Ready to book? Click here
+                Prefer to book a consultation? Click here
             </a>
 
 </div>
@@ -106,12 +145,30 @@
 <section class="contact-info">
 <h2>How to Reach TNT Fix</h2>
 <p>
-                Have a project in mind? Use the form below to reach out. Due to the "in the field" nature of our
-                work, this form reduces unnecessary phone-tag and is always the best way to reach us.
+                Have a project in mind? Use the form below to reach out. Because much of our
+                work keeps us out in the field, this form is the most reliable way to get in
+                touch and avoid unnecessary phone tag. We'll respond as soon as we're able.
            </p>
-<iframe class="contact-form-frame" frameborder="0" loading="lazy" marginheight="0" marginwidth="0" src="https://docs.google.com/forms/d/e/1FAIpQLSeT8k2sQAX77Yj4juBvwLqdwsJkZ8cgZxO3vLdvuFZyGw84rA/viewform?embedded=true" title="Contact TNT Fix Form">
-  Loading…
-</iframe>
+<form id="contact-form" class="tnt-form" novalidate>
+<div class="form-row">
+<label for="cf-name">Name <span class="req">*</span></label>
+<input type="text" id="cf-name" name="name" autocomplete="name" required/>
+</div>
+<div class="form-row">
+<label for="cf-email">Email <span class="req">*</span></label>
+<input type="email" id="cf-email" name="email" autocomplete="email" required/>
+</div>
+<div class="form-row">
+<label for="cf-phone">Phone</label>
+<input type="tel" id="cf-phone" name="phone" autocomplete="tel"/>
+</div>
+<div class="form-row">
+<label for="cf-message">How can we help? <span class="req">*</span></label>
+<textarea id="cf-message" name="message" rows="6" required></textarea>
+</div>
+<button type="submit" class="btn form-submit" id="cf-submit"><div class="flash"></div>Send Message</button>
+<p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+</form>
 </section>
 
 <section class="cta-section">
@@ -140,6 +197,60 @@
                 navToggle.addEventListener('click', function () {
                     navLinks.classList.toggle('nav-links-open');
                     navToggle.classList.toggle('open');
+                });
+            }
+
+            // Contact form submission to n8n webhook
+            const form = document.getElementById('contact-form');
+            const status = document.getElementById('cf-status');
+            const submitBtn = document.getElementById('cf-submit');
+            const WEBHOOK_URL = 'https://n8n.tntfix.com/webhook/contact-form';
+
+            if (form) {
+                form.addEventListener('submit', async function (e) {
+                    e.preventDefault();
+                    status.className = 'form-status';
+                    status.textContent = '';
+
+                    const name = form.name.value.trim();
+                    const email = form.email.value.trim();
+                    const message = form.message.value.trim();
+
+                    if (!name || !email || !message) {
+                        status.className = 'form-status error';
+                        status.textContent = 'Please fill in your name, email, and message.';
+                        return;
+                    }
+
+                    submitBtn.disabled = true;
+                    status.textContent = 'Sending…';
+
+                    try {
+                        const params = new URLSearchParams();
+                        params.append('name', name);
+                        params.append('email', email);
+                        params.append('phone', form.phone.value.trim());
+                        params.append('message', message);
+
+                        const res = await fetch(WEBHOOK_URL, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                            body: params.toString()
+                        });
+
+                        if (res.ok) {
+                            status.className = 'form-status success';
+                            status.textContent = 'Thank you! Your message has been sent. We\'ll be in touch soon.';
+                            form.reset();
+                        } else {
+                            throw new Error('Server responded ' + res.status);
+                        }
+                    } catch (err) {
+                        status.className = 'form-status error';
+                        status.textContent = 'Something went wrong. Please email us directly at info@tntfix.com.';
+                    } finally {
+                        submitBtn.disabled = false;
+                    }
                 });
             }
         });
