@@ -1522,3 +1522,17 @@ a:not(.btn):not(.logo):not(.service-tile):not(.service-category):not(.why-choose
     margin-bottom: 1rem;
     border-radius: 8px;
 }
+
+.bbb-standards-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 2rem;
+    margin-left: 1.5rem;
+    list-style: disc;
+}
+
+@media (max-width: 600px) {
+    .bbb-standards-list {
+        grid-template-columns: 1fr;
+    }
+}
