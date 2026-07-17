@@ -1409,6 +1409,22 @@ a:not(.btn):not(.logo):not(.service-tile):not(.service-category):not(.why-choose
     clip-path: inset(0 0% 0 0);
 }
 
+/* Once JS has split an element into per-line spans, let each .rt-line
+   handle its own wipe instead of the parent wiping as one solid block. */
+.reveal-text.rt-lines-ready {
+    clip-path: none;
+}
+
+.rt-line {
+    display: block;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.revealed .rt-line {
+    clip-path: inset(0 0% 0 0);
+}
+
 /* Block-level text wipe (for h2, p, etc.) */
 .reveal-text-block {
     overflow: hidden;

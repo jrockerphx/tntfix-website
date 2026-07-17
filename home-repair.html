@@ -362,6 +362,89 @@
     var STAGGER_PARENTS = ['.why-choose-grid', '.tiles-grid'];
     var TEXT_SELECTORS = ['h2', 'h3', 'p', '.price', '.duration', '.why-choose-desc'];
 
+    // Split an element's text into per-line spans so the wipe reveals one line at a time.
+    // Preserves <strong>/<b> and <em>/<i> styling on the individual words.
+    function splitIntoLines(el) {
+        function collect(node, bold, italic) {
+            var tokens = [];
+            node.childNodes.forEach(function(child) {
+                if (child.nodeType === 3) {
+                    var parts = child.textContent.split(/(\s+)/);
+                    parts.forEach(function(p) {
+                        if (p === '') return;
+                        if (/^\s+$/.test(p)) {
+                            tokens.push({ space: true });
+                        } else {
+                            tokens.push({ text: p, bold: bold, italic: italic });
+                        }
+                    });
+                } else if (child.nodeType === 1) {
+                    var tag = child.tagName;
+                    var b = bold || tag === 'STRONG' || tag === 'B';
+                    var i = italic || tag === 'EM' || tag === 'I';
+                    tokens = tokens.concat(collect(child, b, i));
+                }
+            });
+            return tokens;
+        }
+
+        var tokens = collect(el, false, false);
+        if (!tokens.length) return;
+
+        // Capture the delay this element would have used (respects nth-child stagger CSS)
+        // before we touch its contents.
+        var baseDelay = parseFloat(getComputedStyle(el).transitionDelay) || 0.55;
+
+        var wordEls = [];
+        var frag = document.createDocumentFragment();
+        tokens.forEach(function(tok) {
+            if (tok.space) {
+                frag.appendChild(document.createTextNode(' '));
+            } else {
+                var span = document.createElement('span');
+                span.className = 'rt-word';
+                span.textContent = tok.text;
+                if (tok.bold) span.style.fontWeight = '700';
+                if (tok.italic) span.style.fontStyle = 'italic';
+                frag.appendChild(span);
+                wordEls.push(span);
+            }
+        });
+
+        el.innerHTML = '';
+        el.appendChild(frag);
+
+        requestAnimationFrame(function() {
+            var lines = [];
+            var currentTop = null;
+            var currentLine = [];
+            wordEls.forEach(function(w) {
+                var top = w.offsetTop;
+                if (currentTop === null || Math.abs(top - currentTop) > 2) {
+                    if (currentLine.length) lines.push(currentLine);
+                    currentLine = [w];
+                    currentTop = top;
+                } else {
+                    currentLine.push(w);
+                }
+            });
+            if (currentLine.length) lines.push(currentLine);
+
+            el.innerHTML = '';
+            lines.forEach(function(lineWords, i) {
+                var lineWrap = document.createElement('span');
+                lineWrap.className = 'rt-line';
+                lineWrap.style.transitionDelay = (baseDelay + i * 0.09) + 's';
+                lineWords.forEach(function(w, idx) {
+                    lineWrap.appendChild(w);
+                    if (idx < lineWords.length - 1) lineWrap.appendChild(document.createTextNode(' '));
+                });
+                el.appendChild(lineWrap);
+            });
+            el.classList.add('rt-lines-ready');
+        });
+    }
+
     function wrapText(container) {
         TEXT_SELECTORS.forEach(function(sel) {
             container.querySelectorAll(sel).forEach(function(el) {
@@ -369,6 +452,7 @@
                 if (el.classList.contains('reveal-text')) return;
                 // Wrap inline elements with clip-path wipe
                 el.classList.add('reveal-text');
+                splitIntoLines(el);
             });
         });
     }
