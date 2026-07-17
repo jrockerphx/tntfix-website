@@ -226,8 +226,9 @@ nav {
 
 .hero-image {
     flex: 0 0 300px;
-    max-width: 200px;
+    max-width: 300px;
     height: 300px;
+    object-fit: contain;
 }
 
 .hero h1 {
