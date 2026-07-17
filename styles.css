@@ -1513,3 +1513,12 @@ a:not(.btn):not(.logo):not(.service-tile):not(.service-category):not(.why-choose
         margin-top: 0.25rem;
     }
 }
+
+/* ===== BBB Accreditation Seal — Inline card/section badge ===== */
+.bbb-card-badge {
+    display: block;
+    height: 64px;
+    width: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
