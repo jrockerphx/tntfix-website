@@ -1454,3 +1454,62 @@ a:not(.btn):not(.logo):not(.service-tile):not(.service-category):not(.why-choose
 .reveal-stagger .reveal:nth-child(10) .reveal-text { transition-delay: 1.63s; }
 .reveal-stagger .reveal:nth-child(11) .reveal-text { transition-delay: 1.75s; }
 .reveal-stagger .reveal:nth-child(12) .reveal-text { transition-delay: 1.87s; }
+
+/* ===== BBB Accreditation Seal — Header (paired with hamburger) ===== */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.bbb-header-seal {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+}
+
+.bbb-header-seal-img {
+    height: 42px;
+    width: auto;
+    display: block;
+    opacity: 0.95;
+    transition: opacity 0.2s ease;
+}
+
+.bbb-header-seal:hover .bbb-header-seal-img {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .bbb-header-seal-img {
+        height: 32px;
+    }
+}
+
+/* ===== BBB Accreditation Seal — Hero (inline with CTA buttons) ===== */
+.bbb-hero-seal {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+    margin-left: 0.5rem;
+}
+
+.bbb-hero-seal-img {
+    height: 56px;
+    width: auto;
+    display: block;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.55)) drop-shadow(0 0 14px rgba(255, 255, 255, 0.3));
+    transition: filter 0.3s ease;
+}
+
+.bbb-hero-seal:hover .bbb-hero-seal-img {
+    filter: drop-shadow(0 0 9px rgba(255, 255, 255, 0.75)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.45));
+}
+
+@media (max-width: 480px) {
+    .bbb-hero-seal {
+        margin-left: 0;
+        margin-top: 0.25rem;
+    }
+}
