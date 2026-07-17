@@ -1553,6 +1553,10 @@ a:not(.btn):not(.logo):not(.service-tile):not(.service-category):not(.why-choose
     margin-bottom: 0.75rem;
 }
 
+.bbb-block-grid .bbb-block-badge {
+    grid-column: 1;
+}
+
 .bbb-block-grid .bbb-standards-list {
     grid-column: 2;
 }
@@ -1571,18 +1575,22 @@ a:not(.btn):not(.logo):not(.service-tile):not(.service-category):not(.why-choose
 
 .bbb-block-logo-img {
     width: 100%;
-    max-width: 220px;
+    max-width: 260px;
     height: auto;
     display: block;
+}
+
+.bbb-block-badge .bbb-card-badge {
+    height: 78px;
+    width: auto;
+    margin-bottom: 0;
 }
 
 .bbb-block-bottom {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
     margin-top: 0.5rem;
-    flex-wrap: wrap;
 }
 
 .bbb-block-bottom .bbb-card-badge {
@@ -1596,6 +1604,7 @@ a:not(.btn):not(.logo):not(.service-tile):not(.service-category):not(.why-choose
         grid-template-columns: 1fr;
         text-align: center;
     }
+    .bbb-block-grid .bbb-block-badge,
     .bbb-block-grid .bbb-standards-list,
     .bbb-block-grid .bbb-block-logo {
         grid-column: 1;
