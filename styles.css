@@ -1527,8 +1527,10 @@ a:not(.btn):not(.logo):not(.service-tile):not(.service-category):not(.why-choose
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem 2rem;
-    margin-left: 1.5rem;
+    margin: 0 auto;
+    width: fit-content;
     list-style: disc;
+    text-align: left;
 }
 
 @media (max-width: 600px) {
@@ -1539,14 +1541,16 @@ a:not(.btn):not(.logo):not(.service-tile):not(.service-category):not(.why-choose
 
 /* ===== BBB Block — full-width heading, list+logo grid, bottom row ===== */
 .bbb-block-heading {
-    margin-bottom: 1.5rem;
+    text-align: center;
+    margin-bottom: 0.75rem;
 }
 
 .bbb-block-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
+    margin-bottom: 0.75rem;
 }
 
 .bbb-block-col {
@@ -1569,7 +1573,7 @@ a:not(.btn):not(.logo):not(.service-tile):not(.service-category):not(.why-choose
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     flex-wrap: wrap;
 }
 
