@@ -1491,7 +1491,7 @@ a:not(.btn):not(.logo):not(.service-tile):not(.service-category):not(.why-choose
     display: flex;
     align-items: center;
     line-height: 0;
-    margin-left: 0.5rem;
+    margin-left: auto;
 }
 
 .bbb-hero-seal-img {
