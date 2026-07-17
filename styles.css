@@ -1536,3 +1536,54 @@ a:not(.btn):not(.logo):not(.service-tile):not(.service-category):not(.why-choose
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== BBB Block — 3 column layout ===== */
+.bbb-block-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.bbb-block-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bbb-block-text {
+    text-align: left;
+    align-items: flex-start;
+}
+
+.bbb-block-badge .bbb-card-badge {
+    margin-bottom: 0;
+}
+
+.bbb-block-logo-img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    display: block;
+}
+
+.bbb-block-button {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+@media (max-width: 800px) {
+    .bbb-block-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .bbb-block-text {
+        text-align: center;
+        align-items: center;
+    }
+    .bbb-standards-list {
+        text-align: left;
+    }
+}
