@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FR4HN9Y7EP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FR4HN9Y7EP');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ask a Question or Send Your List - TNT Fix Smart Home &amp; Climate Solutions</title>
+<meta content="Ask TNT Fix a question or send your honey-do list. We'll reply with honest answers and tell you whether one tech or two fits your list. Phoenix Metro, Coolidge &amp; Casa Grande." name="description"/>
+<link href="https://tntfix.com/ask.html" rel="canonical"/>
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="./favicon.ico">
+<link rel="icon" type="image/png" sizes="500x500" href="./favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+<link href="styles.css" rel="stylesheet"/>
+<style>
+  /* Contact form styling */
+  .tnt-form {
+    max-width: 640px;
+    margin: 1.5rem auto 0;
+    text-align: left;
+  }
+  .tnt-form .form-row {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .tnt-form label {
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+    color: #e8e8e8;
+  }
+  .tnt-form .req { color: #0ab3fa; }
+  .tnt-form input,
+  .tnt-form textarea {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    background: #0d0d0d;
+    border: 1px solid #2a2f4a;
+    border-radius: 6px;
+    color: #f2f2f2;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  .tnt-form input:focus,
+  .tnt-form textarea:focus {
+    outline: none;
+    border-color: #0ab3fa;
+    box-shadow: 0 0 0 3px rgba(10, 179, 250, 0.2);
+  }
+  .tnt-form textarea { resize: vertical; }
+  .tnt-form .form-submit {
+    margin-top: 0.5rem;
+    cursor: pointer;
+    background: transparent;
+    font-size: 1rem;
+  }
+  .tnt-form .form-submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .tnt-form .form-status {
+    margin-top: 1rem;
+    min-height: 1.4em;
+    font-weight: 500;
+  }
+  .tnt-form .form-status.success { color: #4ade80; }
+  .tnt-form .form-status.error { color: #f87171; }
+  /* Ask / list page additions */
+  .ask-toggle { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; border: 1px solid #2a2f4a; border-radius: 8px; padding: 0.3rem; background: #0d0d0d; }
+  .ask-toggle label { position: relative; flex: 1; text-align: center; margin: 0; padding: 0.65rem 0.5rem; border-radius: 6px; cursor: pointer; font-weight: 500; color: #b4b4b4; transition: background .2s, color .2s; }
+  .tnt-form .ask-toggle input { position: absolute; top: 0; left: 0; width: 1px; height: 1px; margin: 0; padding: 0; opacity: 0; pointer-events: none; }
+  .ask-toggle input:checked + span { color: #0d0d0d; }
+  .ask-toggle label:has(input:checked) { background: #0ab3fa; color: #0d0d0d; }
+  .ask-toggle label:has(input:focus-visible) { box-shadow: 0 0 0 3px rgba(10, 179, 250, 0.35); }
+  .tnt-form select { width: 100%; padding: 0.75rem 0.9rem; background: #0d0d0d; border: 1px solid #2a2f4a; border-radius: 6px; color: #f2f2f2; font-family: inherit; font-size: 1rem; box-sizing: border-box; }
+  .tnt-form select:focus { outline: none; border-color: #0ab3fa; box-shadow: 0 0 0 3px rgba(10, 179, 250, 0.2); }
+  .tnt-form .form-hint { font-size: 0.9rem; color: #9aa0b4; margin: 0.35rem 0 0; }
+  .tnt-form .radio-row { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+  .tnt-form .radio-row label { flex-direction: row; display: flex; align-items: center; gap: 0.4rem; font-weight: 400; margin: 0; }
+  .tnt-form .radio-row input { width: auto; }
+  .tnt-form .list-only[hidden], .tnt-form .question-only[hidden] { display: none; }
+  .tnt-form .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .ask-done { max-width: 640px; margin: 1.5rem auto 0; padding: 1.5rem; border: 1px solid #2a2f4a; border-radius: 10px; background: #0d0d0d; text-align: left; }
+  .ask-done h3 { margin-top: 0; color: #4ade80; }
+  .ask-done .btn { margin: 0.5rem 0.5rem 0 0; }
+</style>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Site Icons / Preview Images (standardized across all pages) -->
+<!-- Social share preview image -->
+<meta content="https://tntfix.com/web-logo.png" property="og:image"/>
+<meta content="https://tntfix.com/web-logo.png" property="og:image:secure_url"/>
+<meta content="image/png" property="og:image:type"/>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://tntfix.com/web-logo.png" name="twitter:image"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "TNT Fix - Smart Home & Climate Solutions",
+  "url": "https://tntfix.com/",
+  "logo": "https://tntfix.com/web-logo.png",
+  "image": "https://tntfix.com/web-logo.png"
+}
+    </script>
+</head>
+<body class="page-contact page-ask">
+<!-- Navigation -->
+<nav>
+<div class="nav-container">
+<a class="logo" href="index.html">
+            <img alt="TNT Fix Logo" class="logo-img" src="images/tntfix-logo-cloud-g.webp"/>
+            TNT Fix
+        </a>
+<div class="nav-actions">
+<a class="bbb-header-seal" href="https://www.bbb.org/us/az/phoenix/profile/home-repair/tnt-fix-smart-home-climate-solutions-1126-1000166980/#sealclick" target="_blank" rel="nofollow noopener" aria-label="TNT Fix BBB Accredited Business A+ Rating">
+<img src="images/Accredited_Business_Seal_Rating_RGB_Built_In_TM.png" alt="TNT Fix BBB Accredited Business A+ Rating" class="bbb-header-seal-img">
+</a>
+<button aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation" class="nav-toggle" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+<ul class="nav-links" id="primary-navigation">
+<li><a href="index.html">Home</a></li>
+<li><a href="smart-home.html">Smart Home</a></li>
+<li><a href="hvac.html">HVAC</a></li>
+<li><a href="home-repair.html">Home Repair</a></li>
+<li><a href="how-we-work.html">How We Work</a></li>
+<li><a href="billing.html">Billing & Payments</a></li>
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+<li><a href="terms.html">Terms of Service</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="nav-backdrop" hidden=""></div>
+</nav>
+<nav class="breadcrumb-bar" aria-label="Breadcrumb"><div class="breadcrumb-inner"><a href="index.html">TNT Fix</a> <span class="bc-sep">›</span> <span class="bc-current">Ask a Question</span></div></nav>
+<!-- Cover Banner -->
+<div class="cover-banner">
+<video autoplay="" class="cover-video" loop="" muted="" playsinline="">
+<source src="images/cover-contact.mp4" type="video/mp4"/>
+</video>
+</div>
+<!-- Main Content -->
+<div class="container">
+<section class="intro-section">
+<h1>Ask a Question or Send Your List</h1>
+<h2>No phone tag. No email app. Just tell us what's going on.</h2>
+<div class="intro-content">
+<p>
+                Got a quick question, or a whole honey-do list that keeps growing? Send it here.
+                A real person at TNT Fix reads every message and will reply with a straight answer.
+            </p>
+<p>
+                Sending a list? We'll tell you what realistically fits in a
+                <a href="services/honey-do-half-day.html">Half-Day</a> visit with one tech
+                or <a href="services/honey-do-half-day.html#one-or-two-techs">two</a> before you book anything.
+            </p>
+</div>
+</section>
+<section class="contact-info">
+<form id="ask-form" class="tnt-form" novalidate>
+<div class="ask-toggle" role="radiogroup" aria-label="What are you sending?">
+<label><input type="radio" name="form_type" value="question" checked/><span>I have a question</span></label>
+<label><input type="radio" name="form_type" value="list"/><span>Here's my list</span></label>
+</div>
+<div class="form-row">
+<label for="af-name">Name <span class="req">*</span></label>
+<input type="text" id="af-name" name="name" autocomplete="name" required/>
+</div>
+<div class="form-row">
+<label for="af-email">Email <span class="req">*</span></label>
+<input type="email" id="af-email" name="email" autocomplete="email" required/>
+</div>
+<div class="form-row">
+<label for="af-phone">Phone</label>
+<input type="tel" id="af-phone" name="phone" autocomplete="tel"/>
+</div>
+<div class="form-row">
+<label>Best way to reply</label>
+<div class="radio-row">
+<label><input type="radio" name="contact_pref" value="Email" checked/> Email</label>
+<label><input type="radio" name="contact_pref" value="Text"/> Text</label>
+<label><input type="radio" name="contact_pref" value="Call"/> Call</label>
+</div>
+</div>
+<div class="form-row">
+<label for="af-area">Where's the home?</label>
+<input type="text" id="af-area" name="area" placeholder="City or cross streets" autocomplete="address-level2"/>
+</div>
+<div class="form-row question-only">
+<label for="af-question">Your question <span class="req">*</span></label>
+<textarea id="af-question" name="question" rows="6"></textarea>
+</div>
+<div class="form-row list-only" hidden>
+<label for="af-package">Leaning toward</label>
+<select id="af-package" name="package">
+<option value="Not sure yet">Not sure yet, help me decide</option>
+<option value="Half-Day Honey-Do, 1 tech">Half-Day, 1 tech (4 hours)</option>
+<option value="Half-Day Honey-Do, 2 techs">Half-Day, 2 techs (8 tech-hours)</option>
+</select>
+</div>
+<div class="form-row list-only" hidden>
+<label for="af-list">Your list <span class="req">*</span></label>
+<textarea id="af-list" name="list" rows="9" placeholder="One item per line, for example:
+Hang 55&quot; TV in living room (I have the mount)
+Replace kitchen faucet
+Fix sticking bedroom door
+Swap 3 light switches for dimmers"></textarea>
+<p class="form-hint">One item per line. Mention any parts you already have; customer-provided parts are preferred.</p>
+</div>
+<div class="hp-field" aria-hidden="true">
+<label for="af-company">Company</label>
+<input type="text" id="af-company" name="company" tabindex="-1" autocomplete="off"/>
+</div>
+<button type="submit" class="btn form-submit" id="af-submit"><div class="flash"></div><span id="af-submit-label">Send My Question</span></button>
+<p class="form-status" id="af-status" role="status" aria-live="polite"></p>
+</form>
+<div class="ask-done" id="ask-done" hidden tabindex="-1">
+<h3>Got it. Thank you!</h3>
+<p id="ask-done-text">We'll get back to you as soon as we're out of the field.</p>
+<div id="ask-done-list" hidden>
+<p>Want to lock in a date now? You can book today and we'll confirm what fits from your list.</p>
+<a class="btn" href="https://book.tntfix.com/index.php/?provider=2&amp;service=21">Book Half-Day, 1 Tech – <span data-catalog-price="honey-do-half-day">$449</span></a>
+<a class="btn" href="https://book.tntfix.com/index.php/?provider=2&amp;service=77">Book Half-Day, 2 Techs – <span data-catalog-price="honey-do-half-day-two-tech">$898</span></a>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer -->
+<footer>
+<p>
+            TNT Fix operates under the Handyman designation provided by the Arizona Registrar of Contractors,
+            is owned and operated by Mr. Tippy's LLC, registered with the Arizona Corporation Commission.
+            TNT fix is not a Licensed Contractor.
+        </p>
+</footer>
+<!-- Scripts -->
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function () {
+                    navLinks.classList.toggle('nav-links-open');
+                    navToggle.classList.toggle('open');
+                });
+            }
+
+            // Ask / Send-your-list form -> same n8n webhook as the contact form.
+            // name, email, phone, message are what the existing workflow uses;
+            // the extra fields ride along for future routing and are ignored if unused.
+            const WEBHOOK_URL = 'https://n8n.tntfix.com/webhook/contact-form';
+            const form = document.getElementById('ask-form');
+            const status = document.getElementById('af-status');
+            const submitBtn = document.getElementById('af-submit');
+            const submitLabel = document.getElementById('af-submit-label');
+            const done = document.getElementById('ask-done');
+            const params = new URLSearchParams(window.location.search);
+            const sourcePage = params.get('from') || (document.referrer ? new URL(document.referrer).pathname : 'direct');
+
+            function mode() { return form.querySelector('input[name="form_type"]:checked').value; }
+            function applyMode() {
+                const isList = mode() === 'list';
+                form.querySelectorAll('.list-only').forEach(el => el.hidden = !isList);
+                form.querySelectorAll('.question-only').forEach(el => el.hidden = isList);
+                submitLabel.textContent = isList ? 'Send My List' : 'Send My Question';
+            }
+            form.querySelectorAll('input[name="form_type"]').forEach(r => r.addEventListener('change', applyMode));
+
+            if (params.get('type') === 'list') form.querySelector('input[value="list"]').checked = true;
+            const pkg = params.get('package');
+            if (pkg === 'half') form.package.value = 'Half-Day Honey-Do, 1 tech';
+            if (pkg === 'two' || pkg === 'full') form.package.value = 'Half-Day Honey-Do, 2 techs';
+            applyMode();
+
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                status.className = 'form-status';
+                status.textContent = '';
+
+                const isList = mode() === 'list';
+                const name = form.name.value.trim();
+                const email = form.email.value.trim();
+                const body = (isList ? form.list.value : form.question.value).trim();
+
+                if (!name || !email || !body) {
+                    status.className = 'form-status error';
+                    status.textContent = isList
+                        ? 'Please fill in your name, email, and your list.'
+                        : 'Please fill in your name, email, and your question.';
+                    return;
+                }
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    status.className = 'form-status error';
+                    status.textContent = 'That email address doesn\'t look right. Please check it.';
+                    return;
+                }
+
+                // Honeypot: bots fill hidden fields. Pretend success, send nothing.
+                if (form.company.value) { showDone(isList); return; }
+
+                const pref = form.querySelector('input[name="contact_pref"]:checked').value;
+                const area = form.area.value.trim();
+                const lines = [];
+                lines.push(isList ? '[HONEY-DO LIST]' : '[QUESTION]');
+                if (isList) lines.push('Leaning toward: ' + form.package.value);
+                lines.push('Best way to reply: ' + pref);
+                if (area) lines.push('Where: ' + area);
+                lines.push('Sent from: ' + sourcePage);
+                lines.push('');
+                if (isList) {
+                    lines.push('List:');
+                    body.split(/\r?\n/).map(s => s.trim()).filter(Boolean)
+                        .forEach(item => lines.push('- ' + item.replace(/^[-*\u2022]\s*/, '')));
+                } else {
+                    lines.push(body);
+                }
+
+                submitBtn.disabled = true;
+                status.textContent = 'Sending…';
+                try {
+                    const p = new URLSearchParams();
+                    p.append('name', name);
+                    p.append('email', email);
+                    p.append('phone', form.phone.value.trim());
+                    p.append('message', lines.join('\n'));
+                    p.append('form_type', isList ? 'honey-do-list' : 'question');
+                    p.append('contact_pref', pref);
+                    p.append('area', area);
+                    p.append('package', isList ? form.package.value : '');
+                    p.append('source_page', sourcePage);
+
+                    const res = await fetch(WEBHOOK_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: p.toString()
+                    });
+                    if (!res.ok) throw new Error('Server responded ' + res.status);
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'generate_lead', { form_type: isList ? 'honey_do_list' : 'question', source_page: sourcePage });
+                    }
+                    showDone(isList);
+                } catch (err) {
+                    status.className = 'form-status error';
+                    status.textContent = 'Something went wrong on our end. Please try again, or email info@tntfix.com.';
+                } finally {
+                    submitBtn.disabled = false;
+                }
+            });
+
+            function showDone(isList) {
+                form.hidden = true;
+                done.hidden = false;
+                document.getElementById('ask-done-list').hidden = !isList;
+                document.getElementById('ask-done-text').textContent = isList
+                    ? 'We\'ll review your list and tell you whether one tech or two fits it best.'
+                    : 'We\'ll get back to you as soon as we\'re out of the field.';
+                done.focus();
+            }
+        });
+
+        function createExplosion(event) {
+            event.preventDefault();
+            const tile = event.currentTarget;
+            const rect = tile.getBoundingClientRect();
+            const clickX = event.clientX - rect.left;
+            const clickY = event.clientY - rect.top;
+
+            const flash = tile.querySelector('.flash');
+            if (flash) {
+                flash.style.left = clickX + 'px';
+                flash.style.top = clickY + 'px';
+                flash.classList.add('active');
+                setTimeout(() => flash.classList.remove('active'), 600);
+            }
+
+            const particleCount = 40;
+            const colors = ['#e8e8e8', '#f2f2f2', '#c8c8c8', '#b4b4b4', '#ffffff'];
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = clickX + 'px';
+                particle.style.top = clickY + 'px';
+                particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+                const angle = (Math.PI * 2 * i) / particleCount;
+                const velocity = 100 + Math.random() * 100;
+                const tx = Math.cos(angle) * velocity;
+                const ty = Math.sin(angle) * velocity;
+
+                particle.style.setProperty('--tx', tx + 'px');
+                particle.style.setProperty('--ty', ty + 'px');
+
+                document.body.appendChild(particle);
+                setTimeout(() => particle.remove(), 1000);
+            }
+
+            setTimeout(() => {
+                window.location.href = tile.href;
+            }, 400);
+        }
+    </script>
+</body>
+</html>
